@@ -209,7 +209,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         et_ChildTab2Age = (EditText) findViewById(R.id.et_ChildTab2Age);
         et_ChildTab2Email = (EditText) findViewById(R.id.et_ChildTab2Email);
         ll_city_list = (LinearLayout) findViewById(R.id.ll_city_list);
-        tv_city_gps = (TextView) findViewById(R.id.tv_city_gps);
+       // tv_city_gps = (TextView) findViewById(R.id.tv_city_gps);
         lv_city = (ListView) findViewById(R.id.lv_city_parent);
         lv_city.setAdapter(cityAdapter1 = new CityAdapter(SignUpActivity.this));
         lv_city.setOnItemClickListener(new AdapterView.OnItemClickListener() {

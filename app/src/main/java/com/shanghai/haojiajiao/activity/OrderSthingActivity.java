@@ -169,26 +169,27 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
         getParentById();
         loadingDialog.show();
         if (OrderState != null) {
-            if (OrderState.equals("1")) {
-                tv_finish.setText("BOOKING");
+            if (OrderState.equals("0")) {
+                tv_finish.setText("Wait Booking");
+            } else if (OrderState.equals("1")) {
+                tv_finish.setText("Booking Done");
+            } else if (OrderState.equals("7")) {
+                tv_finish.setText("Booking Cancelled");
+            } else if (OrderState.equals("8")) {
+                tv_finish.setText("Booking Failed");
             } else if (OrderState.equals("2")) {
-                tv_finish.setText("BOOKED");
-
+                tv_finish.setText("Booking Succeed");
             } else if (OrderState.equals("3")) {
-                tv_finish.setText("Coordination");
-
-            } else if (OrderState.equals("4")) {
-
-                tv_finish.setText("DealFailed");
-            } else if (OrderState.equals("5")) {
-
-                tv_finish.setText("DealFailed");
-            } else if (OrderState.equals("6")) {
-                tv_finish.setText("DealDone");
-            } else {
+                tv_finish.setText("Order under Negotiation");
+            } else if(OrderState.equals("4")){
+                tv_finish.setText("Teacher's Order Failed");
+            } else if(OrderState.equals("5")){
+                tv_finish.setText("Parent's Order Failed");
+            } else if(OrderState.equals("6")){
+                tv_finish.setText("Order Succeed");
             }
         } else {
-            tv_finish.setText("NotDone");
+            tv_finish.setText("Wait Booking");
         }
         tv_orderTime.setText("Time: " + OrderDay + getResult(DayAdapter.hours, DayAdapter.abc, TimeSegment));
         //.....................................支付相关.................................................................

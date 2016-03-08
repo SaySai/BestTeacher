@@ -166,7 +166,7 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
             }
         });
         ll_city_list = (LinearLayout) findViewById(R.id.ll_city_list);
-        tv_city_gps = (TextView) findViewById(R.id.tv_city_gps);
+       // tv_city_gps = (TextView) findViewById(R.id.tv_city_gps);
         lv_city = (ListView) findViewById(R.id.lv_city);
         cityAdapter1 = new CityAdapter(MyDataActivity.this);
         lv_city.setAdapter(cityAdapter1);
@@ -325,7 +325,7 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
         });
         et_TeacherTab3List.setAdapter(courseListAdapter = new CourseListAdapter(MyDataActivity.this));
         ArrayList<String> strings = new ArrayList<>();
-        strings.add("");
+        //strings.add("");
 //        strings.add("");
 //        strings.add("");
 //        strings.add("");
@@ -492,18 +492,21 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
     public void updateTeacher() {
         Map<String, String> dataParas = new HashMap<>();
         dataParas.put("TeacherUserName", HaojiajiaoApplication.userName);
-        ifStrTrue(dataParas, "TeacherEmail", et_TeacherTab2Email);
-        ifStrTrue(dataParas, "TeacherGender", et_TeacherTab2Sax);
-        ifStrTrue(dataParas, "TeacherTel", et_TeacherTab2Phone);
-        ifStrTrue(dataParas, "TeacherAge", et_TeacherTab2Age);
-        if (et_TeacherTab2City.getText().toString() != null && et_TeacherTab2City.getText().toString().length() > 0) {
-            dataParas.put("TeacherCity", et_TeacherTab2City.getText().toString());
-        }
-        ifStrTrue(dataParas, "TeacherPaypalAccount", et_TeacherTab2ZPay);
-        ifStrTrue(dataParas, "TeacherSelfCv", et_TeacherTab2Sulf);
-        ifStrTrue(dataParas, "TeacherName", et_TeacherTab2Name);
-        dataParas.put("TeacherCharge", et_money.getText().toString());
-        dataParas.put("TeacherLesson", getCourseModel(models));
+        Log.e("MyDataAct","username:"+HaojiajiaoApplication.userName);
+        dataParas.put("TeacherTel",et_TeacherTab2Phone.getText().toString());
+        Log.e("MyDataAct","Tel:"+et_TeacherTab2Phone.getText().toString());
+        //ifStrTrue(dataParas, "TeacherEmail", et_TeacherTab2Email);
+        //ifStrTrue(dataParas, "TeacherGender", et_TeacherTab2Sax);
+        //ifStrTrue(dataParas, "TeacherTel", et_TeacherTab2Phone);
+        //ifStrTrue(dataParas, "TeacherAge", et_TeacherTab2Age);
+        //if (et_TeacherTab2City.getText().toString() != null && et_TeacherTab2City.getText().toString().length() > 0) {
+            //dataParas.put("TeacherCity", et_TeacherTab2City.getText().toString());
+        //}
+        //ifStrTrue(dataParas, "TeacherPaypalAccount", et_TeacherTab2ZPay);
+        //ifStrTrue(dataParas, "TeacherSelfCv", et_TeacherTab2Sulf);
+        //ifStrTrue(dataParas, "TeacherName", et_TeacherTab2Name);
+        //dataParas.put("TeacherCharge", et_money.getText().toString());
+        //dataParas.put("TeacherLesson", getCourseModel(models));
         Log.e("MyDataAct","course:"+getCourseModel(models));
         requestHandler.sendHttpRequestWithParamByGet(GoodTeacherURL.updateTeacher, dataParas, RequestTag.updateTeacher);
     }
@@ -551,6 +554,7 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
                 setEditString(et_TeacherTab2ZPay, total1.optString("teacherPaypalAccount"));
                 setEditString(et_TeacherTab2Sulf, total1.optString("teacherSelfCv"));
                 setEditString(et_money, total1.optString("teacherCharge"));
+                setEditString(et_TeacherTab2Age,total1.optString("teacherAge"));
                 lessons = total1.optString("teacherLesson");
                 if (lessons != null && lessons.length() > 2) {
                     if (lessons.indexOf("-") != -1) {
@@ -621,7 +625,7 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
         } else if (response.requestTag.toString().equals("updateParent")) {
             String status = response.responseStatus + "";
             if (status.equals("1")) {
-                ToastUtil.showLong(MyDataActivity.this, "Successful modification");
+                ToastUtil.showLong(MyDataActivity.this, "Successful modification!");
             } else {
                 ToastUtil.showLong(MyDataActivity.this, "Modify failed");
             }

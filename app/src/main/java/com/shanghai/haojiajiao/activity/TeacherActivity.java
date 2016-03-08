@@ -535,7 +535,7 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 setEditString(iv_sex, total1.optString("teacherGender") + "");
                 setEditString(tv_age, "Age: "+total1.optString("teacherAge") + "");
                 setEditString(tv_city, "City: "+total1.optString("teacherCity") + "");
-                setEditString(tv_pays, "Price: "+total1.optString("TeacherCharge") + "");
+                setEditString(tv_pays, "Price: "+total1.optString("teacherCharge") + "");
                 setEditString(tv_course, total1.optString("teacherLesson") + "");
                 setEditString(tv_content, total1.optString("teacherSelfCv") + "");
                 teacherUserNames = total1.optString("teacherUserName") + "";

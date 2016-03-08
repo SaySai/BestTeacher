@@ -23,16 +23,19 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="My Data"
+            android:text="MY DATA"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
     </RelativeLayout>
 
+
+
+
     <ScrollView
         android:id="@+id/sv_tab1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:visibility="gone">
 
         <LinearLayout
@@ -48,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dip"
                 android:layout_marginTop="16dip"
-                android:text="Personal information" />
+                android:text="Personal Information" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,6 +78,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null"
                         android:ems="15" />
                 </LinearLayout>
@@ -96,7 +100,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="36dip"
-                        android:text="Sax：" />
+                        android:text="Sex：" />
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Sax"
@@ -104,6 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
+                        android:gravity="center_horizontal"
                         android:ems="15" />
                 </LinearLayout>
 
@@ -131,6 +136,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null"
                         android:ems="15" />
                 </LinearLayout>
@@ -158,7 +164,9 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null"
+                        android:editable="false"
                         android:ems="15" />
                 </LinearLayout>
 
@@ -186,6 +194,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null"
                         android:ems="10" />
                 </LinearLayout>
@@ -222,10 +231,37 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dip"
+                        android:gravity="center_horizontal"
                         android:background="@null"
                         android:maxLines="1"
                         android:singleLine="true" />
                 </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_city_list_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="right|center_vertical"
+                    android:text="Choose city  "
+                    android:background="@color/tab_no_press_color"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    android:layout_marginTop="0dp"
+                    />
+
+                <ListView
+                    android:id="@+id/lv_city_teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_no_press_color"/>
             </LinearLayout>
 
             <ImageView
@@ -235,7 +271,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dip">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:id="@+id/ll_teachers"
@@ -286,7 +322,7 @@
                         android:layout_marginBottom="4dip"
                         android:layout_marginLeft="16dip"
                         android:layout_marginTop="16dip"
-                        android:text="experience：" />
+                        android:text="Experience：" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -297,41 +333,20 @@
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Sulf"
-                        style="@style/name_tab_style"
-                        android:layout_width="match_parent"
-                        android:layout_height="70dip"
-                        android:layout_marginLeft="30dip"
-                        android:layout_marginRight="30dip"
-                        android:layout_marginTop="5dip"
-                        android:background="@null"
-                        android:hint="You can write down your past learning and teaching experience.！"
-                        android:imeOptions="actionDone"
-                        android:singleLine="true" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_city_list_teacher"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:id="@+id/tv_city_gps_teacher"
+                        style="@style/textview_style_small"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@android:color/white"
-                        android:gravity="center_vertical"
-                        android:padding="8dip"
-                        android:text="当前定位：湛江市"
-                        android:textColor="@android:color/black"
-                        android:textSize="14dip" />
-
-                    <ListView
-                        android:id="@+id/lv_city_teacher"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dip" />
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginRight="30dip"
+                        android:layout_marginTop="20dip"
+                        android:layout_marginBottom="20dp"
+                        android:background="@null"
+                        android:hint="You can write down your past learning and teaching experience."
+                        android:imeOptions="actionDone"
+                        android:singleLine="false" />
                 </LinearLayout>
+
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -344,7 +359,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dip"
                     android:layout_marginTop="16dip"
-                    android:text="My course" />
+                    android:text="My Course" />
 
                 <ImageView
                     android:id="@+id/et_TeacherTab3Add"
@@ -367,7 +382,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="fee"
+                    android:text="Price:"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -378,7 +393,7 @@
                     android:layout_marginLeft="12dip"
                     android:layout_marginRight="12dip"
                     android:ems="5"
-                    android:hint="Fee:"
+                    android:hint="fee"
                     android:imeOptions="actionDone"
                     android:inputType="number"
                     android:maxLines="1"
@@ -438,7 +453,7 @@
         <LinearLayout
             android:id="@+id/ll_parent_tab2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@id/rl_title"
             android:orientation="vertical"
             android:visibility="visible">
@@ -476,6 +491,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null" />
                 </LinearLayout>
 
@@ -502,6 +518,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null" />
                 </LinearLayout>
 
@@ -528,7 +545,9 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@null" />
+                        android:gravity="center_horizontal"
+                        android:background="@null"
+                        android:editable="false"/>
                 </LinearLayout>
 
                 <ImageView
@@ -554,6 +573,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null" />
                 </LinearLayout>
             </LinearLayout>
@@ -565,6 +585,36 @@
                 android:layout_marginLeft="16dip"
                 android:layout_marginTop="16dip"
                 android:text="Student Information" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_city_list"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="right|center_vertical"
+                    android:text="Choose city  "
+                    android:background="@color/tab_no_press_color"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    android:layout_marginTop="0dp"
+                    />
+
+                <ListView
+                    android:id="@+id/lv_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_no_press_color" />
+
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -591,6 +641,7 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:background="@null" />
                 </LinearLayout>
 
@@ -625,11 +676,14 @@
                         style="@style/name_tab_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:layout_marginLeft="8dip"
                         android:background="@null"
                         android:maxLines="1"
                         android:singleLine="true" />
                 </LinearLayout>
+
+
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -664,6 +718,7 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:imeOptions="actionNext"
+                            android:gravity="center_horizontal"
                             android:maxLines="1"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -697,6 +752,7 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:imeOptions="actionNext"
+                            android:gravity="center_horizontal"
                             android:maxLines="1"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -730,36 +786,17 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:imeOptions="actionDone"
+                            android:gravity="center_horizontal"
                             android:maxLines="1"
                             android:singleLine="true" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/ll_city_list"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone">
 
-                        <TextView
-                            android:id="@+id/tv_city_gps"
-                            android:layout_width="match_parent"
-                            android:layout_height="22dip"
-                            android:background="@android:color/white"
-                            android:gravity="center_vertical"
-                            android:paddingLeft="8dip"
-                            android:text="当前定位：湛江市"
-                            android:textColor="@android:color/black"
-                            android:textSize="14dip" />
 
-                        <ListView
-                            android:id="@+id/lv_city"
-                            android:layout_width="match_parent"
-                            android:layout_height="100dip"
-                            android:visibility="visible" />
-                    </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -784,5 +821,11 @@
 
         </LinearLayout>
 
+
+
     </ScrollView>
+
+
+
+
 </LinearLayout>

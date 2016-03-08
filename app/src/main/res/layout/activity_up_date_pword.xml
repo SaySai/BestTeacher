@@ -130,7 +130,7 @@
         android:background="@drawable/signup_style_corners_red_theme"
         android:gravity="center"
         android:padding="10dip"
-        android:text="submit"
+        android:text="SUBMIT"
         android:textColor="@android:color/white"
         android:textSize="@dimen/title_text_size" />
 </RelativeLayout>

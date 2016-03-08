@@ -134,7 +134,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
 //            }
 //        });
         loadingDialog = new LoadingDialog(getActivity());
-        tv_city_gps = (TextView) contentView.findViewById(R.id.tv_city_gps);
+        //tv_city_gps = (TextView) contentView.findViewById(R.id.tv_city_gps);
         lv_city = (ListView) contentView.findViewById(R.id.lv_city);
         lv_city.setAdapter(cityAdapter = new CityAdapter(getActivity()));
         tv_teacher = (TextView) contentView.findViewById(R.id.tv_teacher);

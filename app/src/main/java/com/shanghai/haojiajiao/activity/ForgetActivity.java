@@ -68,7 +68,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
         long user = preferences.getLong("endTime", 0);
         if (c.getTimeInMillis() >= user) {
             ifNext = true;
-            tv_finish.setText("获取验证码");
+            tv_finish.setText("Get verification code");
         } else {
             ifNext = false;
             tv_finish.setText((int) (Math.abs(c.getTimeInMillis() - user)) / 1000 + "秒");
@@ -98,7 +98,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
                         tv_finish.setText(60 + "second(s)");
                         handler.sendMessageDelayed(handler.obtainMessage(0), 1000);
                     } else {
-                        ToastUtil.showLong(this, "请输入您注册本应用的时候使用的手机号！");
+                        ToastUtil.showLong(this, "Please type the phone number for the registration.");
                     }
                 }
 
@@ -118,7 +118,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
                 long user = preferences.getLong("endTime", 0);
                 if (c.getTimeInMillis() >= user) {
                     ifNext = true;
-                    tv_finish.setText("获取验证码");
+                    tv_finish.setText("Get verification code");
                     ToastUtil.showLong(ForgetActivity.this, "Verification code has been sent to your phone and your SMS should arrive in 60 second(s)");
                 } else {
                     tv_finish.setText((int) (Math.abs(c.getTimeInMillis() - user)) / 1000 + "second(s)");
@@ -217,7 +217,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
                 JSONObject total1 = new JSONObject(dataStr);
                 String responsestatus = total1.optString("result");
                 if (responsestatus.equals("1")) {
-                    new MsgDialog(ForgetActivity.this, "密码修改成功！", false, "", new MsgLisenner() {
+                    new MsgDialog(ForgetActivity.this, "Password changed successfully!", false, "", new MsgLisenner() {
                         @Override
                         public void goback() {
                             finish();
