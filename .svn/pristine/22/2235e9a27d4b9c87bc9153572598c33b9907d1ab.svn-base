@@ -1,0 +1,1142 @@
+[
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_or_sign_dialog.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\login_or_sign_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_block_popup.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_comments_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_comments_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_voice_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_ext_pager.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_ext_pager.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_notice.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_notice.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_test.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sign_up.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text1_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\text1_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_order_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_my_order_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\login_or_sign_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\login_or_sign_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\empty_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\empty_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_thing.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_order_thing.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_system_msg.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_system_msg.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\teacher_evaluate_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\teacher_evaluate_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_evaluate.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_evaluate.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_conversation_member.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_system_msg.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_system_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_booking_setting_day.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_booking_setting_day.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\booking_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\booking_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_conversation_member_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_choose.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\dialog_choose.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\item.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_rich_content_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_image_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_system_conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text1_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\text1_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_rich_content_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_input_menus.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_notification_loading.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_notification_loading.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\demo.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\demo.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_preview_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_avatar.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\choose_avatar.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pay.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_pay.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\booking_dialog.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\booking_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_camera.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\calendar_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_up_date_pword.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_up_date_pword.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_do_evaluate.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_do_evaluate.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_notice_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_notice_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\text_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_teacher.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_teacher.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\day_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\day_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_text_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_discussion_notification_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_webview.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_webview.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_selected_pictrue.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_selected_pictrue.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ptr_grid.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_ptr_grid.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_photo2.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_photo2.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_notice.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_vo_provider.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_evaluate.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_evaluate.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_base_conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_base_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_base_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_information_notification_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\order_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\order_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_multi_rich_content_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_multi_rich_content_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_location_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_location_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_calledside_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_calledside_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\week.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.squareup\\android-times-square\\1.6.4\\res\\layout\\week.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_choose.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\dialog_choose.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_public_service_sub_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_photo.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_photo.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_vo_provider.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_vo_provider.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_messageinput.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_dialog_alter.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragement_my_main.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\fragement_my_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_messageinput.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_messageinput.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\teacher_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\teacher_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_plugins.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_public_service_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\calendar_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notice.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_notice.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragement_home_page_main.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\fragement_home_page_main.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_messagelist.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_order_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_my_order_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_txt_provider.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\teacher_evaluate_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\teacher_evaluate_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_dialog.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_sub_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_public_service_sub_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\week.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.squareup\\android-times-square\\1.6.4\\res\\layout\\week.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_camera.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ui_voice_cover.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ui_voice_cover.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_input_menu.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_up_date_pword.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_up_date_pword.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_thing.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_order_thing.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_system_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_system_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_discussion_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_txt_provider.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_txt_provider.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\layout_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\item.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_booking_setting_day.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_booking_setting_day.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_vo_popup.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_emoji_grid.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_emoji_grid.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\conversationlist.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\conversationlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leave.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_leave.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\month.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.squareup\\android-times-square\\1.6.4\\res\\layout\\month.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_sign_up.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_calledside_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_calledside_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\city_list1.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\city_list1.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\loading_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\loading_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\pay_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragement_message_main.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\fragement_message_main.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_emoji_grid.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_emoji_grid.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_text_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_text_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_conversation_member.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_conversation_member.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\text_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ptr_grid.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_ptr_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_callside_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_callside_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\course_sthing_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\course_sthing_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_activity.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_activity.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragement_message_main.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\fragement_message_main.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_avatar.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\choose_avatar.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_albums.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_albums.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_text_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_text_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_discussion_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_discussion_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_error.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\view_error.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_error.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\view_error.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forget.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_forget.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_rich_content_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_rich_content_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_messagelist.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_messagelist.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_notice_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_notice_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_forget.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_forget.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_progress.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_progress.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_empty.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\view_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\month.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.squareup\\android-times-square\\1.6.4\\res\\layout\\month.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_notification_loading.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_notification_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_progress.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_progress.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_data.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_my_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay_dialog.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\pay_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_comments_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_comments_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_emoji_txt.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_emoji_txt.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_booking_setting.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_booking_setting.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_block.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_emoji_txt.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_emoji_txt.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_empty.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\view_empty.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\city_list2.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\city_list2.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_selected_pictrue.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_selected_pictrue.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_input.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_group_conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_ext_pager.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_ext_pager.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_data.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_my_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_group_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_group_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_block.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_preview_fragment.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_preview_fragment.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\city_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\city_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_preview.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_preview.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_text_btn.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_text_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_simple_dropdown_hint.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_simple_dropdown_hint.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_public_service_inf.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_image_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_image_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_search.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_public_service_search.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_discussion_notification_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_discussion_notification_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_loading.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\view_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menus.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_input_menus.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_search.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_simple_dropdown_hint.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_simple_dropdown_hint.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\day_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\day_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_webview.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_webview.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menu.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_input_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_input.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_vo_popup.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_vo_popup.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_albums.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_albums.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_callside_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_callside_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_booking_setting.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_booking_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_system_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_system_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_conversation_member_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_conversation_member_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ui_voice_cover.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ui_voice_cover.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\empty_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\empty_layout.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_search.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_search.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_location_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_location_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_input_menu_item.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_input_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_loading.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\view_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\teacher_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\teacher_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_preview.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_preview.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_dialog.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\layout_dialog.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_plugins.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_plugins.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_information_notification_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_information_notification_message.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_system_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_system_conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_include.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_leave.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_leave.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_app_service_conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\course_list_layout.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\course_list_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\conversation.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fragment_base_setting.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_do_evaluate.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_do_evaluate.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\conversationlist.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\conversationlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_albums.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_albums.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fragment_base_setting.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fragment_base_setting.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_public_service_inf.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_public_service_inf.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_teacher.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_teacher.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_photo.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_ac_albums.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_ac_albums.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\order_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\order_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_leave_list.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_leave_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_rich_content_message.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_rich_content_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\demo.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\demo.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_test.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_activity.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_activity.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_app_service_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_app_service_conversation.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_wi_block_popup.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_wi_block_popup.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_conversationlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragement_my_main.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\fragement_my_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notice.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_notice.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\course_dialog.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\course_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_dialog_alter.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_dialog_alter.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_conversation.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_photo2.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_photo2.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_public_service_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_public_service_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_pay.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\activity_pay.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\msg_leave_list.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\layout\\msg_leave_list.xml"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragement_home_page_main.xml",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\layout\\fragement_home_page_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_item_voice_message.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_item_voice_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rc_fr_conversationlist.xml",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\exploded-aar\\Haojiajiao\\IMKit\\unspecified\\res\\layout\\rc_fr_conversationlist.xml"
+    }
+]

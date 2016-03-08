@@ -1,0 +1,169 @@
+package com.shanghai.haojiajiao.activity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.base.BaseActivity;
+
+public class EvaluateActivity extends BaseActivity implements View.OnClickListener {
+    private ImageView iv_back;
+    private ImageView iv_userIcon;
+    private TextView tv_username;
+    private TextView tv_times;
+    private ImageView ratingBar0, ratingBar1, ratingBar2, ratingBar3, ratingBar4;
+    private EditText et_content;
+    private TextView tv_up;
+    private FinishReceiver receiver;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_do_evaluate);
+        receiver = new FinishReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(EvaluateActivity.class.getCanonicalName());
+        registerReceiver(receiver, intentFilter);
+        iv_back = (ImageView) findViewById(R.id.iv_back);
+        iv_back.setOnClickListener(this);
+        iv_userIcon = (ImageView) findViewById(R.id.iv_userIcon);
+        tv_username = (TextView) findViewById(R.id.tv_username);
+        tv_times = (TextView) findViewById(R.id.tv_times);
+        ratingBar0 = (ImageView) findViewById(R.id.ratingBar0);
+        ratingBar0.setOnClickListener(this);
+        ratingBar1 = (ImageView) findViewById(R.id.ratingBar1);
+        ratingBar1.setOnClickListener(this);
+        ratingBar2 = (ImageView) findViewById(R.id.ratingBar2);
+        ratingBar2.setOnClickListener(this);
+        ratingBar3 = (ImageView) findViewById(R.id.ratingBar3);
+        ratingBar3.setOnClickListener(this);
+        ratingBar4 = (ImageView) findViewById(R.id.ratingBar4);
+        ratingBar4.setOnClickListener(this);
+        et_content = (EditText) findViewById(R.id.et_content);
+        tv_up = (TextView) findViewById(R.id.tv_up);
+        tv_up.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switchRatingBar(v.getId());
+        switch (v.getId()) {
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_up:
+                finish();
+                break;
+
+        }
+    }
+
+    private void setBar(float number) {
+        if (number < 0.5) {
+            ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+        } else if (number >= 0.5 && number < 1.5) {
+            ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+
+        } else if (number >= 1.5 && number < 2.5) {
+            ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+
+        }
+        if (number >= 2.5 && number < 3.5) {
+            ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+            ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+        }
+        if (number >= 3.5 && number < 4.5) {
+            ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+        }
+        if (number >= 4.5 && number <= 5) {
+            ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+            ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+        }
+    }
+
+    private void switchRatingBar(int id) {
+        switch (id) {
+            case R.id.ratingBar0:
+                ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                break;
+            case R.id.ratingBar1:
+                ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                break;
+            case R.id.ratingBar2:
+                ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                break;
+            case R.id.ratingBar3:
+                ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_empty));
+                break;
+            case R.id.ratingBar4:
+                ratingBar0.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar1.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar2.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar3.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                ratingBar4.setImageDrawable(getDrawable(R.mipmap.ic_star_fill));
+                break;
+        }
+    }
+
+    public class FinishReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (EvaluateActivity.class.getCanonicalName().equals(intent.getAction())) {
+                finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+}

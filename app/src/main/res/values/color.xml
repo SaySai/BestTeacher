@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <!-- 透明1 -->
+    <color name="half_transparent">#30000000</color>
+    <!-- 透明2 -->
+    <color name="half_transparent1">#10000000</color>
+    <!-- 半透明 -->
+    <color name="half_transparent2">#60000000</color>
+    <!-- 象牙色 -->
+    <color name="ivory">#FFFFF0</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 绿色 -->
+    <color name="green">#5AB75E</color>
+    <!-- 淡绿色 -->
+    <color name="lightgreen">#e3ffe4</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 天蓝色 -->
+    <color name="skyblue">#87CEEB</color>
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+    <!-- 灰色 -->
+    <color name="gray">#484848</color>
+    <!-- 分割线的颜色 -->
+    <color name="separatorLine">#B0B0B0</color>
+    <!--xml中主背景色-->
+    <color name="background_color">#F2F4F5</color>
+    <!--项目主体色,未被按下-->
+    <color name="theme_color">#66CDAA</color>
+    <!--项目主体色,被按下-->
+    <color name="theme_color_pressed">#79CDCD</color>
+    <!-- 钱币颜色 -->
+    <color name="money_color">#F97A09</color>
+    <!-- tab未被按下 -->
+    <color name="tab_no_press_color">#1ABC9C</color>
+    <!-- tab被按下 -->
+    <color name="tab_press_color">#16A085</color>
+    <!-- 大型文字颜色,主要用于主标题栏 -->
+    <color name="text_color_big">#383838</color>
+    <!-- 中文字颜色 ,主要用于副标题栏-->
+    <color name="text_color_middle">#5F5F5F</color>
+    <!-- 小文字颜色，主要用于正文栏 -->
+    <color name="text_color_small">#949494</color>
+    <color name="green_down">#9BC848</color>
+    <!-- 标题栏文字颜色 -->
+    <color name="title_text_color">#ffffff</color>
+    <color name="gray_light">#D9D9D9</color>
+    <color name="gray_dark">#2e2e2e</color>
+    <!-- 副标题颜色 -->
+    <color name="sub_title_color">#5F5F5F</color>
+    <color name="province_line_border">#C7C7C7</color>
+
+
+</resources>

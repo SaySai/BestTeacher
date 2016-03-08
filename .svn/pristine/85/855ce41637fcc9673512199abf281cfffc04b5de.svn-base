@@ -1,0 +1,601 @@
+package com.shanghai.haojiajiao.activity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.adapter.CalendarAdapter;
+import com.shanghai.haojiajiao.adapter.TeacherEvaluateAdapter;
+import com.shanghai.haojiajiao.app.HaojiajiaoApplication;
+import com.shanghai.haojiajiao.base.BaseActivity;
+import com.shanghai.haojiajiao.model.BroadCastAction;
+import com.shanghai.haojiajiao.model.CalendarModel;
+import com.shanghai.haojiajiao.model.TeacherEvaluateModel;
+import com.shanghai.haojiajiao.util.HttpUtil.GoodTeacherURL;
+import com.shanghai.haojiajiao.util.HttpUtil.RequestTag;
+import com.shanghai.haojiajiao.util.HttpUtil.ResponseOwn;
+import com.shanghai.haojiajiao.weight.ListViewForScrollView;
+import com.shanghai.haojiajiao.weight.LoadingDialog;
+import com.shanghai.haojiajiao.weight.LoginDialog;
+import com.shanghai.haojiajiao.weight.LoginLisenner;
+import com.shanghai.haojiajiao.weight.MyGridView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
+
+/**
+ * 教师详情
+ */
+public class TeacherActivity extends BaseActivity implements View.OnClickListener {
+    /**
+     * 返回
+     */
+    private ImageView iv_back;
+    /**
+     * 用户头像
+     */
+    private ImageView iv_userIcon;
+    /**
+     * 用户名称
+     */
+    private TextView tv_userName;
+    /**
+     * 用户年龄
+     */
+    private TextView tv_age1;
+    /**
+     * 性别
+     */
+    private ImageView iv_sex;
+    /**
+     * 内容
+     */
+    private TextView tv_content;
+    /**
+     * 用户基本信息
+     */
+    private TextView tv_homePage;
+    /**
+     * 评价
+     */
+    private TextView tv_evaluate;
+    /**
+     * 预约
+     */
+    private TextView tv_booking;
+    /**
+     * 聊天
+     */
+    private TextView tv_message;
+    /**
+     * 用户基本信息切换页面
+     */
+    private LinearLayout ll_homePage_tab1;
+    /**
+     * 评价切换页面
+     */
+    private LinearLayout ll_homePage_tab2;
+    /**
+     * 预约切换页面
+     */
+    private LinearLayout ll_homePage_tab3;
+    /**
+     * tab1按顺序
+     */
+    private TextView tv_age;
+    private TextView tv_city;
+    private TextView tv_pays;
+    private TextView tv_course;
+    private TextView tv_class;
+    private TextView tv_history;
+    private TextView tv_mysulf;
+    /**
+     * tab2按顺序
+     */
+    private TextView tv_count;
+    private ListViewForScrollView listview;
+    /**
+     * tab3
+     */
+    private TextView tv_times, tv_next;
+    private MyGridView gridview;
+    private CalendarAdapter calendarAdapter;
+    private CalendarModel ts = null;
+    private ArrayList<CalendarModel> calendarModels = null;
+    private ArrayList<CalendarModel> calendarModels2 = null;
+    private int oneMouth1 = 0;
+    private int oneMouth2 = 0;
+    private long thisMounthSS = 0;
+    private int twoMouth1 = 0;
+    private int twoMouth2 = 0;
+    private ScrollView scrollView;
+    String str = "This Month";
+    private TeacherEvaluateAdapter teacherEvaluateAdapter;
+    private FinishReceiver receiver;
+    private LoadingDialog loadingDialog;
+    private int id = 0;
+    //...............................................聊天相关..........................................................
+    String Token = "3t2smePRwqNZL+kSZZj6TmAhfU1q45pmBt2Df5Dd6kCUgHNR7ixL/rYzJsjyZ6u//0f0ll9aB1JEN5lMCShKaw==";//test
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_teacher);
+        receiver = new FinishReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        loadingDialog = new LoadingDialog(TeacherActivity.this);
+        intentFilter.addAction(BroadCastAction.TEACHERACTIVITY);
+        registerReceiver(receiver, intentFilter);
+        initView();
+        switchPage(getIntent().getIntExtra("tab", 0));
+        getTeacherInfoByUserName();
+    }
+
+    private void initView() {
+        iv_back = (ImageView) findViewById(R.id.iv_back);
+        iv_userIcon = (ImageView) findViewById(R.id.iv_userIcon);
+        tv_userName = (TextView) findViewById(R.id.tv_userName);
+        tv_age1 = (TextView) findViewById(R.id.tv_age1);
+        iv_sex = (ImageView) findViewById(R.id.iv_sex);
+        tv_content = (TextView) findViewById(R.id.tv_content);
+        tv_homePage = (TextView) findViewById(R.id.tv_homePage);
+        tv_evaluate = (TextView) findViewById(R.id.tv_evaluate);
+        tv_booking = (TextView) findViewById(R.id.tv_booking);
+        tv_message = (TextView) findViewById(R.id.tv_message);
+        ll_homePage_tab1 = (LinearLayout) findViewById(R.id.ll_homePage_tab1);
+        ll_homePage_tab2 = (LinearLayout) findViewById(R.id.ll_homePage_tab2);
+        ll_homePage_tab3 = (LinearLayout) findViewById(R.id.ll_homePage_tab3);
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
+        iv_back.setOnClickListener(this);
+        tv_homePage.setOnClickListener(this);
+        tv_evaluate.setOnClickListener(this);
+        tv_booking.setOnClickListener(this);
+        tv_message.setOnClickListener(this);
+        //tab1
+        tv_age = (TextView) findViewById(R.id.tv_age);
+        tv_city = (TextView) findViewById(R.id.tv_city);
+        tv_pays = (TextView) findViewById(R.id.tv_pays);
+        tv_course = (TextView) findViewById(R.id.tv_course);
+        tv_class = (TextView) findViewById(R.id.tv_class);
+        tv_history = (TextView) findViewById(R.id.tv_history);
+        tv_mysulf = (TextView) findViewById(R.id.tv_mysulf);
+        //tab2
+        tv_count = (TextView) findViewById(R.id.tv_count);
+        listview = (ListViewForScrollView) findViewById(R.id.listview);
+        teacherEvaluateAdapter = new TeacherEvaluateAdapter(this);
+        listview.setAdapter(teacherEvaluateAdapter);
+
+        //tab3
+        tv_times = (TextView) findViewById(R.id.tv_times);
+        tv_next = (TextView) findViewById(R.id.tv_next);
+        gridview = (MyGridView) findViewById(R.id.gridview);
+        calendarAdapter = new CalendarAdapter(this);
+        gridview.setAdapter(calendarAdapter);
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (tv_next.getText().equals(str)) {//calendarModels2
+                    if (calendarModels2.get(position).getChoiceState() == 1) {
+                        Intent intent = new Intent(TeacherActivity.this, BookingSettingDayActivity.class);
+                        intent.putExtra("yearMonth", CalendarAdapter.getCurrentyyyyMM(0));
+                        intent.putExtra("day", calendarModels2.get(position).getDay());
+                        startActivity(intent);
+                    }
+                } else if (tv_next.getText().equals("Next Month")) {//calendarModels
+                    if (calendarModels.get(position).getChoiceState() == 1) {
+                        Intent intent = new Intent(TeacherActivity.this, BookingSettingDayActivity.class);
+                        intent.putExtra("yearMonth", CalendarAdapter.getCurrentyyyyMM(Math.abs(thisMounthSS)));
+                        intent.putExtra("day", calendarModels.get(position).getDay());
+                        startActivity(intent);
+                    }
+                }
+            }
+        });
+        oneMounth();
+        tv_next.setOnClickListener(this);
+        //融云相关start..................................................................................................................
+        String Token = "myefoCuvXwmelBzvApExXQJVbg2IPAqSO8Hao5ZEFyWSlhUwbXdnbABIujtXhwq0CpGgqGtMaX2atstURP94jw==";//test
+        /**
+         * IMKit SDK调用第二步
+         *
+         * 建立与服务器的连接
+         *
+         */
+        if (MainActivity.IF_MSG_IS_INIT_FIRST == 0) {
+            MainActivity.IF_MSG_IS_INIT_FIRST = 1;
+            RongIM.connect(Token, new RongIMClient.ConnectCallback() {
+                @Override
+                public void onTokenIncorrect() {
+                    //Connect Token 失效的状态处理，需要重新获取 Token
+                }
+
+                @Override
+                public void onSuccess(String userId) {
+                    Log.e("MainActivity", "——onSuccess— -" + userId);
+                }
+
+                @Override
+                public void onError(RongIMClient.ErrorCode errorCode) {
+                    Log.e("MainActivity", "——onError— -" + errorCode);
+                }
+            });
+            //融云相关end.................................................................................................................
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switch (v.getId()) {
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_homePage:
+                switchPage(0);
+                break;
+            case R.id.tv_evaluate:
+                switchPage(1);
+                break;
+            case R.id.tv_booking:
+                if (HaojiajiaoApplication.IFLOGIN) {
+                    if (!HaojiajiaoApplication.ISSTATE) {
+                        switchPage(2);
+                    }
+                } else {
+                    new LoginDialog(TeacherActivity.this, "Login before you can make an appointment！", new LoginLisenner() {
+                        @Override
+                        public void login() {
+                            Intent intent = new Intent(BroadCastAction.MAINACTIVITY);
+                            sendBroadcast(intent);
+                            Intent intent1 = new Intent(BroadCastAction.TEACHERACTIVITY);
+                            sendBroadcast(intent1);
+                        }
+
+                        @Override
+                        public void sign() {
+                            Intent intent = new Intent(BroadCastAction.MAINACTIVITY);
+                            sendBroadcast(intent);
+                            Intent intent1 = new Intent(BroadCastAction.TEACHERACTIVITY);
+                            sendBroadcast(intent1);
+                        }
+                    }).show();
+                }
+
+                break;
+            case R.id.tv_message:
+                if (HaojiajiaoApplication.IFLOGIN) {
+                    //跳转到聊天
+                    //启动单聊
+                    /**
+                     * 启动单聊
+                     * context - 应用上下文。
+                     * targetUserId - 要与之聊天的用户 Id。
+                     * title - 聊天的标题，如果传入空值，则默认显示与之聊天的用户名称。
+                     */
+                    if (!HaojiajiaoApplication.ISSTATE) {
+
+                        if (RongIM.getInstance() != null) {
+                            RongIM.getInstance().startPrivateChat(this, "1111", "hello");
+                        }
+                    }
+                } else {
+                    new LoginDialog(TeacherActivity.this, "Login before you can make an appointment！", new LoginLisenner() {
+                        @Override
+                        public void login() {
+                            Intent msgIntent = new Intent(MainActivity.class.getCanonicalName());
+                            sendBroadcast(msgIntent);
+                            Intent ntent = new Intent(TeacherActivity.class.getCanonicalName());
+                            sendBroadcast(ntent);
+                            finish();
+                        }
+
+                        @Override
+                        public void sign() {
+                            Intent msgIntent = new Intent(MainActivity.class.getCanonicalName());
+                            sendBroadcast(msgIntent);
+                            Intent ntent = new Intent(TeacherActivity.this, WelcomeActivity.class);
+                            sendBroadcast(ntent);
+                            finish();
+                        }
+                    }).show();
+                }
+                break;
+            case R.id.tv_next:
+
+                if (calendarModels2 == null) {
+                    calendarAdapter.clearData();
+                    oneAddMounth(thisMounthSS);
+                    tv_next.setText(str);
+                } else {
+                    if (tv_next.getText().equals("Next Month")) {
+                        calendarAdapter.clearData();
+                        calendarAdapter.setData(calendarModels2);
+                        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(Math.abs(thisMounthSS)));
+
+                        tv_next.setText(str);
+                    } else if (tv_next.getText().equals(str)) {
+                        calendarAdapter.clearData();
+                        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(0));
+                        calendarAdapter.setData(calendarModels);
+
+                        tv_next.setText("Next Month");
+                    }
+                }
+                break;
+        }
+    }
+
+    private void switchPage(int number) {
+        switch (number) {
+            case 0:
+                //getResources().getColor(R.color.tab_no_press_color);
+                tv_homePage.setTextColor(0xFF1ABC9C);
+                tv_evaluate.setTextColor(Color.BLACK);
+                tv_booking.setTextColor(Color.BLACK);
+                ll_homePage_tab1.setVisibility(View.VISIBLE);
+                ll_homePage_tab2.setVisibility(View.GONE);
+                ll_homePage_tab3.setVisibility(View.GONE);
+                break;
+            case 1:
+                tv_homePage.setTextColor(Color.BLACK);
+                tv_evaluate.setTextColor(0xFF1ABC9C);
+                tv_booking.setTextColor(Color.BLACK);
+                ll_homePage_tab1.setVisibility(View.GONE);
+                ll_homePage_tab2.setVisibility(View.VISIBLE);
+                ll_homePage_tab3.setVisibility(View.GONE);
+                break;
+            case 2:
+                tv_homePage.setTextColor(Color.BLACK);
+                tv_evaluate.setTextColor(Color.BLACK);
+                tv_booking.setTextColor(0xFF1ABC9C);
+                ll_homePage_tab1.setVisibility(View.GONE);
+                ll_homePage_tab2.setVisibility(View.GONE);
+                ll_homePage_tab3.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+
+    private void oneMounth() {
+        calendarModels = new ArrayList<>();
+        for (int a = 0; a < 7; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels.add(ts);
+        }
+        int zhouji = CalendarAdapter.getWeekNumber(0);
+        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(0));
+        int mounts = CalendarAdapter.getCurrentMMM(0);
+        int[] days = CalendarAdapter.isLeapYear(0, 0);
+        int thisDay = CalendarAdapter.getCurrentDatedd();
+        int mountCount = days[mounts];
+        thisMounthSS = (mountCount + 1) * 24 * 60 * 60 * 1000;
+        for (int a = 0; a < zhouji; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels.add(ts);
+        }
+        for (int a = 0; a < mountCount; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(true);
+            ts.setDay(a);
+            ts.setDayTime(CalendarAdapter.getCurrentyyyy_MM(0) + "-" + (a + 1) + " 00:00:00.0");
+            if (a <= (thisDay - 1)) {
+                ts.setChoiceState(0);
+            } else {//����Ϊ�����ʾ����
+                ts.setChoiceState(1);
+            }
+            calendarModels.add(ts);
+        }
+        oneMouth1 = zhouji + mountCount;
+        int lins2 = oneMouth1 % 7;
+        if (lins2 == 0) {
+            calendarAdapter.setData(calendarModels);
+        } else {
+            oneMouth2 = 7 - lins2;
+            for (int a = 0; a < oneMouth2; a++) {
+                ts = new CalendarModel();
+                ts.setClickState(false);
+                calendarModels.add(ts);
+            }
+            calendarAdapter.setData(calendarModels);
+        }
+    }
+
+    private void oneAddMounth(long mouth) {
+        mouth = Math.abs(mouth);
+        calendarModels2 = new ArrayList<>();
+        for (int a = 0; a < 7; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels2.add(ts);
+        }
+        int zhouji = CalendarAdapter.getWeekNumber(mouth);
+//        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(mouth));
+        int[] days = CalendarAdapter.isLeapYear(0, mouth);
+        int mounts = CalendarAdapter.getCurrentMMM(mouth);
+        int mountCount = days[mounts];
+        for (int a = 0; a < zhouji; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels2.add(ts);
+        }
+        for (int a = 0; a < mountCount; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(true);
+            ts.setDay(a);
+            ts.setDayTime(CalendarAdapter.getCurrentyyyy_MM(0) + "-" + (a + 1) + " 00:00:00.0");
+            ts.setChoiceState(1);
+            calendarModels2.add(ts);
+        }
+        twoMouth2 = zhouji + mountCount;
+        int lins2 = twoMouth2 % 7;
+        if (lins2 == 0) {
+            calendarAdapter.setData(calendarModels2);
+        } else {
+            twoMouth2 = 7 - lins2;
+            for (int a = 0; a < twoMouth2; a++) {
+                ts = new CalendarModel();
+                ts.setClickState(false);
+                calendarModels2.add(ts);
+            }
+            calendarAdapter.setData(calendarModels2);
+        }
+    }
+
+    public class FinishReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (BroadCastAction.TEACHERACTIVITY.equals(intent.getAction())) {
+                Intent intent1 = new Intent(TeacherActivity.this, WelcomeActivity.class);
+                startActivity(intent1);
+                finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+
+    @Override
+    public void onRequestError(ResponseOwn response) {
+        loadingDialog.dismiss();
+        super.onRequestError(response);
+    }
+
+    private void getTeacherInfoByUserName() {
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("TeacherUserName", HaojiajiaoApplication.userName);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherInfoByUserName, stringMap, RequestTag.getTeacherInfoByUserName);
+    }
+
+    private void getTeacherEvaluation() {
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("TeacherId", id + "");
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherEvaluation, stringMap, RequestTag.getTeacherEvaluation);
+    }
+
+    @Override
+    public void onRequestSuccess(ResponseOwn response) {
+
+        if (response.requestTag.toString().equals("getTeacherInfoByUserName")) {
+            String dataStr = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr);
+                id = total1.getInt("id");
+                setEditString(tv_userName, total1.getString("teacherName"));
+                setEditString(tv_age1, total1.getString("teacherAge"));
+                //setEditString(iv_sex, total1.getString("teacherGender"));
+                setEditString(tv_age, total1.getString("teacherAge"));
+                setEditString(tv_city, total1.getString("teacherCity"));
+                setEditString(tv_pays, total1.getString("teacherPaypalAccount"));
+                setEditString(tv_course, total1.getString("teacherLesson"));
+                setEditString(tv_content, total1.getString("teacherSelfCv"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            getTeacherEvaluation();
+        } else if (response.requestTag.toString().equals("getTeacherEvaluation")) {
+            loadingDialog.dismiss();
+            String dataStr = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr);
+                JSONArray jsonArray = total1.getJSONArray("result");
+                if (jsonArray != null) {
+                    ArrayList<TeacherEvaluateModel> arrayList = new ArrayList<>();
+                    for (int a = 0; a < jsonArray.length(); a++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(a);
+                        TeacherEvaluateModel model = new TeacherEvaluateModel();
+                        model.setId(jsonObject.getInt("id"));
+                        model.setEvaluationContent(jsonObject.getString("evaluationContent"));
+                        model.setEvaluationRate(jsonObject.getInt("evaluationRate"));
+                        model.setParentId(jsonObject.getInt("parentId"));
+                        model.setTeacherId(jsonObject.getInt("teacherId"));
+                        model.setEvaluationTime(jsonObject.getString("evaluationTime"));
+                        arrayList.add(model);
+                    }
+                    teacherEvaluateAdapter.setData(arrayList);
+                }
+                getTeacherAvailableDate(id + "");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            if (response.requestTag.toString().equals("getTeacherAvailableDate")) {
+                loadingDialog.dismiss();
+                String dataStr1 = response.responseString;
+                try {
+                    JSONObject total1 = new JSONObject(dataStr1);
+                    JSONArray jsonArray = total1.getJSONArray("result");
+                    if (jsonArray != null) {
+                        ArrayList<TeacherEvaluateModel> arrayList = new ArrayList<>();
+                        for (int i = 0; i < calendarModels.size(); i++) {
+                            for (int a = 0; a < jsonArray.length(); a++) {
+                                JSONObject jsonObject = jsonArray.getJSONObject(a);
+                                if (calendarModels.get(i).isClickState()) {
+                                    if (jsonObject.getString("appointmentTime") != null) {
+                                        if (calendarModels.get(i).getDayTime().equals(jsonObject.getString("appointmentTime"))) {
+                                            calendarModels.get(i).setId(jsonObject.getInt("id"));
+                                            calendarModels.get(i).setTeacherId(jsonObject.getInt("teacherId"));
+                                            calendarModels.get(i).setParentId(jsonObject.getInt("parentId"));
+                                            calendarModels.get(i).setAppointment(jsonObject.getString("appointment"));
+                                            calendarModels.get(i).setAppointmentAvailableSegment(jsonObject.getString("appointmentAvailableSegment"));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        for (int i = 0; i < calendarModels2.size(); i++) {
+                            for (int a = 0; a < jsonArray.length(); a++) {
+                                JSONObject jsonObject = jsonArray.getJSONObject(a);
+                                if (calendarModels2.get(i).isClickState()) {
+                                    if (jsonObject.getString("appointmentTime") != null) {
+                                        if (calendarModels2.get(i).getDayTime().equals(jsonObject.getString("appointmentTime"))) {
+                                            calendarModels2.get(i).setId(jsonObject.getInt("id"));
+                                            calendarModels2.get(i).setTeacherId(jsonObject.getInt("teacherId"));
+                                            calendarModels2.get(i).setParentId(jsonObject.getInt("parentId"));
+                                            calendarModels2.get(i).setAppointment(jsonObject.getString("appointment"));
+                                            calendarModels2.get(i).setAppointmentAvailableSegment(jsonObject.getString("appointmentAvailableSegment"));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void getTeacherAvailableDate(String id) {
+        Map<String, String> dataParas = new HashMap<>();
+        dataParas.put("TeacherId", id);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherAvailableDate, dataParas, RequestTag.getTeacherAvailableDate);
+    }
+
+    private void setEditString(TextView editString, String str) {
+        editString.setText(str);
+    }
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="预约订单"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_homePage_tab1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dip"
+            android:background="@drawable/shape_content_backgroud_white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dip"
+                android:layout_marginTop="16dip"
+                android:text="基本信息" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="40dip"
+                android:layout_marginRight="40dip"
+                android:layout_marginTop="8dip"
+                android:background="@color/gray_light" />
+
+
+            <TextView
+                android:id="@+id/tv_teacher"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="教师：" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="城市：" />
+
+            <TextView
+                android:id="@+id/tv_pays"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="收费标准：" />
+
+            <TextView
+                android:id="@+id/tv_course"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="教授课程：" />
+
+            <TextView
+                android:id="@+id/tv_class"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="年级：" />
+
+            <TextView
+                android:id="@+id/tv_history"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="过往经历：" />
+
+            <TextView
+                android:id="@+id/tv_mysulf"
+                style="@style/user_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:text="自我介绍：" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

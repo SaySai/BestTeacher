@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"  android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="修改密码"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:orientation="horizontal"
+            android:paddingTop="8dip">
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dip"
+                android:text="邮箱：" />
+
+            <EditText
+                android:id="@+id/et_userEmail"
+                style="@style/name_tab_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:orientation="horizontal"
+            android:paddingTop="8dip">
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="36dip"
+                android:text="密码：" />
+
+            <EditText
+                android:id="@+id/et_userPassword"
+                style="@style/name_tab_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:orientation="horizontal"
+            android:paddingTop="8dip">
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="36dip"
+                android:text="新密码：" />
+
+            <EditText
+                android:id="@+id/et_newPassword"
+                style="@style/name_tab_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:orientation="horizontal"
+            android:paddingTop="8dip">
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="36dip"
+                android:text="重复新密码：" />
+
+            <EditText
+                android:id="@+id/et_ageinPassword"
+                style="@style/name_tab_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dip"
+        android:layout_marginLeft="48dip"
+        android:layout_marginRight="48dip"
+        android:background="@drawable/signup_style_corners_red_theme"
+        android:gravity="center"
+        android:padding="10dip"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/title_text_size" />
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tv_TName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="公告详情"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dip"
+        android:background="@drawable/shape_content_backgroud_white"
+        android:orientation="vertical"
+        android:paddingBottom="16dip"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:paddingTop="16dip">
+
+        <TextView
+            android:id="@+id/tv_titleName"
+            style="@style/name_test_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公告标题" />
+
+        <TextView
+            android:id="@+id/tv_Times"
+            style="@style/name_tab_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:text="2015.11.12" />
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_marginTop="12dip"
+            android:background="@color/gray_light" />
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:layout_marginTop="12dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/welcome" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/text_content_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="12dip"
+            android:layout_marginTop="20dip"
+            android:text="Teambition 是一个简单,高效的项目协作工具,你可以在这里管理项目,跟踪任务进度"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</LinearLayout>

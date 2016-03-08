@@ -1,0 +1,99 @@
+package com.shanghai.haojiajiao.util.HttpUtil;
+
+/**
+ * Created by Administrator on 2016/1/21.
+ */
+public class GoodTeacherURL {
+    private static final String BaseURL = "http://121.42.140.239:8080/HaoJiaJiao/";
+    /**
+     * 登录接口
+     */
+    public static final String login = BaseURL + "login";
+    /**
+     * 检查邮箱是否被注册了
+     */
+    public static final String checkRegister = BaseURL + "checkRegister";
+    /**
+     * 重置密码（忘记密码）
+     */
+    public static final String resetPassword = BaseURL + "resetPassword";
+    /**
+     * 修改密码
+     */
+    public static final String changePassword = BaseURL + "changePassword";
+    /**
+     * 通过用户名查看家长资料
+     */
+    public static final String getParentInfoByUserName = BaseURL + "getParentInfoByUserName";
+    /**
+     * 修改家长资料
+     */
+    public static final String editParentInfo = BaseURL + "editParentInfo";
+    /**
+     * 家长获取预约信息
+     */
+    public static final String getParentOrderInfo = BaseURL + "getParentOrderInfo";
+    /**
+     * 家长评价教师
+     */
+    public static final String parentEvaluateTeacher = BaseURL + "parentEvaluateTeacher";
+    /**
+     * 通过用户名获取教师资料
+     */
+    public static final String getTeacherInfoByUserName = BaseURL + "getTeacherInfoByUserName";
+    /**
+     * 家长注册接口
+     */
+    public static final String parentRegister = BaseURL + "parentRegister";
+    /**
+     * 教师注册接口
+     */
+    public static final String teacherRegister = BaseURL + "teacherRegister";
+    /**
+     * 获取首页教师列表显示信息
+     */
+    public static final String getTeacherListInfo = BaseURL + "getTeacherListInfo.action";
+    /**
+     * 获取教师可预约时间表
+     */
+    public static final String getTeacherAvailableDateByStartDate = BaseURL + "getTeacherAvailableDateByStartDate";
+    /**
+     * 获取某一天的可预约时间段
+     */
+    public static final String getTeacherAvailableTimeByDate = BaseURL + "getTeacherAvailableTimeByDate";
+    /**
+     * 教师修改/设置可预约时间
+     */
+    public static final String editTeacherAvailableTimeByDate = BaseURL + "editTeacherAvailableTimeByDate";
+    /**
+     * 上传头像
+     */
+    public static final String uploadPortrait = BaseURL + "uploadPortrait";
+    /**
+     * 设置登录状态
+     */
+    public static final String setLoginStatus = BaseURL + "setLoginStatus";
+    /**
+     * 根据评分获取教师信息
+     */
+    public static final String getTeacherByRate = BaseURL + "getTeacherByRate";
+    /**
+     * 获取用户的所有评论
+     */
+    public static final String getTeacherEvaluation = BaseURL + "getTeacherEvaluation";
+    /**
+     * 修改updateTeacher
+     */
+    public static final String updateTeacher = BaseURL + "updateTeacher";
+    /**
+     * updateParent
+     */
+    public static final String updateParent = BaseURL + "updateParent";
+    public static final String getTeacherByCity = BaseURL + "getTeacherByCity";
+    public static final String getTeacherByCharge = BaseURL + "getTeacherByCharge";
+    public static final String searchTeacher = BaseURL + "searchTeacher";
+    public static final String getTeacherAvailableDate = BaseURL + "getTeacherAvailableDate";
+    public static final String getTeacherByLesson = BaseURL + "getTeacherByLesson";
+    //获得上传的头像
+    public static final String getPicUrl = BaseURL + "getPorPath";
+}

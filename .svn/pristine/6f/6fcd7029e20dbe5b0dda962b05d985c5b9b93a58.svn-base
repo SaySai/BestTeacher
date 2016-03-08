@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Teacher information"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_userIcon"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginBottom="16dip"
+        android:layout_marginTop="16dip"
+        android:background="@android:color/holo_red_dark" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_userName"
+            style="@style/name_test_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="惠伟杰" />
+
+        <TextView
+            android:id="@+id/tv_age1"
+            style="@style/text_content_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:text="（21岁）"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/iv_sex"
+            android:layout_width="17dip"
+            android:layout_height="17dip"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="8dip"
+        android:background="@color/gray_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_homePage"
+            style="@style/name_tab_style"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Home" />
+
+        <TextView
+            android:id="@+id/tv_evaluate"
+            style="@style/name_tab_style"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Review" />
+
+        <TextView
+            android:id="@+id/tv_booking"
+            style="@style/name_tab_style"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Book" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            style="@style/name_tab_style"
+            android:layout_width="0dip"
+            android:layout_height="36dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="chat" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:background="@color/gray_light" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_homePage_tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dip"
+                    android:background="@drawable/shape_content_backgroud_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dip"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/name_test_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dip"
+                        android:layout_marginTop="16dip"
+                        android:text="Personal information" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="40dip"
+                        android:layout_marginRight="40dip"
+                        android:layout_marginTop="8dip"
+                        android:background="@color/gray_light" />
+
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54dip"
+                        android:layout_marginTop="8dip"
+                        android:text="Age：" />
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54dip"
+                        android:layout_marginTop="8dip"
+                        android:text="City：" />
+
+                    <TextView
+                        android:id="@+id/tv_pays"
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54dip"
+                        android:layout_marginTop="8dip"
+                        android:text="Fee：" />
+
+                    <TextView
+                        android:id="@+id/tv_course"
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54dip"
+                        android:layout_marginTop="8dip"
+                        android:text="course：" />
+
+                    <TextView
+                        android:id="@+id/tv_class"
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54dip"
+                        android:layout_marginTop="8dip"
+                        android:text="Grede：" />
+
+
+                    <TextView
+                        android:id="@+id/tv_mysulf"
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54dip"
+                        android:layout_marginTop="8dip"
+                        android:text="Experience：" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_homePage_tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dip"
+                            android:text="review（" />
+
+                        <TextView
+                            android:id="@+id/tv_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="55"
+                            android:textColor="@color/tab_no_press_color"
+                            android:textSize="@dimen/list_name_size" />
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="）" />
+                    </LinearLayout>
+
+                    <com.shanghai.haojiajiao.weight.ListViewForScrollView
+                        android:id="@+id/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"></com.shanghai.haojiajiao.weight.ListViewForScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_homePage_tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/user_content_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="18dip"
+                        android:layout_marginTop="5dip"
+                        android:gravity="center"
+                        android:text="book" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip">
+
+                        <TextView
+                            android:id="@+id/tssss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dip"
+                            android:layout_alignParentBottom="true"
+                            android:text="This month:"
+                            android:textColor="@color/tab_no_press_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_times"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dip"
+                            android:layout_marginLeft="4dip"
+                            android:layout_toRightOf="@id/tssss"
+                            android:text="2015.12"
+                            android:textColor="@color/tab_no_press_color"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="Next Month"
+                            android:textColor="@color/tab_no_press_color"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <com.shanghai.haojiajiao.weight.MyGridView
+                        android:id="@+id/gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dip"
+                        android:layout_marginRight="12dip"
+                        android:fadingEdge="none"
+                        android:horizontalSpacing="1dip"
+                        android:numColumns="7"
+                        android:scrollbars="none"
+                        android:verticalSpacing="1dip"></com.shanghai.haojiajiao.weight.MyGridView>
+
+                    <TextView
+                        style="@style/text_content_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dip"
+                        android:layout_marginRight="50dip"
+                        android:layout_marginTop="16dip"
+                        android:text="Tips: green background can make an appointment date, click on the date, continue to choose the time period."
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

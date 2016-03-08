@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tv_titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="预约详情"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dip"
+                android:background="@drawable/shape_content_backgroud_white"
+                android:orientation="vertical"
+                android:padding="20dip">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/name_test_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="预约订单" />
+
+                    <TextView
+                        android:id="@+id/tv_finish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_shape_corners_white_k_red"
+                        android:ems="4"
+                        android:gravity="center"
+                        android:padding="2dip"
+                        android:text="已完成"
+                        android:textColor="#FFCC3300" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_times"
+                    style="@style/text_content_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:text="2016.5.5.2.20"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginRight="6dip"
+                    android:layout_marginTop="12dip"
+                    android:background="@color/gray_light" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    style="@style/user_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="16dip"
+                    android:text="订单编号：" />
+
+                <TextView
+                    android:id="@+id/tv_teacher"
+                    style="@style/user_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="8dip"
+                    android:text="教师：" />
+
+                <TextView
+                    android:id="@+id/tv_orderTime"
+                    style="@style/user_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="8dip"
+                    android:text="预约时间段：" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    style="@style/user_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="8dip"
+                    android:text="收费标准：" />
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    style="@style/user_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dip"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginTop="8dip"
+                    android:text="总价：" />
+
+                <TextView
+                    android:id="@+id/tv_goBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dip"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginRight="12dip"
+                    android:background="@drawable/signup_style_corners_red_theme"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="去评价"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/title_text_size"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/name_test_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dip"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginTop="16dip"
+                    android:text="使用Paypal支付" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dip">
+
+                    <ImageView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/paypal" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        android:padding="16dip">
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="订单编号：" />
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="需安装paypal客户端" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_check"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/checkbox" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_goPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="48dip"
+                    android:layout_marginRight="48dip"
+                    android:layout_marginTop="32dip"
+                    android:background="@drawable/signup_style_corners_red_theme"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="确认，去支付"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/title_text_size"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_backHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="44dip"
+                android:layout_marginRight="44dip"
+                android:layout_marginTop="80dip"
+                android:background="@drawable/button_style_corners_no_stroke_theme"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="返回教师详情"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

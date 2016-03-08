@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="My Data"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_tab1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_tab_teacher2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_title"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginTop="16dip"
+                android:text="Personal information" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="245dip"
+                android:layout_marginTop="12dip"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Name：" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2Name"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="36dip"
+                        android:text="Sax：" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2Sax"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="36dip"
+                        android:text="Age：" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2Age"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Email：" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2Email"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="36dip"
+                        android:text="Phone：" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2Phone"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="10" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:id="@+id/ll_teacher_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="City" />
+
+                    <ImageView
+                        android:layout_width="16dip"
+                        android:layout_height="16dip"
+                        android:gravity="center"
+                        android:src="@mipmap/tab1_icon" />
+
+                    <TextView
+                        android:id="@+id/et_TeacherTab2City"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#EEEEEE" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dip">
+
+                <LinearLayout
+                    android:id="@+id/ll_teachers"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="36dip"
+                        android:text="Paypay account：" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2ZPay"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/ll_teachers1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dip"
+                    android:layout_below="@id/ll_teachers"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:id="@+id/ll_teachers2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_teachers1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/name_test_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_marginTop="16dip"
+                        android:text="experience：" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginRight="30dip"
+                        android:background="#EEEEEE" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2Sulf"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dip"
+                        android:layout_marginLeft="30dip"
+                        android:layout_marginRight="30dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@null"
+                        android:hint="You can write down your past learning and teaching experience.！"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_city_list_teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_city_gps_teacher"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:padding="8dip"
+                        android:text="当前定位：湛江市"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dip" />
+
+                    <ListView
+                        android:id="@+id/lv_city_teacher"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dip" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/name_test_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dip"
+                    android:layout_marginTop="16dip"
+                    android:text="My course" />
+
+                <ImageView
+                    android:id="@+id/et_TeacherTab3Add"
+                    android:layout_width="44dip"
+                    android:layout_height="44dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dip"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@mipmap/add_img" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fee"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginRight="12dip"
+                    android:ems="5"
+                    android:hint="Fee:"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUD/H"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/et_TeacherTab3List"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:layout_marginTop="24dip"
+                    android:background="@drawable/signup_style_corners_red_theme"
+                    android:ems="13"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="Submit"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/title_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_tab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_parent_tab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_title"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginTop="16dip"
+                android:text="Parent Information" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="163dip"
+                android:layout_marginTop="12dip"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Name：" />
+
+                    <EditText
+                        android:id="@+id/et_parentTab2Name"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Sex：" />
+
+                    <EditText
+                        android:id="@+id/et_parentTab2Sax"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Email：" />
+
+                    <EditText
+                        android:id="@+id/et_parentTab2Email"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Phone：" />
+
+                    <EditText
+                        android:id="@+id/et_parentTab2Phone"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_marginTop="16dip"
+                android:text="Student Information" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="204dip"
+                android:layout_marginTop="12dip"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="Name：" />
+
+                    <EditText
+                        android:id="@+id/et_ChildTab2Name"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:id="@+id/ll_city_listShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="36dip"
+                        android:text="City" />
+
+                    <ImageView
+                        android:layout_width="16dip"
+                        android:layout_height="16dip"
+                        android:gravity="center"
+                        android:src="@mipmap/tab1_icon" />
+
+                    <TextView
+                        android:id="@+id/et_ChildTab2City"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="122dip">
+
+                    <ImageView
+                        android:id="@+id/iv_tab123"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#EEEEEE" />
+
+                    <LinearLayout
+                        android:id="@+id/iv_tab223"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_below="@id/iv_tab123"
+
+                        android:orientation="horizontal"
+                        android:paddingTop="8dip">
+
+                        <TextView
+                            style="@style/name_tab_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dip"
+                            android:text="Sex：" />
+
+                        <EditText
+                            android:id="@+id/et_ChildTab2Sax"
+                            style="@style/name_tab_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_tab323"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@id/iv_tab223"
+                        android:background="#EEEEEE" />
+
+                    <LinearLayout
+                        android:id="@+id/iv_tab423"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_below="@id/iv_tab323"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dip">
+
+                        <TextView
+                            style="@style/name_tab_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dip"
+                            android:text="Age：" />
+
+                        <EditText
+                            android:id="@+id/et_ChildTab2Age"
+                            style="@style/name_tab_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_tab523"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@id/iv_tab423"
+                        android:background="#EEEEEE" />
+
+                    <LinearLayout
+                        android:id="@+id/iv_tab623"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_below="@id/iv_tab523"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dip">
+
+                        <TextView
+                            style="@style/name_tab_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="36dip"
+                            android:text="Email：" />
+
+                        <EditText
+                            android:id="@+id/et_ChildTab2Email"
+                            style="@style/name_tab_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:imeOptions="actionDone"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_city_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_city_gps"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dip"
+                            android:background="@android:color/white"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dip"
+                            android:text="当前定位：湛江市"
+                            android:textColor="@android:color/black"
+                            android:textSize="14dip" />
+
+                        <ListView
+                            android:id="@+id/lv_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dip"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dip"
+                    android:layout_marginTop="24dip"
+                    android:background="@drawable/signup_style_corners_red_theme"
+                    android:ems="13"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="Submit"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/title_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

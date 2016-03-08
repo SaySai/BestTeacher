@@ -1,0 +1,29 @@
+package com.shanghai.haojiajiao.adapter;
+
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.base.AdapterBase;
+
+/**
+ * Created by Administrator on 2015/12/21.
+ */
+public class OrderAdapter<String> extends AdapterBase<String> {
+    public OrderAdapter(Activity act) {
+        super(act);
+    }
+
+    @Override
+    protected View getExView(int position, View convertView, ViewGroup parent, LayoutInflater inflater) {
+        convertView = inflater.inflate(R.layout.order_list, null);
+        TextView tv_times = (TextView) convertView.findViewById(R.id.tv_times);
+        TextView tv_number = (TextView) convertView.findViewById(R.id.tv_number);
+        TextView tv_teacher = (TextView) convertView.findViewById(R.id.tv_teacher);
+        TextView tv_finish = (TextView) convertView.findViewById(R.id.tv_finish);
+        return convertView;
+    }
+}

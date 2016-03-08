@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="开放预约时间"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_homePage_tab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dip"
+        android:background="@drawable/shape_content_backgroud_white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/name_test_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dip"
+            android:text="登陆设置" />
+
+        <TextView
+            android:id="@+id/tv_content1"
+            style="@style/text_explain_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:text="1.可开放时间为：本月剩余时间+下一个整月；"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_content2"
+            style="@style/text_explain_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:text="2.点击日期后会进入具体时间段，设定时间段后该时间段和当月日期会变成绿色，表明设定成功."
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="8dip"
+        android:background="@color/gray_light" />
+
+    <TextView
+        style="@style/name_tab_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dip"
+        android:text="预约" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip">
+
+                <TextView
+                    android:id="@+id/tssss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dip"
+                    android:layout_alignParentBottom="true"
+                    android:text="当月月份:"
+                    android:textColor="@color/tab_no_press_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="4dip"
+                    android:layout_toRightOf="@id/tssss"
+                    android:text="2015.12"
+                    android:textColor="@color/tab_no_press_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="下一月"
+                    android:textColor="@color/tab_no_press_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.shanghai.haojiajiao.weight.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:fadingEdge="none"
+                android:horizontalSpacing="1dip"
+                android:numColumns="7"
+                android:scrollbars="none"
+                android:verticalSpacing="1dip"></com.shanghai.haojiajiao.weight.MyGridView>
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/text_content_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="16dip"
+                android:text="提示：绿色北京为可预约日期，点击日期后，继续选择时间段。"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

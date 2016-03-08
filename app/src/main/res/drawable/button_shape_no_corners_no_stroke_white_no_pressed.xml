@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >  
+     <!-- 主要用来设置白色背景,用于解决魅族手机白色显示有问题而设置的 -->
+    <solid 
+        android:color="#FFFFFF" 
+        />  
+</shape>

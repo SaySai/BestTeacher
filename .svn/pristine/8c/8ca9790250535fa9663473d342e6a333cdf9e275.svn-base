@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="head_title_text_style">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/title_text_color</item>
+    </style>
+
+    <!-- 手机号码最大位数限制 -->
+    <style name="numberDigit">
+        <item name="android:maxLength">11</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <!-- 系統色Button按钮统一样式:包括背景,字体大小,颜色 -->
+    <style name="buttonStyle_theme_color">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_style_corners_no_stroke_theme</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+    <!-- 灰色Button,有圆角按钮统一样式:包括背景,字体大小,颜色 -->
+    <style name="buttonStyle_corners_gray_color">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_style_no_corners_stroke_real_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- 分割线 :铺满整个水平面 -->
+    <style name="separatorLine">
+        <item name="android:background">@color/separatorLine</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0px</item>
+    </style>
+    <!-- 分割线 :铺满整个水平面 -->
+    <style name="separatorLine1">
+        <item name="android:background">#d9e8f4</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <!-- 主标题 -->
+    <style name="textview_style_big">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_color_big</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- 副标题 -->
+    <style name="textview_style_middle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color_middle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- 正文内容 -->
+    <style name="textview_style_small">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_color_small</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 自定义弹出框 -->
+
+    <style name="MyDialog" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="NumberProgressBar_Default">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="progress_max">100</item>
+        <item name="progress_current">0</item>
+
+        <item name="progress_unreached_color">#CCCCCC</item>
+        <item name="progress_reached_color">#3498DB</item>
+
+        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_color">#3498DB</item>
+
+        <item name="progress_reached_bar_height">1.5dp</item>
+        <item name="progress_unreached_bar_height">0.75dp</item>
+    </style>
+
+    <style name="textviewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="edittextStyle_1">
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:textColor">@color/text_color_middle</item>
+        <item name="android:background">@drawable/button_shape_corners_stroke_white_no_pressed
+        </item>
+        <item name="android:gravity">top|left</item>
+    </style>
+
+    <style name="popupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <!-- actionBar -->
+    <style name="ActionBarThemeOverlay" parent="">
+        <item name="colorControlNormal">#ffffff</item>
+    </style>
+
+    <style name="Widget.MyTheme.HeaderBar.Spinner" parent="Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:theme">@style/ActionBarThemeOverlay</item>
+    </style>
+    <!--listview名称 style-->
+    <style name="name_test_style">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/list_name_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--listview选项 style-->
+    <style name="name_tab_style">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/list_name_size</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <!--listview数字 style-->
+    <style name="nmuber_test_style">
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:textSize">@dimen/list_name_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--注意事项 style-->
+    <style name="nmuber_careful_style">
+        <item name="android:textColor">@android:color/holo_blue_dark</item>
+        <item name="android:textSize">@dimen/list_name_size</item>
+    </style>
+    <!--listview数字 style-->
+    <style name="text_content_style">
+        <item name="android:textSize">@dimen/list_content_size</item>
+    </style>
+    <!--listview数字 style-->
+    <style name="text_explain_style">
+        <item name="android:textSize">@dimen/list_explain_size</item>
+    </style>
+    <!--用户基本信息 style-->
+    <style name="user_content_style">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/list_name_size</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="text_bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

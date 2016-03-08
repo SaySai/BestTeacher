@@ -1,0 +1,455 @@
+package com.shanghai.haojiajiao.activity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.adapter.CityAdapter;
+import com.shanghai.haojiajiao.adapter.CourseListAdapter;
+import com.shanghai.haojiajiao.app.HaojiajiaoApplication;
+import com.shanghai.haojiajiao.base.BaseActivity;
+import com.shanghai.haojiajiao.model.CityModel;
+import com.shanghai.haojiajiao.model.Course1Model;
+import com.shanghai.haojiajiao.model.Course2Model;
+import com.shanghai.haojiajiao.util.HttpUtil.GoodTeacherURL;
+import com.shanghai.haojiajiao.util.HttpUtil.RequestTag;
+import com.shanghai.haojiajiao.util.HttpUtil.ResponseOwn;
+import com.shanghai.haojiajiao.util.ToastUtil;
+import com.shanghai.haojiajiao.weight.CourseDialog;
+import com.shanghai.haojiajiao.weight.CourseLisenner;
+import com.shanghai.haojiajiao.weight.LoadingDialog;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MyDataActivity extends BaseActivity implements View.OnClickListener {
+    private ScrollView sv_tab1, sv_tab2;
+    private ImageView iv_back;
+    private TextView tv_parent, tv_teacher;
+    //tab2Parent
+    private EditText et_parentTab2Name, et_parentTab2Sax, et_parentTab2Email, et_parentTab2Phone;
+    private EditText et_ChildTab2Name, et_ChildTab2Sax, et_ChildTab2Age, et_ChildTab2Email;
+    //tab2Teacher
+    private EditText et_money, et_TeacherTab2Name, et_TeacherTab2Sax, et_TeacherTab2Age, et_TeacherTab2Email, et_TeacherTab2Phone, et_TeacherTab2ZPay, et_TeacherTab2Sulf;
+    //tab3Teacher
+    private ImageView et_TeacherTab3Add;
+    private ListView et_TeacherTab3List;
+    private FinishReceiver receiver;
+
+
+    private TextView et_ChildTab2City;
+    private LinearLayout ll_city_listShow;
+    //城市
+    private LinearLayout ll_city_list;
+    private ListView lv_city;
+    private CityAdapter cityAdapter;
+    private TextView tv_city_gps;
+    private LinearLayout ll_city_list_teacher;
+    private ListView lv_city_teacher;
+    private CityAdapter cityAdapter_teacher;
+    private TextView tv_city_gps_teacher;
+    private TextView et_TeacherTab2City;
+    private LinearLayout ll_teacher_city;
+    private CourseListAdapter courseListAdapter;
+    private LoadingDialog loadingDialog;
+    private int id = 0;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_data);
+        receiver = new FinishReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        loadingDialog = new LoadingDialog(MyDataActivity.this);
+        intentFilter.addAction(MyDataActivity.class.getCanonicalName());
+        registerReceiver(receiver, intentFilter);
+        iv_back = (ImageView) findViewById(R.id.iv_back);
+        sv_tab1 = (ScrollView) findViewById(R.id.sv_tab1);
+        sv_tab2 = (ScrollView) findViewById(R.id.sv_tab2);
+        tv_parent = (TextView) findViewById(R.id.tv_parent);
+        tv_parent.setOnClickListener(this);
+        tv_teacher = (TextView) findViewById(R.id.tv_teacher);
+        tv_teacher.setOnClickListener(this);
+        iv_back.setOnClickListener(this);
+        initTabPrarent2();
+        initTabTeacher2();
+        initTabTeacher3();
+        if (!HaojiajiaoApplication.ISSTATE) {
+            getParentInfoByUserName();
+            sv_tab1.setVisibility(View.GONE);
+            sv_tab2.setVisibility(View.VISIBLE);
+        } else {
+            getTeacherInfoByUserName();
+            sv_tab1.setVisibility(View.VISIBLE);
+            sv_tab2.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switchView(v.getId());
+    }
+
+    private void switchView(int id) {
+        switch (id) {
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_parent:
+                updateParent();
+                loadingDialog.show();
+                break;
+            case R.id.tv_teacher:
+                updateTeacher();
+                loadingDialog.show();
+                break;
+        }
+    }
+
+    private void initTabPrarent2() {
+        //parent
+        et_parentTab2Name = (EditText) findViewById(R.id.et_parentTab2Name);
+        et_parentTab2Sax = (EditText) findViewById(R.id.et_parentTab2Sax);
+        et_parentTab2Email = (EditText) findViewById(R.id.et_parentTab2Email);
+        et_parentTab2Phone = (EditText) findViewById(R.id.et_parentTab2Phone);
+        //child
+        et_ChildTab2Name = (EditText) findViewById(R.id.et_ChildTab2Name);
+        et_ChildTab2City = (TextView) findViewById(R.id.et_ChildTab2City);
+        et_ChildTab2Sax = (EditText) findViewById(R.id.et_ChildTab2Sax);
+        et_ChildTab2Age = (EditText) findViewById(R.id.et_ChildTab2Age);
+        et_ChildTab2Email = (EditText) findViewById(R.id.et_ChildTab2Email);
+        ll_city_listShow = (LinearLayout) findViewById(R.id.ll_city_listShow);
+        ll_city_listShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ll_city_list.getVisibility() == View.GONE) {
+                    ll_city_list.setVisibility(View.VISIBLE);
+                    cityAdapter.clearData();
+                    ArrayList<CityModel> cityModels = new ArrayList<>();
+                    for (int i = 0; i < 15; i++) {
+                        CityModel cityModel = new CityModel();
+                        cityModel.setCatchCity(i == 2);
+                        cityModels.add(cityModel);
+                    }
+                    cityAdapter.setData(cityModels);
+                } else {
+                    ll_city_list.setVisibility(View.GONE);
+                }
+            }
+        });
+        ll_city_list = (LinearLayout) findViewById(R.id.ll_city_list);
+        tv_city_gps = (TextView) findViewById(R.id.tv_city_gps);
+        lv_city = (ListView) findViewById(R.id.lv_city);
+        lv_city.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    sv_tab2.requestDisallowInterceptTouchEvent(false);
+                } else {
+                    sv_tab2.requestDisallowInterceptTouchEvent(true);
+                }
+                return false;
+            }
+        });
+        lv_city.setAdapter(cityAdapter = new CityAdapter(MyDataActivity.this));
+        lv_city.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CityModel cityModel = (CityModel) cityAdapter.getItem(position);
+                et_ChildTab2City.setText("湛江");
+                ll_city_list.setVisibility(View.GONE);
+            }
+        });
+        setGpsCity(HaojiajiaoApplication.city);
+
+    }
+
+    private void initTabTeacher2() {
+        et_TeacherTab2Name = (EditText) findViewById(R.id.et_TeacherTab2Name);
+        et_TeacherTab2Sax = (EditText) findViewById(R.id.et_TeacherTab2Sax);
+        et_TeacherTab2Age = (EditText) findViewById(R.id.et_TeacherTab2Age);
+        et_TeacherTab2Email = (EditText) findViewById(R.id.et_TeacherTab2Email);
+        et_TeacherTab2Phone = (EditText) findViewById(R.id.et_TeacherTab2Phone);
+        et_TeacherTab2City = (TextView) findViewById(R.id.et_TeacherTab2City);
+        et_TeacherTab2ZPay = (EditText) findViewById(R.id.et_TeacherTab2ZPay);
+        et_TeacherTab2Sulf = (EditText) findViewById(R.id.et_TeacherTab2Sulf);
+        et_ChildTab2City = (TextView) findViewById(R.id.et_ChildTab2City);
+        ll_teacher_city = (LinearLayout) findViewById(R.id.ll_teacher_city);
+        et_money = (EditText) findViewById(R.id.et_money);
+        ll_teacher_city.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ll_city_list_teacher.getVisibility() == View.GONE) {
+                    ll_city_list_teacher.setVisibility(View.VISIBLE);
+                    cityAdapter.clearData();
+                    ArrayList<CityModel> cityModels = new ArrayList<>();
+                    for (int i = 0; i < 15; i++) {
+                        CityModel cityModel = new CityModel();
+                        cityModel.setCatchCity(i == 2);
+                        cityModels.add(cityModel);
+                    }
+                    cityAdapter.setData(cityModels);
+                } else {
+                    ll_city_list_teacher.setVisibility(View.GONE);
+                }
+            }
+        });
+        ll_city_list_teacher = (LinearLayout) findViewById(R.id.ll_city_list_teacher);
+        tv_city_gps_teacher = (TextView) findViewById(R.id.tv_city_gps_teacher);
+        lv_city_teacher = (ListView) findViewById(R.id.lv_city_teacher);
+        lv_city_teacher.setAdapter(cityAdapter = new CityAdapter(MyDataActivity.this));
+        lv_city_teacher.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    sv_tab1.requestDisallowInterceptTouchEvent(false);
+                } else {
+                    sv_tab1.requestDisallowInterceptTouchEvent(true);
+                }
+                return false;
+            }
+        });
+        lv_city_teacher.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CityModel cityModel = (CityModel) cityAdapter.getItem(position);
+                et_TeacherTab2City.setText("湛江");
+                ll_city_list_teacher.setVisibility(View.GONE);
+            }
+        });
+        setGpsCity(HaojiajiaoApplication.city);
+
+    }
+
+    private void initTabTeacher3() {
+        et_TeacherTab3Add = (ImageView) findViewById(R.id.et_TeacherTab3Add);
+        et_TeacherTab3Add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new CourseDialog(MyDataActivity.this, new CourseLisenner() {
+                    @Override
+                    public void sendList(Course1Model course1Model, Course2Model course2Model) {
+
+                    }
+                }).show();
+            }
+        });
+        et_TeacherTab3List = (ListView) findViewById(R.id.et_TeacherTab3List);
+        et_TeacherTab3List.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    sv_tab1.requestDisallowInterceptTouchEvent(false);
+                } else {
+                    sv_tab1.requestDisallowInterceptTouchEvent(true);
+                }
+                return false;
+            }
+        });
+        et_TeacherTab3List.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                new CourseDialog(MyDataActivity.this, new CourseLisenner() {
+                    @Override
+                    public void sendList(Course1Model course1Model, Course2Model course2Model) {
+
+                    }
+                }).show();
+            }
+        });
+        et_TeacherTab3List.setAdapter(courseListAdapter = new CourseListAdapter(MyDataActivity.this));
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("");
+        strings.add("");
+        strings.add("");
+        strings.add("");
+        strings.add("");
+        strings.add("");
+        strings.add("");
+        strings.add("");
+        courseListAdapter.setData(strings);
+
+    }
+
+    public class FinishReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (MyDataActivity.class.getCanonicalName().equals(intent.getAction())) {
+                finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+
+    public void setGpsCity(String city) {
+        if (tv_city_gps != null) {
+            if (city != null) {
+                tv_city_gps.setText("Current location city:：" + city);
+            } else {
+                tv_city_gps.setText("Location information can not be obtained!");
+
+            }
+
+        }
+
+    }
+
+    public void getParentInfoByUserName() {
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("userName", HaojiajiaoApplication.userName);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getParentInfoByUserName, stringMap, RequestTag.getParentInfoByUserName);
+    }
+
+    public void getTeacherInfoByUserName() {
+        Map<String, String> stringMap = new HashMap<>();
+//        stringMap.put("TeacherUserName", HaojiajiaoApplication.userName);
+        stringMap.put("TeacherUserName", "fsdf@qq.com");
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherInfoByUserName, stringMap, RequestTag.getTeacherInfoByUserName);
+    }
+
+    public void updateParent() {
+        Map<String, String> dataParas = new HashMap<>();
+        dataParas.put("ParentUserName", HaojiajiaoApplication.userName);
+        ifStrTrue(dataParas, "ParentName", et_parentTab2Name);
+        ifStrTrue(dataParas, "ParentGender", et_parentTab2Sax);
+        ifStrTrue(dataParas, "ParentEmail", et_parentTab2Email);
+        ifStrTrue(dataParas, "ParentTel", et_parentTab2Phone);
+        ifStrTrue(dataParas, "StudentName", et_ChildTab2Name);
+        if (et_ChildTab2City.getText().toString() != null && et_ChildTab2City.getText().toString().length() > 0) {
+            dataParas.put("StudentName", et_ChildTab2City.getText().toString());
+        }
+        ifStrTrue(dataParas, "StudentAge", et_ChildTab2Age);
+        ifStrTrue(dataParas, "StudentGender", et_ChildTab2Sax);
+        ifStrTrue(dataParas, "StudentEmail", et_ChildTab2Email);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.updateParent, dataParas, RequestTag.updateParent);
+    }
+
+    public void updateTeacher() {
+        Map<String, String> dataParas = new HashMap<>();
+        dataParas.put("TeacherUserName", HaojiajiaoApplication.userName);
+        ifStrTrue(dataParas, "TeacherEmail", et_TeacherTab2Email);
+        ifStrTrue(dataParas, "TeacherGender", et_TeacherTab2Sax);
+        ifStrTrue(dataParas, "TeacherTel", et_TeacherTab2Phone);
+        ifStrTrue(dataParas, "TeacherAge", et_TeacherTab2Age);
+        if (et_TeacherTab2City.getText().toString() != null && et_TeacherTab2City.getText().toString().length() > 0) {
+            dataParas.put("TeacherCity", et_TeacherTab2City.getText().toString());
+        }
+        ifStrTrue(dataParas, "TeacherPaypalAccount", et_TeacherTab2ZPay);
+        ifStrTrue(dataParas, "TeacherSelfCv", et_TeacherTab2Sulf);
+        ifStrTrue(dataParas, "TeacherName", et_TeacherTab2Name);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.updateTeacher, dataParas, RequestTag.updateTeacher);
+    }
+
+    private void ifStrTrue(Map<String, String> dataParas, String type, EditText string) {
+        String str = string.getText().toString();
+        if (str != null && str.length() > 0) {
+            dataParas.put(type, str);
+        }
+    }
+
+    @Override
+    public void onRequestError(ResponseOwn response) {
+        loadingDialog.dismiss();
+        super.onRequestError(response);
+    }
+
+    @Override
+    public void onRequestSuccess(ResponseOwn response) {
+        loadingDialog.dismiss();
+        if (response.requestTag.toString().equals("getTeacherInfoByUserName")) {
+            String dataStr = response.responseString;
+            Log.d("data", dataStr);
+            JSONObject total1 = null;
+            try {
+                total1 = new JSONObject(dataStr);
+                id = total1.getInt("id");
+                setEditString(et_TeacherTab2Name, total1.getString("teacherName"));
+                setEditString(et_TeacherTab2Sax, total1.getString("teacherGender"));
+                setEditString(et_TeacherTab2Email, total1.getString("teacherEmail"));
+                setEditString(et_TeacherTab2Phone, total1.getString("teacherTel"));
+                et_TeacherTab2City.setText(total1.getString("teacherCity") == null ? "" : total1.getString("teacherCity"));
+                setEditString(et_TeacherTab2ZPay, total1.getString("teacherPaypalAccount"));
+                setEditString(et_TeacherTab2Sulf, total1.getString("teacherSelfCv"));
+                setEditString(et_money, total1.getString("teacherCharge"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        } else if (response.requestTag.toString().equals("getParentInfoByUserName")) {
+            String dataStr = response.responseString;
+            Log.d("data", dataStr);
+            JSONObject total1 = null;
+            try {
+                total1 = new JSONObject(dataStr);
+                id = total1.getInt("id");
+                setEditString(et_parentTab2Name, total1.getString("parentName"));
+                setEditString(et_parentTab2Sax, total1.getString("parentGender"));
+                setEditString(et_parentTab2Email, total1.getString("parentUserName"));
+                setEditString(et_parentTab2Phone, total1.getString("parentTel"));
+                et_ChildTab2City.setText(total1.getString("parentCity") == null ? "" : total1.getString("parentCity"));
+                setEditString(et_ChildTab2Name, total1.getString("studentName"));
+                setEditString(et_ChildTab2Email, total1.getString("studentEmail"));
+                setEditString(et_ChildTab2Sax, total1.getString("studentGender"));
+                setEditString(et_ChildTab2Age, total1.getString("studentAge"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else if (response.requestTag.toString().equals("updateParent")) {
+            String dataStr = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr);
+                String responsestatus = total1.optString("result");
+                if (responsestatus.equals("1")) {
+                    ToastUtil.showLong(MyDataActivity.this, "Successful modification");
+                } else {
+                    ToastUtil.showLong(MyDataActivity.this, "Modify failed");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+        } else if (response.requestTag.toString().equals("updateTeacher")) {
+            String dataStr = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr);
+                String responsestatus = total1.optString("result");
+                if (responsestatus.equals("1")) {
+                    ToastUtil.showLong(MyDataActivity.this, "Successful modification!");
+                } else {
+                    ToastUtil.showLong(MyDataActivity.this, "Modify failed!");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void setEditString(EditText editString, String str) {
+        editString.setText(str);
+    }
+}

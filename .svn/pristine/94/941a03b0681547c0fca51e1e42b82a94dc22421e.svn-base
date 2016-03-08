@@ -1,0 +1,285 @@
+package com.shanghai.haojiajiao.activity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.adapter.CalendarAdapter;
+import com.shanghai.haojiajiao.base.BaseActivity;
+import com.shanghai.haojiajiao.model.CalendarModel;
+import com.shanghai.haojiajiao.model.TeacherEvaluateModel;
+import com.shanghai.haojiajiao.util.HttpUtil.GoodTeacherURL;
+import com.shanghai.haojiajiao.util.HttpUtil.RequestTag;
+import com.shanghai.haojiajiao.util.HttpUtil.ResponseOwn;
+import com.shanghai.haojiajiao.weight.LoadingDialog;
+import com.shanghai.haojiajiao.weight.MyGridView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class BookingSettingActivity extends BaseActivity implements View.OnClickListener {
+    private ImageView iv_back;
+    private TextView tv_times, tv_next;
+    private MyGridView gridview;
+    private CalendarAdapter calendarAdapter;
+    private CalendarModel ts = null;
+    private ArrayList<CalendarModel> calendarModels = null;
+    private ArrayList<CalendarModel> calendarModels2 = null;
+    private int oneMouth1 = 0;
+    private int oneMouth2 = 0;
+    private long thisMounthSS = 0;
+    private int twoMouth1 = 0;
+    private int twoMouth2 = 0;
+    private FinishReceiver receiver;
+    private int id = 0;
+    String str = "本月";
+    private LoadingDialog loadingDialog;
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_booking_setting);
+        receiver = new FinishReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(BookingSettingActivity.class.getCanonicalName());
+        registerReceiver(receiver, intentFilter);
+        iv_back = (ImageView) findViewById(R.id.iv_back);
+        iv_back.setOnClickListener(this);
+        getTeacherAvailableDate(getIntent().getIntExtra("id", 1) + "");
+        tv_times = (TextView) findViewById(R.id.tv_times);
+        tv_next = (TextView) findViewById(R.id.tv_next);
+        gridview = (MyGridView) findViewById(R.id.gridview);
+        calendarAdapter = new CalendarAdapter(this);
+        gridview.setAdapter(calendarAdapter);
+        oneMounth();
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (tv_next.getText().equals(str)) {//calendarModels2
+                    if (calendarModels2.get(position).getChoiceState() == 1 && calendarModels.get(position).getAppointmentAvailableSegment() != null) {
+                        Intent intent = new Intent(BookingSettingActivity.this, BookingSettingDayActivity.class);
+                        intent.putExtra("yearMonth", CalendarAdapter.getCurrentyyyy_MM(0));
+                        intent.putExtra("day", calendarModels2.get(position).getDay());
+                        intent.putExtra("appointmentAvailableSegment", calendarModels2.get(position).getAppointmentAvailableSegment());
+                        startActivity(intent);
+                    }
+                } else if (tv_next.getText().equals("下一月")) {//calendarModels
+                    if (calendarModels.get(position).getChoiceState() == 1 && calendarModels.get(position).getAppointmentAvailableSegment() != null) {
+                        Intent intent = new Intent(BookingSettingActivity.this, BookingSettingDayActivity.class);
+                        intent.putExtra("yearMonth", CalendarAdapter.getCurrentyyyy_MM(Math.abs(thisMounthSS)));
+                        intent.putExtra("day", calendarModels.get(position).getDay());
+                        intent.putExtra("appointmentAvailableSegment", calendarModels.get(position).getAppointmentAvailableSegment());
+                        startActivity(intent);
+                    }
+                }
+            }
+        });
+        tv_next.setOnClickListener(this);
+        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(0));
+    }
+
+    private void getTeacherAvailableDate(String id) {
+        Map<String, String> dataParas = new HashMap<>();
+        dataParas.put("TeacherId", id);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherAvailableDate, dataParas, RequestTag.getTeacherAvailableDate);
+    }
+
+    private void oneMounth() {
+        calendarModels = new ArrayList<>();
+        for (int a = 0; a < 7; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels.add(ts);
+        }
+        int zhouji = CalendarAdapter.getWeekNumber(0);
+        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(0));
+        int[] days = CalendarAdapter.isLeapYear(0, 0);
+        int mounts = CalendarAdapter.getCurrentMMM(0);
+        int thisDay = CalendarAdapter.getCurrentDatedd();
+        int mountCount = days[mounts];
+        thisMounthSS = mountCount * 24 * 60 * 60 * 1000;
+        for (int a = 0; a < zhouji; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels.add(ts);
+        }
+        for (int a = 0; a < mountCount; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(true);
+            ts.setDay(a);
+            ts.setDayTime(CalendarAdapter.getCurrentyyyy_MM(0) + "-" + (a + 1) + " 00:00:00.0");
+            if (a <= (thisDay - 1)) {
+                ts.setChoiceState(0);
+            } else {//����Ϊ�����ʾ����
+                ts.setChoiceState(1);
+            }
+            calendarModels.add(ts);
+        }
+        oneMouth1 = zhouji + mountCount;
+        int lins2 = oneMouth1 % 7;
+        if (lins2 == 0) {
+            calendarAdapter.setData(calendarModels);
+        } else {
+            oneMouth2 = 7 - lins2;
+            for (int a = 0; a < oneMouth2; a++) {
+                ts = new CalendarModel();
+                ts.setClickState(false);
+                calendarModels.add(ts);
+            }
+            calendarAdapter.setData(calendarModels);
+        }
+    }
+
+    private void oneAddMounth(long mouth) {
+        calendarModels2 = new ArrayList<>();
+        for (int a = 0; a < 7; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels2.add(ts);
+        }
+        int zhouji = CalendarAdapter.getWeekNumber(mouth);
+        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(Math.abs(mouth)));
+        int[] days = CalendarAdapter.isLeapYear(0, mouth);
+        int mounts = CalendarAdapter.getCurrentMMM(Math.abs(mouth));
+        int mountCount = days[mounts];
+        for (int a = 0; a < (zhouji + 1); a++) {
+            ts = new CalendarModel();
+            ts.setClickState(false);
+            calendarModels2.add(ts);
+        }
+        for (int a = 0; a < mountCount; a++) {
+            ts = new CalendarModel();
+            ts.setClickState(true);
+            ts.setDayTime(CalendarAdapter.getCurrentyyyy_MM(0) + "-" + (a + 1) + " 00:00:00.0");
+            ts.setDay(a);
+            ts.setChoiceState(1);
+            calendarModels2.add(ts);
+        }
+        twoMouth1 = zhouji + mountCount;
+        int lins2 = twoMouth1 % 7;
+        if (lins2 == 0) {
+            calendarAdapter.setData(calendarModels2);
+        } else {
+            twoMouth2 = 7 - lins2;
+            for (int a = 0; a < twoMouth2; a++) {
+                ts = new CalendarModel();
+                ts.setClickState(false);
+                calendarModels2.add(ts);
+            }
+            calendarAdapter.setData(calendarModels2);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switch (v.getId()) {
+            case R.id.iv_back:
+                finish();
+                break;
+            case R.id.tv_next:
+                if (calendarModels2 == null) {
+                    calendarAdapter.clearData();
+                    oneAddMounth(thisMounthSS);
+                    tv_next.setText(str);
+                } else {
+                    if (tv_next.getText().equals("下一月")) {
+                        calendarAdapter.clearData();
+                        calendarAdapter.setData(calendarModels2);
+                        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(Math.abs(thisMounthSS)));
+                        tv_next.setText(str);
+                    } else if (tv_next.getText().equals(str)) {
+                        calendarAdapter.clearData();
+                        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(0));
+                        calendarAdapter.setData(calendarModels);
+
+                        tv_next.setText("下一月");
+                    }
+                }
+                break;
+        }
+    }
+
+    public class FinishReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (BookingSettingActivity.class.getCanonicalName().equals(intent.getAction())) {
+                finish();
+            }
+        }
+    }
+
+    @Override
+    public void onRequestError(ResponseOwn response) {
+        loadingDialog.dismiss();
+        super.onRequestError(response);
+    }
+
+    @Override
+    public void onRequestSuccess(ResponseOwn response) {
+        loadingDialog.dismiss();
+        if (response.requestTag.toString().equals("getTeacherAvailableDate")) {
+            loadingDialog.dismiss();
+            String dataStr1 = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr1);
+                JSONArray jsonArray = total1.getJSONArray("result");
+                if (jsonArray != null) {
+                    ArrayList<TeacherEvaluateModel> arrayList = new ArrayList<>();
+                    for (int i = 0; i < calendarModels.size(); i++) {
+                        for (int a = 0; a < jsonArray.length(); a++) {
+                            JSONObject jsonObject = jsonArray.getJSONObject(a);
+                            if (calendarModels.get(i).isClickState()) {
+                                if (jsonObject.getString("appointmentTime") != null) {
+                                    if (calendarModels.get(i).getDayTime().equals(jsonObject.getString("appointmentTime"))) {
+                                        calendarModels.get(i).setId(jsonObject.getInt("id"));
+                                        calendarModels.get(i).setTeacherId(jsonObject.getInt("teacherId"));
+                                        calendarModels.get(i).setParentId(jsonObject.getInt("parentId"));
+                                        calendarModels.get(i).setAppointment(jsonObject.getString("appointment"));
+                                        calendarModels.get(i).setAppointmentAvailableSegment(jsonObject.getString("appointmentAvailableSegment"));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    for (int i = 0; i < calendarModels2.size(); i++) {
+                        for (int a = 0; a < jsonArray.length(); a++) {
+                            JSONObject jsonObject = jsonArray.getJSONObject(a);
+                            if (calendarModels2.get(i).isClickState()) {
+                                if (jsonObject.getString("appointmentTime") != null) {
+                                    if (calendarModels2.get(i).getDayTime().equals(jsonObject.getString("appointmentTime"))) {
+                                        calendarModels2.get(i).setId(jsonObject.getInt("id"));
+                                        calendarModels2.get(i).setTeacherId(jsonObject.getInt("teacherId"));
+                                        calendarModels2.get(i).setParentId(jsonObject.getInt("parentId"));
+                                        calendarModels2.get(i).setAppointment(jsonObject.getString("appointment"));
+                                        calendarModels2.get(i).setAppointmentAvailableSegment(jsonObject.getString("appointmentAvailableSegment"));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

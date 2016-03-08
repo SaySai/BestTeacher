@@ -1,0 +1,463 @@
+package com.shanghai.haojiajiao.app;
+
+import android.annotation.SuppressLint;
+import android.app.Application;
+import android.app.Service;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
+import android.os.Vibrator;
+import android.telephony.TelephonyManager;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.util.LruCache;
+import android.view.WindowManager;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.baidu.location.Poi;
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
+import com.nostra13.universalimageloader.utils.StorageUtils;
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.model.UserModel;
+import com.shanghai.haojiajiao.provider.MyPrivateConversationProvider;
+import com.shanghai.haojiajiao.util.CrashHandlerUtils.CustomCrashHandler;
+import com.shanghai.haojiajiao.util.DeviceUtil;
+import com.shanghai.haojiajiao.util.HttpUtil.PreferencesUtil;
+import com.shanghai.haojiajiao.util.ObjectHandlerUtil;
+import com.shanghai.haojiajiao.util.RunCache;
+import com.shanghai.haojiajiao.util.ToastUtil;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.List;
+
+import cn.jpush.android.api.JPushInterface;
+import io.rong.imkit.RongIM;
+import io.rong.imlib.model.UserInfo;
+
+@SuppressLint("NewApi")
+public class HaojiajiaoApplication extends Application {
+    private static RequestQueue requestQueue;
+    public static Bitmap defaultBitmap = null, errorBitmap = null; // 默认图片
+    public static Context context;
+    public static UserModel loginUser;
+    public final static String ROOTDIRPATH = "/shanghaieducation/";
+    public final static String IMG_PATH = ROOTDIRPATH + "image/"; // 图片缓存目录
+    public final static String CACHE_PATH = ROOTDIRPATH + "cache/";
+    public final static String CRASH_PATH = ROOTDIRPATH + "crash/"; // 崩机日志
+    public final static String VIDEO_PATH = ROOTDIRPATH + "video/"; // 视频存放目录
+    public final static String APK_PATH = ROOTDIRPATH + "update/"; // 更新软件的apk下载存放目录
+    public static int deviceWidth, deviceHeight, statusBarHeight; // 屏幕的宽和高还有状态栏的高度
+    public static boolean autoLoad = true; // 是否自动加载图片
+    public static boolean isWifi = false; // 当前是否wifi环境
+    private static int cacheSize;
+    public static String IMEI = "";
+    //判断该手机是否可以使用沉浸式菜单
+    public static boolean isCanFullScreen = true;
+    /* 默认为1. 0为首页，1 消息，2 我的 */
+    public static int screenBack = 0;// 决定登陆界面按返回键到哪里
+    public static boolean IFLOGIN = false;//是否登陆
+    public static boolean ISSTATE = false;//false家长，true教师
+    public LocationClient mLocationClient;
+    public MyLocationListener mMyLocationListener;
+    public Vibrator mVibrator;
+    public static String city = null;
+    public static String userName = null;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        context = this;
+        mLocationClient = new LocationClient(this.getApplicationContext());
+        mMyLocationListener = new MyLocationListener();
+        mLocationClient.registerLocationListener(mMyLocationListener);
+        mVibrator = (Vibrator) getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
+        // 判断当前SDK版本号，如果是4.4以上，就是支持沉浸式状态栏的
+        isCanFullScreen = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
+        // 在sd卡中创建项目所需文件夹
+        createRootDirectory();
+        JPushInterface.setDebugMode(false);    // 设置开启日志,发布时请关闭日志
+        JPushInterface.init(this);            // 初始化 JPush
+        // 获取应用程序最大可用内存
+        int maxMemory = (int) Runtime.getRuntime().maxMemory();
+        cacheSize = maxMemory / 3;
+        getPhoneInfo();
+        // 初始化uil图片处理框架
+        initImageLoader(getApplicationContext());
+        // 增加crash时日志记录,日志保存在CRASH_PATH中
+        // 在这里为应用设置异常处理程序，然后我们的程序才能捕获未处理的异常
+        CustomCrashHandler mCustomCrashHandler = CustomCrashHandler.getInstance();
+        mCustomCrashHandler.setCustomCrashHanler(getApplicationContext());
+        // 单纯从网络或者本地获取的图片放入LruCache中,可以有效避免oom
+        mMemoryCache = new LruCache<String, Bitmap>(cacheSize) {
+            @Override
+            protected int sizeOf(String key, Bitmap bitmap) {
+                return bitmap.getByteCount();
+            }
+        };
+        String str = PreferencesUtil.getStringByKey(context,
+                RunCache.AUTO_LOAD);
+        if (str != null && !str.trim().equals("")) {
+            autoLoad = Boolean.parseBoolean(str);
+
+        }
+        isWifi = DeviceUtil.isWifiConnected(context);
+
+        initRong();
+
+
+    }
+
+    public void initRong() {
+        /**
+         * 初始化融云
+         */
+        RongIM.init(HaojiajiaoApplication.this);
+        RongIM.getInstance().registerConversationTemplate(new MyPrivateConversationProvider());
+        //初始化融云个人信息
+        RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+            @Override
+            public UserInfo getUserInfo(String s) {
+                Uri u = Uri.parse("http://d.hiphotos.baidu.com/image/h%3D200/sign=99e997010e24ab18ff16e63705fbe69a/267f9e2f07082838d4bfae33bf99a9014c08f163.jpg");
+                UserInfo userInfo = new UserInfo("2222", "chenyajun", u);
+                return userInfo;
+            }
+        }, true);
+    }
+
+    /**
+     * 创建缓存根目录
+     */
+    private void createRootDirectory() {
+        File rootDir = new File(Environment.getExternalStorageDirectory() + "/"
+                + ROOTDIRPATH);
+        if (!rootDir.exists() || !rootDir.isDirectory()) {
+            rootDir.mkdirs();
+        }
+
+        // 创建图片缓存目录
+        rootDir = new File(Environment.getExternalStorageDirectory() + "/"
+                + IMG_PATH);
+        if (!rootDir.exists() || !rootDir.isDirectory()) {
+            rootDir.mkdirs();
+        }
+
+        // 创建图片缓存目录
+        rootDir = new File(Environment.getExternalStorageDirectory() + "/"
+                + CRASH_PATH);
+        if (!rootDir.exists() || !rootDir.isDirectory()) {
+            rootDir.mkdirs();
+        }
+        // 创建图片缓存目录
+        rootDir = new File(Environment.getExternalStorageDirectory() + "/"
+                + VIDEO_PATH);
+        if (!rootDir.exists() || !rootDir.isDirectory()) {
+            rootDir.mkdirs();
+        }
+
+    }
+
+    /**
+     * 获得手机屏幕的宽高和状态栏的宽高
+     */
+    private void getPhoneInfo() {
+        try {
+            // 获得手机屏幕宽高
+            WindowManager manager = (WindowManager) context
+                    .getSystemService(Context.WINDOW_SERVICE);
+            DisplayMetrics dm1 = new DisplayMetrics();
+            manager.getDefaultDisplay().getMetrics(dm1);
+            deviceWidth = dm1.widthPixels;
+            deviceHeight = dm1.heightPixels;
+            statusBarHeight = DeviceUtil.getStatusBarHeight(context);
+            // 获取手机信息,iemi号发送请求
+            TelephonyManager tm = (TelephonyManager) context
+                    .getSystemService(Context.TELEPHONY_SERVICE);
+            IMEI = tm.getDeviceId();
+        } catch (Exception e) {
+            deviceWidth = 0;
+            deviceHeight = 0;
+            statusBarHeight = 0;
+            ToastUtil.showShort(context, "获取屏幕宽高或者通知栏出错");
+        }
+    }
+
+    /**
+     * 获得全局的context 对象
+     *
+     * @return
+     */
+    public static Context getContext() {
+
+        return context;
+
+    }
+
+
+    /**
+     * 得到默认的bitamp
+     *
+     * @return
+     */
+    public static Bitmap getDefaultBitmap() {
+        if (defaultBitmap == null || defaultBitmap.isRecycled()) {
+            defaultBitmap = BitmapFactory.decodeResource(
+                    context.getResources(), R.mipmap.pic_nopicture);
+        }
+        return defaultBitmap;
+    }
+
+    /**
+     * 获得默认的错误bitamp
+     *
+     * @return
+     */
+    public static Bitmap getErrorBitmap() {
+        if (errorBitmap == null || errorBitmap.isRecycled()) {
+            errorBitmap = BitmapFactory.decodeResource(context.getResources(),
+                    R.mipmap.pic_errpicture);
+        }
+        return errorBitmap;
+    }
+
+    /****************************
+     * 使用uil来加载图片,因为比较好控制
+     **************************/
+    public static void initImageLoader(Context context) {
+        // This configuration tuning is custom. You can tune every option, you
+        // may tune some of them,
+        // or you can create default configuration by
+        // ImageLoaderConfiguration.createDefault(this);
+        // method.
+        // 缓存文件的存放地址
+        File cacheDir = StorageUtils.getOwnCacheDirectory(context, IMG_PATH);
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+                context)
+                // 内存缓存的设置选项 (最大图片宽度,最大图片高度) 默认的是当前屏幕分辨率
+                .memoryCacheExtraOptions(480, 800)
+                .threadPoolSize(3)// 线程池内加载的数量
+                        // 降低线程的优先级保证主UI线程不受太大影响
+                .threadPriority(Thread.NORM_PRIORITY - 2)
+                        // 设置拒绝缓存在内存中一个图片多个大小 默认为允许,(同一个图片URL)根据不同大小的imageview保存不同大小图片
+                .denyCacheImageMultipleSizesInMemory()
+                        // 设置内存缓存 默认为一个当前应用可用内存的1/8大小的LruMemoryCache
+                .memoryCache(new LruMemoryCache(cacheSize))
+                        // 设置内存缓存的最大大小 默认为一个当前应用可用内存的1/8
+                .memoryCacheSize(cacheSize)
+                        // 设置硬盘缓存的最大大小
+                .diskCacheSize(80 * 1024 * 1024)
+                        // 设置硬盘缓存文件名生成规范
+                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
+                        // 设置图片加载和显示队列处理的类型
+                .tasksProcessingOrder(QueueProcessingType.LIFO)
+                .discCacheFileCount(100) //缓存的文件数量
+                        // 设置硬盘缓存目录
+                .diskCache(new UnlimitedDiskCache(cacheDir))
+                        // 设置默认的图片显示选项
+                .defaultDisplayImageOptions(DisplayImageOptions.createSimple())
+                        // connectTimeout (5 s), readTimeout (30 s)
+                .imageDownloader(
+                        new BaseImageDownloader(context, 5 * 1000, 30 * 1000))
+                        // 打印DebugLogs Remove for release app
+//				.writeDebugLogs()
+                        // 建立
+                .build();
+        // 初始化ImageLoader
+        ImageLoader.getInstance().init(config);
+    }
+
+    // 将用户信息做二级缓存处理
+    public static UserModel getUserInfo() {
+        if (HaojiajiaoApplication.loginUser != null) {
+            return HaojiajiaoApplication.loginUser;
+        } else {
+            HashMap<String, Object> hso = ObjectHandlerUtil.getHashMap(context, "logininfo");
+            if (hso == null) {
+                return null;
+            } else {
+                HaojiajiaoApplication.loginUser = UserModel.initWithMap(hso);
+                return HaojiajiaoApplication.loginUser;
+            }
+        }
+    }
+
+
+    /**
+     * 获得请求队列对象
+     *
+     * @return
+     */
+    public static RequestQueue getRequestQueue() {
+        if (null == requestQueue) {
+            requestQueue = Volley.newRequestQueue(context);
+        }
+
+        return requestQueue;
+
+    }
+
+    /**
+     * 图片缓存技术的核心类，用于缓存所有下载好的图片，在程序内存达到设定值时会将最少最近使用的图片移除掉。
+     */
+    private static LruCache<String, Bitmap> mMemoryCache;
+
+    /**
+     * 从LruCache中获取一张图片，如果不存在就返回null。
+     *
+     * @param key LruCache的键，这里传入图片的URL地址。
+     * @return 对应传入键的Bitmap对象，或者null。
+     */
+    public static Bitmap getBitmapFromMemoryCache(String key) {
+
+        return mMemoryCache.get(key);
+    }
+
+    /**
+     * 将一张图片存储到LruCache中。
+     *
+     * @param key    LruCache的键，这里传入图片的URL地址。
+     * @param bitmap LruCache的键，这里传入从网络上下载的 对象。
+     */
+    public static void addBitmapToMemoryCache(String key, Bitmap bitmap) {
+        if (key == null || bitmap == null) {
+            return;
+        }
+        if (getBitmapFromMemoryCache(key) == null) {
+            mMemoryCache.put(key, bitmap);
+        }
+    }
+
+    /**
+     * 将一张图片从LruCache中删除
+     *
+     * @param key LruCache的键，这里传入图片的URL地址。
+     */
+    public static void removeBitmapToMemoryCache(String key) {
+
+        if (null == key) {
+            return;
+        }
+        Bitmap bitmap = mMemoryCache.remove(key);
+        if (bitmap != null) {
+            if (!bitmap.isRecycled()) {
+                bitmap.recycle();
+                bitmap = null;
+                System.gc();
+            }
+
+        }
+    }
+
+    /**
+     * 实现实时位置回调监听
+     */
+    public class MyLocationListener implements BDLocationListener {
+
+        @Override
+        public void onReceiveLocation(BDLocation location) {
+            //Receive Location
+            if (location != null) {
+                city = location.getCity();
+                if (city != null) {
+                    mLocationClient.stop();
+                }
+
+            }
+            StringBuffer sb = new StringBuffer(256);
+            sb.append("time : ");
+            sb.append(location.getTime());
+            sb.append("\nerror code : ");
+            sb.append(location.getLocType());
+            sb.append("\nlatitude : ");
+            sb.append(location.getLatitude());
+            sb.append("\nlontitude : ");
+            sb.append(location.getLongitude());
+            sb.append("\nradius : ");
+            sb.append(location.getRadius());
+            if (location.getLocType() == BDLocation.TypeGpsLocation) {// GPS定位结果
+                sb.append("\nspeed : ");
+                sb.append(location.getSpeed());// 单位：公里每小时
+                sb.append("\nsatellite : ");
+                sb.append(location.getSatelliteNumber());
+                sb.append("\nheight : ");
+                sb.append(location.getAltitude());// 单位：米
+                sb.append("\ndirection : ");
+                sb.append(location.getDirection());
+                sb.append("\naddr : ");
+                sb.append(location.getAddrStr());
+                sb.append("\ndescribe : ");
+                sb.append("gps定位成功");
+
+            } else if (location.getLocType() == BDLocation.TypeNetWorkLocation) {// 网络定位结果
+                sb.append("\naddr : ");
+                sb.append(location.getAddrStr());
+                //运营商信息
+                sb.append("\noperationers : ");
+                sb.append(location.getOperators());
+                sb.append("\ndescribe : ");
+                sb.append("网络定位成功");
+            } else if (location.getLocType() == BDLocation.TypeOffLineLocation) {// 离线定位结果
+                sb.append("\ndescribe : ");
+                sb.append("离线定位成功，离线定位结果也是有效的");
+            } else if (location.getLocType() == BDLocation.TypeServerError) {
+                sb.append("\ndescribe : ");
+                sb.append("服务端网络定位失败，可以反馈IMEI号和大体定位时间到loc-bugs@baidu.com，会有人追查原因");
+            } else if (location.getLocType() == BDLocation.TypeNetWorkException) {
+                sb.append("\ndescribe : ");
+                sb.append("网络不同导致定位失败，请检查网络是否通畅");
+            } else if (location.getLocType() == BDLocation.TypeCriteriaException) {
+                sb.append("\ndescribe : ");
+                sb.append("无法获取有效定位依据导致定位失败，一般是由于手机的原因，处于飞行模式下一般会造成这种结果，可以试着重启手机");
+            }
+            sb.append("\nlocationdescribe : ");// 位置语义化信息
+            sb.append(location.getLocationDescribe());
+            List<Poi> list = location.getPoiList();// POI信息
+            if (list != null) {
+                sb.append("\npoilist size = : ");
+                sb.append(list.size());
+                for (Poi p : list) {
+                    sb.append("\npoi= : ");
+                    sb.append(p.getId() + " " + p.getName() + " " + p.getRank());
+                }
+            }
+            Log.i("BaiduLocationApiDem", sb.toString());
+        }
+
+
+    }
+
+    public void initLocation() {
+        LocationClientOption option = new LocationClientOption();
+        option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);//可选，默认高精度，设置定位模式，高精度，低功耗，仅设备
+        option.setCoorType("bd09ll");//可选，默认gcj02，设置返回的定位结果坐标系，
+        option.setScanSpan(1000);//可选，默认0，即仅定位一次，设置发起定位请求的间隔需要大于等于1000ms才是有效的
+        option.setIsNeedAddress(true);//可选，设置是否需要地址信息，默认不需要
+        option.setOpenGps(true);//可选，默认false,设置是否使用gps
+        option.setLocationNotify(true);//可选，默认false，设置是否当gps有效时按照1S1次频率输出GPS结果
+        option.setIgnoreKillProcess(true);//可选，默认true，定位SDK内部是一个SERVICE，并放到了独立进程，设置是否在stop的时候杀死这个进程，默认不杀死
+        option.setEnableSimulateGps(false);//可选，默认false，设置是否需要过滤gps仿真结果，默认需要
+        option.setIsNeedLocationDescribe(true);//可选，默认false，设置是否需要位置语义化结果，可以在BDLocation.getLocationDescribe里得到，结果类似于“在北京天安门附近”
+        option.setIsNeedLocationPoiList(true);//可选，默认false，设置是否需要POI结果，可以在BDLocation.getPoiList里得到
+        mLocationClient.setLocOption(option);
+    }
+
+    public void startLocation() {
+        mLocationClient.start();//定位SDK start之后会默认发起一次定位请求，开发者无须判断isstart并主动调用request
+    }
+
+}

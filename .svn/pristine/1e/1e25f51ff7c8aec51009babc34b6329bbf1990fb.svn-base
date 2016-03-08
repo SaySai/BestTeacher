@@ -1,0 +1,71 @@
+package com.shanghai.haojiajiao.activity;
+
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.adapter.OrderAdapter;
+
+import java.util.ArrayList;
+
+public class MyOrderListActivity extends Activity {
+    private ImageView iv_back;
+    private ListView listview;
+    private OrderAdapter<String> orderAdapter;
+    private FinishReceiver receiver;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_order_list);
+        receiver = new FinishReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(MyOrderListActivity.class.getCanonicalName());
+        registerReceiver(receiver, intentFilter);
+        iv_back = (ImageView) findViewById(R.id.iv_back);
+        listview = (ListView) findViewById(R.id.listview);
+        orderAdapter = new OrderAdapter<String>(this);
+        listview.setAdapter(orderAdapter);
+        ArrayList<String> strings = new ArrayList();
+        for (int a = 0; a < 9; a++) {
+            strings.add("111");
+        }
+        orderAdapter.setData(strings);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MyOrderListActivity.this, OrderSthingActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public class FinishReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (MyOrderListActivity.class.getCanonicalName().equals(intent.getAction())) {
+                finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+}

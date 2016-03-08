@@ -1,0 +1,68 @@
+package com.shanghai.haojiajiao.activity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
+import com.shanghai.haojiajiao.R;
+
+/**
+ * Created by chenyajun on 2016/1/2.
+ * 正式的聊天界面
+ */
+public class ConversationActivity extends ActionBarActivity {
+    private ImageView iv_back;
+    private static final String TAG = ConversationActivity.class.getSimpleName();
+    private FinishReceiver receiver;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        receiver = new FinishReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ConversationActivity.class.getCanonicalName());
+        registerReceiver(receiver, intentFilter);
+        //唯一有用的代码，加载一个 layout
+        setContentView(R.layout.conversation);
+        iv_back = (ImageView) findViewById(R.id.iv_back);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+//        //继承的是ActionBarActivity，直接调用 自带的 Actionbar，下面是Actionbar 的配置，如果不用可忽略…
+//        getSupportActionBar().setTitle(“聊天”);
+//        getSupportActionBar().setLogo(R.drawable.de_bar_logo);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.de_actionbar_back);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    public class FinishReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (ConversationActivity.class.getCanonicalName().equals(intent.getAction())) {
+                finish();
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+}

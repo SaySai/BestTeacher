@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\raw\\smssdk_pydb",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\raw\\smssdk_pydb"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\raw\\smssdk_pydb",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\raw\\smssdk_pydb"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\raw\\smssdk_pydb",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\raw\\smssdk_pydb"
+    }
+]

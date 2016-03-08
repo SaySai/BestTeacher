@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:background="@drawable/shape_content_backgroud_white"
+        android:orientation="vertical"
+        android:padding="20dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约订单" />
+
+            <TextView
+                android:id="@+id/tv_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_shape_corners_white_k_red"
+                android:ems="4"
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="已完成"
+                android:textColor="#FFCC3300" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_times"
+            style="@style/text_content_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:text="2016.5.5.2.20"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="12dip"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/user_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginTop="16dip"
+            android:text="订单编号：" />
+
+        <TextView
+            android:id="@+id/tv_teacher"
+            style="@style/user_content_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginTop="8dip"
+            android:text="教师：" />
+    </LinearLayout>
+</LinearLayout>

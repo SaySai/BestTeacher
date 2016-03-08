@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="F:\haojiajiao2016_1_10\Haojiajiao\IMKit\src\main\libs"><file name="Rong_IMKit_v2_4_2.jar" path="F:\haojiajiao2016_1_10\Haojiajiao\IMKit\src\main\libs\Rong_IMKit_v2_4_2.jar"/></source></dataSet><dataSet config="release"><source path="F:\haojiajiao2016_1_10\Haojiajiao\IMKit\src\release\jniLibs"/></dataSet></merger>

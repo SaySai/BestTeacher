@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dip">
+
+        <ImageView
+            android:id="@+id/iv_userIcon"
+            android:layout_width="96dip"
+            android:layout_height="96dip"
+            android:layout_marginTop="20dip"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_userName"
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="惠伟杰" />
+
+            <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="17dip"
+                android:layout_height="17dip"
+                android:layout_marginLeft="12dip"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_city"-->
+        <!--style="@style/name_tab_style"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dip"-->
+        <!--android:text="栖霞区" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="269dip"
+        android:layout_marginTop="32dip"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_myData"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="16dip"
+                android:src="@mipmap/mydata" />
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:text="My profile" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_TimeSetting"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="16dip"
+                android:src="@mipmap/timesetting" />
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:text="Settings appointment time" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_booking"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="16dip"
+                android:src="@mipmap/booking" />
+
+            <TextView
+
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:text="My order" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_about"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="16dip"
+                android:src="@mipmap/about" />
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:text="Aboat us" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_settings"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="16dip"
+                android:src="@mipmap/settings" />
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:text="Settings" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:id="@+id/ll_CustomerService"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="16dip"
+                android:src="@mipmap/settings" />
+
+            <TextView
+                style="@style/name_tab_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:text="Contact customer service" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

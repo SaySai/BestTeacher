@@ -1,0 +1,110 @@
+package com.shanghai.haojiajiao.adapter;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.activity.TeacherActivity;
+import com.shanghai.haojiajiao.app.HaojiajiaoApplication;
+import com.shanghai.haojiajiao.base.AdapterBase;
+import com.shanghai.haojiajiao.model.TeacherListModel;
+import com.shanghai.haojiajiao.weight.LoginDialog;
+import com.shanghai.haojiajiao.weight.LoginLisenner;
+
+/**
+ * Created by Administrator on 2015/12/17.
+ */
+public class TeacherPageAdatper extends AdapterBase<TeacherListModel> {
+    public TeacherPageAdatper(Activity act) {
+        super(act);
+    }
+
+    @Override
+    protected View getExView(int position, View convertView, ViewGroup parent, LayoutInflater inflater) {
+        convertView = inflater.inflate(R.layout.teacher_list, null);
+        TeacherListModel teacherListModel = (TeacherListModel) getItem(position);
+        ImageView iv_userIcon = (ImageView) convertView.findViewById(R.id.iv_userIcon);
+        TextView tv_username = (TextView) convertView.findViewById(R.id.tv_username);
+        tv_username.setText(teacherListModel.getTeacherName());
+        TextView tv_ratingNumber = (TextView) convertView.findViewById(R.id.tv_ratingNumber);
+        tv_ratingNumber.setText(teacherListModel.getTeacherRate() + "");
+        TextView tv_class = (TextView) convertView.findViewById(R.id.tv_class);
+        TextView tv_subject = (TextView) convertView.findViewById(R.id.tv_subject);
+        TextView tv_evaluate = (TextView) convertView.findViewById(R.id.tv_evaluate);
+        LinearLayout ll_booking_layout = (LinearLayout) convertView.findViewById(R.id.ll_booking_layout);
+        TextView tv_money = (TextView) convertView.findViewById(R.id.tv_money);
+        ImageView ratingBar = (ImageView) convertView.findViewById(R.id.ratingBar);
+        switchRatingBar(ratingBar, teacherListModel.getTeacherRate());
+        tv_evaluate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getAct(), TeacherActivity.class);
+                intent.putExtra("tab", 1);
+                getAct().startActivity(intent);
+            }
+        });
+        if (HaojiajiaoApplication.ISSTATE) {
+            ll_booking_layout.setVisibility(View.INVISIBLE);
+        }
+        ll_booking_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (HaojiajiaoApplication.IFLOGIN) {
+                    if (!HaojiajiaoApplication.ISSTATE) {
+                        Intent intent = new Intent(getAct(), TeacherActivity.class);
+                        intent.putExtra("tab", 2);
+                        getAct().startActivity(intent);
+                    }
+
+                } else {
+                    new LoginDialog(getAct(), "Login before you can make an appointment oh!", new LoginLisenner() {
+                        @Override
+                        public void login() {
+                            Intent i = getAct().getPackageManager()
+                                    .getLaunchIntentForPackage(getAct().getPackageName());
+                            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            getAct().startActivity(i);
+                        }
+
+                        @Override
+                        public void sign() {
+                            Intent i = getAct().getPackageManager()
+                                    .getLaunchIntentForPackage(getAct().getPackageName());
+                            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            getAct().startActivity(i);
+                        }
+                    }).show();
+                }
+
+            }
+        });
+        return convertView;
+    }
+
+    private void switchRatingBar(ImageView ratingBar, double number) {
+        if (number < 0.5) {
+            ratingBar.setImageDrawable(getAct().getResources().getDrawable(R.drawable.star0));
+        } else if (number >= 0.5 && number < 1.5) {
+            ratingBar.setImageDrawable(getAct().getResources().getDrawable(R.drawable.star1));
+
+        } else if (number >= 1.5 && number < 2.5) {
+            ratingBar.setImageDrawable(getAct().getResources().getDrawable(R.drawable.star2));
+
+        }
+        if (number >= 2.5 && number < 3.5) {
+            ratingBar.setImageDrawable(getAct().getResources().getDrawable(R.drawable.star3));
+        }
+        if (number >= 3.5 && number < 4.5) {
+            ratingBar.setImageDrawable(getAct().getResources().getDrawable(R.drawable.star4));
+        }
+        if (number >= 4.5 && number <= 5) {
+            ratingBar.setImageDrawable(getAct().getResources().getDrawable(R.drawable.star5));
+        }
+    }
+}

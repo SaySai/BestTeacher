@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dip"
+    android:background="@drawable/edittext_shape_corners_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="4dip"
+                android:src="@mipmap/iv_class" />
+
+            <TextView
+                android:id="@+id/tv_class"
+                style="@style/nmuber_careful_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dip"
+                android:text="八年级，九年级"
+                android:textColor="@android:color/holo_blue_dark" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="4dip"
+                android:src="@mipmap/subject" />
+
+            <TextView
+                android:id="@+id/tv_subject"
+                style="@style/nmuber_careful_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物理，数学"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dip">
+
+
+        <TextView
+            android:id="@+id/tv_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/signup_style_corners_red_theme"
+            android:ems="5"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="Del"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

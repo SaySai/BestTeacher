@@ -1,0 +1,131 @@
+package com.shanghai.haojiajiao.fragment.about;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.shanghai.haojiajiao.R;
+import com.shanghai.haojiajiao.activity.BookingSettingActivity;
+import com.shanghai.haojiajiao.activity.MyDataActivity;
+import com.shanghai.haojiajiao.activity.MyOrderListActivity;
+import com.shanghai.haojiajiao.activity.NoticeActivity;
+import com.shanghai.haojiajiao.activity.SettingsActivity;
+import com.shanghai.haojiajiao.app.HaojiajiaoApplication;
+import com.shanghai.haojiajiao.base.BaseFragment;
+import com.shanghai.haojiajiao.util.BitmapUtil;
+import com.shanghai.haojiajiao.weight.ImgSwitchDialog;
+
+
+/**
+ * 我的 主界面
+ *
+ * @author zjy
+ */
+public class MyMainFM extends BaseFragment implements View.OnClickListener {
+    private View contentView = null;
+    private ImageView iv_userIcon;
+    private TextView tv_userName;
+    private ImageView iv_sex;
+    private TextView tv_city;
+    private LinearLayout ll_myData, ll_TimeSetting, ll_booking, ll_about, ll_settings, ll_CustomerService;
+    private String picPath = null;
+    public int AV = 0;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        contentView = inflater.inflate(R.layout.fragement_my_main, container, false);
+        iv_userIcon = (ImageView) contentView.findViewById(R.id.iv_userIcon);
+        tv_userName = (TextView) contentView.findViewById(R.id.tv_userName);
+        iv_sex = (ImageView) contentView.findViewById(R.id.iv_sex);
+        tv_city = (TextView) contentView.findViewById(R.id.tv_city);
+        ll_myData = (LinearLayout) contentView.findViewById(R.id.ll_myData);
+        ll_myData.setOnClickListener(this);
+        ll_TimeSetting = (LinearLayout) contentView.findViewById(R.id.ll_TimeSetting);
+        ll_TimeSetting.setOnClickListener(this);
+        ll_booking = (LinearLayout) contentView.findViewById(R.id.ll_booking);
+        ll_booking.setOnClickListener(this);
+        ll_about = (LinearLayout) contentView.findViewById(R.id.ll_about);
+        ll_about.setOnClickListener(this);
+        ll_settings = (LinearLayout) contentView.findViewById(R.id.ll_settings);
+        ll_CustomerService = (LinearLayout) contentView.findViewById(R.id.ll_CustomerService);
+        ll_CustomerService.setOnClickListener(this);
+        ll_settings.setOnClickListener(this);
+        if (HaojiajiaoApplication.ISSTATE) {
+            ll_TimeSetting.setVisibility(View.VISIBLE);
+        } else {
+            ll_TimeSetting.setVisibility(View.GONE);
+        }
+        iv_userIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new ImgSwitchDialog(getActivity(), new ImgSwitchDialog.ImgSwitchLisenner() {
+                    @Override
+                    public void album() {
+                        BitmapUtil.doPickPhotoFromGallery(getActivity());
+                        AV = 0;
+                    }
+
+                    @Override
+                    public void cam() {
+                        BitmapUtil.doTakePhoto(getActivity());
+                        AV = 0;
+                    }
+                }).show();
+
+            }
+        });
+        return contentView;
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        switchView(v.getId());
+    }
+
+    public void switchView(int id) {
+        switch (id) {
+            case R.id.ll_myData:
+                Intent intent = new Intent(getActivity(), MyDataActivity.class);
+                getActivity().startActivity(intent);
+                break;
+            case R.id.ll_TimeSetting:
+                Intent intent1 = new Intent(getActivity(), BookingSettingActivity.class);
+                getActivity().startActivity(intent1);
+                break;
+            case R.id.ll_booking:
+                Intent intent2 = new Intent(getActivity(), MyOrderListActivity.class);
+                getActivity().startActivity(intent2);
+                break;
+            case R.id.ll_about:
+                Intent intent4 = new Intent(getActivity(), NoticeActivity.class);
+                getActivity().startActivity(intent4);
+                break;
+            case R.id.ll_settings:
+                Intent intent5 = new Intent(getActivity(), SettingsActivity.class);
+                getActivity().startActivity(intent5);
+                break;
+            case R.id.ll_CustomerService:
+                Uri uri = Uri.parse("tel:15155518752");
+                Intent saer = new Intent(Intent.ACTION_DIAL, uri);
+                startActivity(saer);
+                break;
+        }
+    }
+
+    public void getRequestCodeFromActivity(Bitmap bitmap) {
+        iv_userIcon.setImageBitmap(bitmap);
+        // BitmapUtil.doCropPhoto(data,SignUpActivity.this);
+
+
+    }
+
+}

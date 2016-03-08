@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="G:\GoodTeacher\IMKit\src\main\libs"><file name="Rong_IMKit_v2_4_2.jar" path="G:\GoodTeacher\IMKit\src\main\libs\Rong_IMKit_v2_4_2.jar"/></source></dataSet><dataSet config="debug"><source path="G:\GoodTeacher\IMKit\src\debug\jniLibs"/></dataSet></merger>

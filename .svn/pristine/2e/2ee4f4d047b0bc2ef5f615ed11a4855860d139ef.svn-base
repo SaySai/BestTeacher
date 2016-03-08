@@ -1,0 +1,614 @@
+[
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_empty.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_empty.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_02.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_02.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab2_icon.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab2_icon.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\back.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_star_fill.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_star_fill.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_08.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_08.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\password.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\password.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_01.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_01.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\del_img.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\del_img.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\logo.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab22.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab22.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab21.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab21.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\default_ptr_flip.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\default_ptr_flip.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\default_ptr_rotate.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab2_icon.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab2_icon.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_07.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_07.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_09.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_09.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\down_sanjiao.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\down_sanjiao.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab11.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab11.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_empty.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_empty.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_error.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_error.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\logo.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\logo.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\settings.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\settings.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\default_ptr_rotate.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_12.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_12.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\booking.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\booking.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab12.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab12.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab1_icon.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab1_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\timesetting.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\timesetting.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_star_fill.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_star_fill.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\del_img.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\del_img.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\back.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab31.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab31.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\default_ptr_flip.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\default_ptr_flip.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\usericon.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\usericon.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_04.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_04.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\settings.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\settings.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_star_empty.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_star_empty.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_05.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_05.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_01.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_01.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\next.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\next.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\booking.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\booking.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\next.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\next.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_04.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_04.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_star_empty.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_star_empty.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_11.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_11.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\down_sanjiao.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\down_sanjiao.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_nopicture.jpg",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\pic_nopicture.jpg"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\back.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\back.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab32.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab32.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_loading.jpg",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\pic_loading.jpg"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\iv_class.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\iv_class.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_06.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_06.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\search.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\search.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab22.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab22.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\usericon.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\usericon.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\add_img.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\add_img.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_02.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_02.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\paypal.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\paypal.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\default_ptr_flip.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\default_ptr_flip.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_06.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_06.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_08.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_08.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_07.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_07.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_09.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_09.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\del_img.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\del_img.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_nopicture.jpg",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\pic_nopicture.jpg"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_error.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_error.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_empty.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_empty.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_error.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_error.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_05.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_05.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\timesetting.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\timesetting.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_10.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_10.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\indicator_arrow.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\indicator_arrow.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_03.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_03.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\add_img.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\add_img.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\city.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\city.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_errpicture.jpg",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\pic_errpicture.jpg"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\city.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\city.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab31.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab31.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_09.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_09.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_loading.jpg",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\pic_loading.jpg"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_errpicture.jpg",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\pic_errpicture.jpg"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab11.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab11.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_11.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_11.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\indicator_arrow.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\indicator_arrow.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\logo.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\logo.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_12.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_12.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\checkbox.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\checkbox.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_03.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_03.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_04.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_04.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\checkbox.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\checkbox.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_07.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_07.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_12.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_12.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab12.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab12.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\indicator_arrow.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\indicator_arrow.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_03.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_03.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab32.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab32.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_star_fill.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_star_fill.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_star_empty.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_star_empty.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\paypal.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\paypal.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\about.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\about.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\default_ptr_rotate.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab1_icon.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab1_icon.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_loading.jpg",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\pic_loading.jpg"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_05.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_05.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab32.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab32.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\search.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\search.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\settings.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\settings.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\about.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\about.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_06.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_06.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\mydata.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\mydata.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab11.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab11.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_01.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_01.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab21.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab21.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\iv_class.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\iv_class.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_errpicture.jpg",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\pic_errpicture.jpg"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\usericon.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\usericon.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\mydata.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\mydata.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\password.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\password.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\pic_nopicture.jpg",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\pic_nopicture.jpg"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_10.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_10.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab12.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab12.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_02.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_02.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\subject.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\subject.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab31.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab31.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\paypal.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\paypal.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab21.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab21.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\mydata.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\mydata.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\checkbox.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\checkbox.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\next.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\next.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab2_icon.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\tab2_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\password.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\password.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\search.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\search.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab22.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab22.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\iv_class.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\iv_class.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\subject.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\subject.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\add_img.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\add_img.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_11.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_11.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\city.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\city.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\down_sanjiao.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\down_sanjiao.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\tab1_icon.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\tab1_icon.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\timesetting.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\timesetting.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\booking.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\booking.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_08.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_08.png"
+    },
+    {
+        "merged": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\subject.png",
+        "source": "F:\\haojiajiao2016_1_10\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\subject.png"
+    },
+    {
+        "merged": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\about.png",
+        "source": "C:\\Users\\chenyajun\\Desktop\\Haojiajiao\\app\\src\\main\\res\\mipmap-hdpi\\about.png"
+    },
+    {
+        "merged": "G:\\GoodTeacher\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_loading_white_10.png",
+        "source": "G:\\GoodTeacher\\app\\src\\main\\res\\mipmap-hdpi\\ic_loading_white_10.png"
+    }
+]

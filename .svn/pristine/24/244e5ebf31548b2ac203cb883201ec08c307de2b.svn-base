@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
+
+    <ImageView
+        android:id="@+id/iv_userIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dip"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:paddingRight="16dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汪理高" />
+
+            <TextView
+                android:id="@+id/fen"
+                style="@style/text_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dip"
+                android:text="分"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/tv_ratingNumber"
+                style="@style/nmuber_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/fen"
+                android:text="3.6" />
+
+            <ImageView
+                android:id="@+id/ratingBar"
+                android:layout_width="100dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@id/tv_ratingNumber"
+                android:src="@drawable/star0" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="4dip"
+                android:src="@mipmap/iv_class" />
+
+            <TextView
+                android:id="@+id/tv_class"
+                style="@style/text_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dip"
+                android:text="八年级，九年级"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="4dip"
+                android:src="@mipmap/subject" />
+
+            <TextView
+                android:id="@+id/tv_subject"
+                style="@style/text_content_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物理，数学"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/text_content_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Teambition 是一个简单,高效的项目协作工具,你可以在这里管理项目,跟踪任务进度"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_evaluate_layout"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="20dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_style_corners_no_stroke_theme"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="6dip">
+
+                <TextView
+                    android:id="@+id/tv_evaluate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="6"
+                    android:gravity="center"
+                    android:text="Review（55）"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/list_content_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_booking_layout"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_style_corners_no_stroke_theme"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="6dip">
+
+                <TextView
+                    android:id="@+id/tv_booking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="6"
+                    android:gravity="center"
+                    android:text="book"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/list_content_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="$199/h"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/list_content_size" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

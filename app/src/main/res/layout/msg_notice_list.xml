@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_content_backgroud_white"
+            android:orientation="vertical"
+            android:padding="20dip">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公告标题内容" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="16dip"
+                android:scaleType="fitEnd"
+                android:src="@mipmap/next"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_times"
+                style="@style/text_content_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2016.5.5.2.20"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/next" />
+    </RelativeLayout>
+</LinearLayout>

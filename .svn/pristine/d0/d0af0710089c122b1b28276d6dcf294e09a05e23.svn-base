@@ -1,0 +1,16 @@
+package com.shanghai.haojiajiao.model;
+
+/**
+ * Created by Administrator on 2015/12/23.
+ */
+public class DayModel {
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    private int state=0;//0=none，1=可逾越 2=选中
+}

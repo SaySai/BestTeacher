@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_title1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:background="@drawable/shape_notice_backgroud_white"
+            android:ems="7"
+            android:gravity="center"
+            android:text="notification"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:background="@drawable/shape_message_backgroud_white"
+            android:ems="7"
+            android:gravity="center"
+            android:text="message"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+
+
+        <TextView
+            android:id="@+id/tv_comments"
+            style="@style/name_tab_style"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dip"
+            android:paddingRight="20dip"
+            android:text="Review" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+
+
+        <TextView
+            android:id="@+id/tv_leave"
+            style="@style/name_tab_style"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dip"
+            android:paddingRight="20dip"
+            android:text="Charts" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tv_system"
+            style="@style/name_tab_style"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dip"
+            android:paddingRight="20dip"
+            android:text="System message" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+
+
+        <TextView
+            android:id="@+id/tv_leaveParent"
+            style="@style/name_tab_style"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dip"
+            android:paddingRight="20dip"
+            android:text="Charts" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tv_systemParent"
+            style="@style/name_tab_style"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dip"
+            android:paddingRight="20dip"
+            android:text="System message" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+</LinearLayout>

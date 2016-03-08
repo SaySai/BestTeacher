@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--上拉下拉刷新所使用的数据值-->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <!--首页导航栏所使用的数据值-->
+    <dimen name="tab_height">55dp</dimen>
+    <dimen name="tab_text_size">12sp</dimen>
+    <dimen name="tab_img_size">25dp</dimen>
+    <!-- title高度 -->
+    <dimen name="title_height">55dp</dimen>
+    <dimen name="title_height1">45dp</dimen>
+    <!-- title中控件与边界的距离 -->
+    <dimen name="title_margin">8dp</dimen>
+    <!-- title中控件与边界的距离 -->
+    <dimen name="title_margin2">40dp</dimen>
+    <!-- title中控件与边界的距离 -->
+    <dimen name="title_margin3">15dp</dimen>
+    <!-- title中标题文字大小 -->
+    <dimen name="title_text_size">18sp</dimen>
+    <!-- title相关参数设置 -->
+    <!-- title返回按钮宽高 -->
+    <dimen name="title_back_btn_height">24dp</dimen>
+    <dimen name="title_back_btn_width">24dp</dimen>
+    <!-- title右侧按钮宽高 -->
+    <dimen name="title_right_height">26dp</dimen>
+    <dimen name="title_right_width">26dp</dimen>
+    <!--标题文字大小设置-->
+    <dimen name="textview_size_big">18sp</dimen>
+    <dimen name="textview_size_middle">16sp</dimen>
+    <dimen name="textview_size_small">14sp</dimen>
+    <!--listview名称数字文字-->
+    <dimen name="list_name_size">16sp</dimen>
+    <!--listview详情文字-->
+    <dimen name="list_content_size">11sp</dimen>
+    <!--说明文字-->
+    <dimen name="list_explain_size">16sp</dimen>
+</resources>

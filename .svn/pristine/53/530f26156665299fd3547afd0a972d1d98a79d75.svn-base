@@ -1,0 +1,24 @@
+package com.shanghai.haojiajiao.model;
+
+/**
+ * Created by Administrator on 2015/12/23.
+ */
+public class Model {
+    /*****************************
+     * 课程表
+     **********************************/
+    /*年级*/
+    public static String AD = "advance";//Advance Preparation Course
+    public static String HI = "high";
+    public static String HS = "hsc";
+    public static String OT = "other";
+    /*课程*/
+    public static String EN = "english";
+    public static String MA = "math";
+    public static String SC = "science";
+    public static String GC = "gacw";//General Ability Creative Writing
+    public static String GA = "ga";//General Ability
+    public static String PH = "physics";
+    public static String CH = "chemistry";
+    /********************************************************************/
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittext_shape_corners_white"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="温馨提示:"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+    <LinearLayout style="@style/separatorLine"/>
+    <TextView
+        android:id="@+id/dialog_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="18dp"
+        android:text="您确定退出程序？"
+        android:textColor="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" >
+        <LinearLayout
+            android:id="@+id/ok_btn_layout"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_style_corners_no_stroke_theme" >
+            <TextView
+                android:id="@+id/dialog_ok_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cancle_btn_layout"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_toRightOf="@id/ok_btn_layout"
+            android:background="@drawable/button_style_corners_no_stroke_theme" >
+
+            <TextView
+                android:id="@+id/dialog_cancle_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

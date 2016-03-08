@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
+
+    <ImageView
+        android:id="@+id/iv_userIcon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dip"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:paddingRight="16dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/name_test_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汪理高" />
+
+            <TextView
+                android:id="@+id/tv_times"
+                style="@style/text_content_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:text="2015.12.17   18.20.50"
+                android:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ratingBar"
+            android:layout_width="100dip"
+            android:layout_height="20dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/star0" />
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/text_content_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="讲的是个锤子，连个一加一都不懂"
+            android:textColor="@android:color/black" />
+
+
+    </LinearLayout>
+</LinearLayout>

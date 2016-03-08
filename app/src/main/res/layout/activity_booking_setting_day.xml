@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/tab_no_press_color">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/title_height"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="APPOINTMENT TIME"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip">
+
+        <TextView
+            android:id="@+id/tssss"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_alignParentBottom="true"
+            android:text="DATE:"
+            android:textColor="@color/tab_no_press_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_thisTime"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_marginLeft="4dip"
+            android:layout_toRightOf="@id/tssss"
+            android:layout_alignParentBottom="true"
+            android:text="2015.12"
+            android:textColor="@color/tab_no_press_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/text_content_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:layout_marginTop="16dip"
+        android:text="Tips: Tap to set the time for appointment."
+        android:textColor="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.shanghai.haojiajiao.weight.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:fadingEdge="none"
+                android:horizontalSpacing="1dip"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="1dip" />
+
+            <TextView
+                android:id="@+id/tv_signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="30dip"
+                android:background="@drawable/signup_style_corners_red_theme"
+                android:ems="13"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="SUBMIT"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
