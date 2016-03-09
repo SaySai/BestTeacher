@@ -42,13 +42,13 @@ public class WelcomeActivityForVisitor extends BaseActivity implements View.OnCl
 
     private TextView tv_login, tv_signUp, tv_forget, tv_law;
     private ImageView checkBox;
-    private boolean FALV = false;
+    private boolean FALV = true;
     private int index = 0;
     //    private FinishReceiver receiver;
     private LoadingDialog loadingDialog;
     private String isLogin = "signUp";
     private LinearLayout accept_ll;
-    private boolean isClick = false;//是否点击接受按钮
+    private boolean isClick = true;//是否点击接受按钮
     private TextView accept_tv;
 
     @Override
@@ -88,8 +88,8 @@ public class WelcomeActivityForVisitor extends BaseActivity implements View.OnCl
         ll_wc2 = (LinearLayout) findViewById(R.id.ll_wc2);
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);
-        et_username.setText("TestParent@qq.com");
-        et_password.setText("123456");
+        //et_username.setText("");
+        //et_password.setText("");
         tv_login = (TextView) findViewById(R.id.tv_login);
         checkBox = (ImageView) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(this);
@@ -120,8 +120,8 @@ public class WelcomeActivityForVisitor extends BaseActivity implements View.OnCl
             tv_login.setVisibility(View.GONE);
         }
         HaojiajiaoApplication application = (HaojiajiaoApplication) getApplication();
-        application.initLocation();
-        application.startLocation();
+        //application.initLocation();
+        //application.startLocation();
         loadingDialog = new LoadingDialog(WelcomeActivityForVisitor.this);
     }
 

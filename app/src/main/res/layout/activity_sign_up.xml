@@ -62,7 +62,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="81dip"
+            android:layout_height="122dip"
             android:layout_marginTop="12dip"
             android:background="@android:color/white"
             android:orientation="vertical">
@@ -118,11 +118,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:imeOptions="actionDone"
+                    android:imeOptions="actionNext"
                     android:maxLines="1"
+                    android:inputType="numberPassword"
                     android:password="true"
                     android:singleLine="true" />
             </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#EEEEEE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:orientation="horizontal"
+                android:paddingTop="8dip">
+
+                <TextView
+                    style="@style/name_tab_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="36dip"
+                    android:text="Confirm password：" />
+
+                <EditText
+                    android:id="@+id/et_tab1_userPassword1"
+                    style="@style/name_tab_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:password="true"
+                    android:inputType="numberPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
@@ -244,10 +277,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    />
             </LinearLayout>
 
             <ImageView

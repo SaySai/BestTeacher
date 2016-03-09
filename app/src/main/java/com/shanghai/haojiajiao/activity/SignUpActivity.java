@@ -54,7 +54,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
     //tab
     private LinearLayout ll_tab1, ll_parent_tab2, ll_tab_end, ll_tab_teacher2, ll_tab_teacher3;
     //tab1
-    private EditText et_tab1_userEmail, et_tab1_userPassword;
+    private EditText et_tab1_userEmail, et_tab1_userPassword,et_tab1_userPassword1;
     //tab2Parent
     private EditText et_parentTab2Name, et_parentTab2Email, et_parentTab2Phone;
     private RadioGroup et_parentTab2Sax, et_ChildTab2Sax;
@@ -160,6 +160,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
     private void initTab1() {
         et_tab1_userEmail = (EditText) findViewById(R.id.et_tab1_userEmail);
         et_tab1_userPassword = (EditText) findViewById(R.id.et_tab1_userPassword);
+        et_tab1_userPassword1 = (EditText) findViewById(R.id.et_tab1_userPassword1);
     }
 
     private void initTabPrarent2() {
@@ -173,9 +174,14 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
             }
         });
         et_parentTab2Email = (EditText) findViewById(R.id.et_parentTab2Email);
-        email = getIntent().getStringExtra("email");
+        //email = getIntent().getStringExtra("email");
+        email = et_tab1_userEmail.getText().toString();
+        Log.e("Signup",email);
         if(email!=null){
             et_parentTab2Email.setText(email);
+        }
+        else{
+            et_parentTab2Email.setText("oo@qq.com");
         }
         et_parentTab2Phone = (EditText) findViewById(R.id.et_parentTab2Phone);
         //child
@@ -233,9 +239,13 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         });
         et_TeacherTab2Age = (EditText) findViewById(R.id.et_TeacherTab2Age);
         et_TeacherTab2Email = (EditText) findViewById(R.id.et_TeacherTab2Email);
-        email = getIntent().getStringExtra("email");
+        //email = getIntent().getStringExtra("email");
+        email = et_tab1_userEmail.getText().toString();
         if(email!=null){
             et_TeacherTab2Email.setText(email);
+        }
+        else{
+            et_TeacherTab2Email.setText("oo@oo.com");
         }
         et_TeacherTab2Phone = (EditText) findViewById(R.id.et_TeacherTab2Phone);
         et_TeacherTab2City = (TextView) findViewById(R.id.et_TeacherTab2City);
@@ -476,9 +486,9 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         if (email != null) {
             et_tab1_userEmail.setText(email);
         }
-        if (password != null) {
-            et_tab1_userPassword.setText(MD5(password));
-        }
+//        if (password != null) {
+//            et_tab1_userPassword.setText(MD5(password));
+//        }
     }
 
 
@@ -540,7 +550,9 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         }
         RadioButton userSax = (RadioButton) findViewById(et_TeacherTab2Sax.getCheckedRadioButtonId());
         dataParas.put("TeacherGender", userSax.getText().toString());
-        ifStrTrue(dataParas, "TeacherPassword", et_tab1_userPassword);
+        password = MD5(et_tab1_userPassword.getText().toString());
+        dataParas.put("TeacherPassword",password);
+        //ifStrTrue(dataParas, "TeacherPassword", password);
         if (et_TeacherTab2Phone != null && (!et_TeacherTab2Phone.equals(""))) {
             ifStrTrue(dataParas, "TeacherTel", et_TeacherTab2Phone);
         } else {
@@ -580,7 +592,9 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
             return;
         }
 
-        ifStrTrue(dataParas, "ParentPassword", et_tab1_userPassword);
+        password = MD5(et_tab1_userPassword.getText().toString());
+        dataParas.put("ParentPassword",password);
+        //ifStrTrue(dataParas, "ParentPassword", et_tab1_userPassword);
 
         RadioButton userSax = (RadioButton) findViewById(et_parentTab2Sax.getCheckedRadioButtonId());
         dataParas.put("ParentGender", userSax.getText().toString());
@@ -654,13 +668,15 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
         Log.e("Signup",HaojiajiaoApplication.ISSTATE?"Tea":"Par");
         if (!HaojiajiaoApplication.ISSTATE) {
             if (ll_tab1.getVisibility() == View.VISIBLE) {
-                if (et_tab1_userEmail.getText() != null && et_tab1_userEmail.getText().length() > 0) {
+                if(et_tab1_userPassword.getText() == null || et_tab1_userPassword.getText().length() <6){
+                    ToastUtil.showShort(SignUpActivity.this, "Your password must be at least 6 characters.");
+                }else if(et_tab1_userPassword.getText() != null && et_tab1_userPassword1.getText() != null &&
+                        !et_tab1_userPassword.getText().toString().equals(et_tab1_userPassword1.getText().toString())){
+                    ToastUtil.showShort(SignUpActivity.this, "Please input same password.");
+                }else if (et_tab1_userEmail.getText() != null && et_tab1_userEmail.getText().length() > 0) {
                     checkRegister(et_tab1_userEmail.getText().toString());
                     //ll_tab1.setVisibility(View.GONE);
                     //ll_parent_tab2.setVisibility(View.VISIBLE);
-                }
-                if(et_tab1_userPassword.getText() == null && et_tab1_userPassword.getText().length() <=6){
-                    ToastUtil.showShort(SignUpActivity.this, "Your password must be at least 6 characters.");
                 }
             } else if (ll_parent_tab2.getVisibility() == View.VISIBLE) {
                 if(ifCompleteParentInfo() && isParentSexSelcted && isChildSexSelcted){
@@ -673,18 +689,21 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 }
             } else if (ll_tab_end.getVisibility() == View.VISIBLE) {
                 parentRegister();
-                getParentToken();
+                //getParentToken();
             }
         } else {
             if (ll_tab1.getVisibility() == View.VISIBLE) {
-                if (et_tab1_userEmail.getText() != null && et_tab1_userEmail.getText().length() > 0) {
+                if(et_tab1_userPassword.getText() == null && et_tab1_userPassword.getText().length() <6){
+                    ToastUtil.showShort(SignUpActivity.this, "Your password must be at least 6 characters.");
+                }else if(et_tab1_userPassword.getText() == null && et_tab1_userPassword1.getText() == null &&
+                        !et_tab1_userPassword.getText().toString().equals(et_tab1_userPassword1.getText().toString())){
+                    ToastUtil.showShort(SignUpActivity.this, "Please input same password.");
+                }else if (et_tab1_userEmail.getText() != null && et_tab1_userEmail.getText().length() > 0) {
                     checkRegister(et_tab1_userEmail.getText().toString());
                     //ll_tab1.setVisibility(View.GONE);
                     //ll_tab_teacher2.setVisibility(View.VISIBLE);
                 }
-                if(et_tab1_userPassword.getText() == null && et_tab1_userPassword.getText().length() <=6){
-                    ToastUtil.showShort(SignUpActivity.this, "Your password must be at least 6 characters.");
-                }
+
             } else if (ll_tab_teacher2.getVisibility() == View.VISIBLE) {
                 if(ifCompleteTeacherInfo1() && isTeacherSexSelcted){
                     ll_tab_teacher2.setVisibility(View.GONE);
@@ -707,7 +726,7 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                 }
             } else if (ll_tab_end.getVisibility() == View.VISIBLE) {
                 teacherRegister();
-                getTeacherToken();
+                //getTeacherToken();
             }
         }
     }
@@ -890,8 +909,10 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                     HaojiajiaoApplication.ISSTATE = true;
                     if (ifHasIMG) {
                         HaojiajiaoApplication.ifIsSignUp = true;
-
                     }
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
 
                 } else {
                     ToastUtil.showLong(SignUpActivity.this, "Sorry, Registration failure.");
@@ -918,6 +939,9 @@ public class SignUpActivity extends BaseActivity implements View.OnClickListener
                     HaojiajiaoApplication.ifIsSignUp = true;
                     HaojiajiaoApplication.ISSTATE = false;
                     Log.e("SignUp","username:"+HaojiajiaoApplication.userName);
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     ToastUtil.showLong(SignUpActivity.this, "Sorry, Registration failure.");
                 }

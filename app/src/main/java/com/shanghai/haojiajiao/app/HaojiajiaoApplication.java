@@ -7,7 +7,6 @@ import android.app.Service;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Vibrator;
@@ -36,7 +35,6 @@ import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.shanghai.haojiajiao.R;
 import com.shanghai.haojiajiao.model.UserList;
 import com.shanghai.haojiajiao.model.UserModel;
-import com.shanghai.haojiajiao.provider.MyPrivateConversationProvider;
 import com.shanghai.haojiajiao.util.CrashHandlerUtils.CustomCrashHandler;
 import com.shanghai.haojiajiao.util.DeviceUtil;
 import com.shanghai.haojiajiao.util.HttpUtil.PreferencesUtil;
@@ -51,7 +49,6 @@ import java.util.List;
 
 import cn.jpush.android.api.JPushInterface;
 import io.rong.imkit.RongIM;
-import io.rong.imlib.model.UserInfo;
 
 @SuppressLint("NewApi")
 public class HaojiajiaoApplication extends Application {
@@ -101,21 +98,30 @@ public class HaojiajiaoApplication extends Application {
         context = this;
 //        UserList = new ArrayList<>();
 //        UserList.clear();//初始清空
-        mLocationClient = new LocationClient(this.getApplicationContext());
-        mMyLocationListener = new MyLocationListener();
-        mLocationClient.registerLocationListener(mMyLocationListener);
+        Log.e("Application","获取位置信息开始。");
+        //mLocationClient = new LocationClient(this.getApplicationContext());
+        //mMyLocationListener = new MyLocationListener();
+        //mLocationClient.registerLocationListener(mMyLocationListener);
+        Log.e("Application","获取位置信息结束。");
         mVibrator = (Vibrator) getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
         // 判断当前SDK版本号，如果是4.4以上，就是支持沉浸式状态栏的
         isCanFullScreen = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
         // 在sd卡中创建项目所需文件夹
+        Log.e("Application","创建项目根目录开始。");
         createRootDirectory();
+        Log.e("Application","创建项目根目录结束。");
+        Log.e("Application","初始化JPush开始。");
         JPushInterface.setDebugMode(false);    // 设置开启日志,发布时请关闭日志
         JPushInterface.init(this);            // 初始化 JPush
         // 获取应用程序最大可用内存
         int maxMemory = (int) Runtime.getRuntime().maxMemory();
         cacheSize = maxMemory / 3;
+        Log.e("Application","初始化JPush结束。");
+        Log.e("Application","获取手机信息开始。");
         getPhoneInfo();
+        Log.e("Application","获取手机信息结束。");
         // 初始化uil图片处理框架
+        Log.e("Application","初始化uil图片处理框架开始。");
         initImageLoader(getApplicationContext());
         // 增加crash时日志记录,日志保存在CRASH_PATH中
         // 在这里为应用设置异常处理程序，然后我们的程序才能捕获未处理的异常
@@ -135,8 +141,11 @@ public class HaojiajiaoApplication extends Application {
 
         }
         isWifi = DeviceUtil.isWifiConnected(context);
+        Log.e("Application","初始化uil图片处理框架结束。");
+        Log.e("Application","初始化融云开始。");
 
         initRong();
+        Log.e("Application","初始化融云结束。");
 
 
     }

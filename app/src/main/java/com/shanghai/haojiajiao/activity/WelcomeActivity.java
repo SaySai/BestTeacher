@@ -37,38 +37,45 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
     private TextView tv_parent;
     private TextView tv_child;
     private TextView tv_friend;
-    private  boolean  isClick=false;//是否点击接受按钮
+    private  boolean  isClick=true;//是否点击接受按钮
     private LinearLayout ll_tab1, ll_tab2, ll_wc1, ll_wc2;
 
     private EditText et_username, et_password;
 
     private TextView tv_login, tv_signUp, tv_forget, tv_law;
     private ImageView checkBox;
-    private boolean FALV = false;
+    private boolean FALV = true;
     private int index = 0;
     private FinishReceiver receiver;
     private LoadingDialog loadingDialog;
     private TextView accept_tv;
     @Override
     protected void onResume() {
+        Log.e("WelcomeActivity","welcomeActivity:onResume()");
         JPushInterface.onResume(WelcomeActivity.this);
         super.onResume();
     }
 
     @Override
     protected void onPause() {
+        Log.e("WelcomeActivity","welcomeActivity:onPause()");
         JPushInterface.onPause(WelcomeActivity.this);
         super.onPause();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e("WelcomeActivity","进入welcomeActivity。");
         super.onCreate(savedInstanceState);
+        Log.e("WelcomeActivity","开始setContentView。");
         setContentView(R.layout.activity_welcome);
+        Log.e("WelcomeActivity","new FinishReceiver");
         receiver = new FinishReceiver();
         IntentFilter intentFilter = new IntentFilter();
+        Log.e("WelcomeActivity","新建IntentFilter结束。");
         intentFilter.addAction(WelcomeActivity.class.getCanonicalName());
         registerReceiver(receiver, intentFilter);
+        Log.e("WelcomeActivity","registerReceiver建立。");
         iv_wellcome = (ImageView) findViewById(R.id.iv_wellcome);
         tv_wellcome = (TextView) findViewById(R.id.tv_wellcome);
         accept_tv= (TextView) findViewById(R.id.accept_tv);
@@ -87,8 +94,8 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
         et_password = (EditText) findViewById(R.id.et_password);
 //        et_username.setText("admin00@163.com");
 //        et_password.setText("e10adc3949ba59abbe56e057f20f883e");
-        et_username.setText("TestParent@qq.com");
-       et_password.setText("123456");
+        //et_username.setText("TestParent@qq.com");
+        //et_password.setText("123456");
         tv_login = (TextView) findViewById(R.id.tv_login);
         checkBox = (ImageView) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(this);
@@ -99,10 +106,13 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
         tv_law.setOnClickListener(this);
         tv_forget = (TextView) findViewById(R.id.tv_forget);
         tv_forget.setOnClickListener(this);
+        Log.e("WelcomeActivity","界面控件find结束。");
         HaojiajiaoApplication application = (HaojiajiaoApplication) getApplication();
         //application.initLocation();
         //application.startLocation();
+        Log.e("WelcomeActivity","new loadingDialog开始。");
         loadingDialog = new LoadingDialog(WelcomeActivity.this);
+        Log.e("WelcomeActivity","new loadingDialog结束。");
     }
 
     @Override
@@ -242,8 +252,10 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
 
 
     public class FinishReceiver extends BroadcastReceiver {
+
         @Override
         public void onReceive(Context context, Intent intent) {
+            Log.e("WelcomeActivity","welcomeActivity:FinishReceiver-onReceive");
             if (WelcomeActivity.class.getCanonicalName().equals(intent.getAction())) {
                 finish();
             }

@@ -475,7 +475,7 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
     public void updateParent() {
         Map<String, String> dataParas = new HashMap<>();
         dataParas.put("ParentUserName", HaojiajiaoApplication.userName);
-        ifStrTrue(dataParas, "ParentName", et_parentTab2Name);
+        /*ifStrTrue(dataParas, "ParentName", et_parentTab2Name);
         ifStrTrue(dataParas, "ParentGender", et_parentTab2Sax);
         ifStrTrue(dataParas, "ParentEmail", et_parentTab2Email);
         ifStrTrue(dataParas, "ParentTel", et_parentTab2Phone);
@@ -485,7 +485,7 @@ public class MyDataActivity extends BaseActivity implements View.OnClickListener
         }
         ifStrTrue(dataParas, "StudentAge", et_ChildTab2Age);
         ifStrTrue(dataParas, "StudentGender", et_ChildTab2Sax);
-        ifStrTrue(dataParas, "StudentEmail", et_ChildTab2Email);
+        ifStrTrue(dataParas, "StudentEmail", et_ChildTab2Email);*/
         requestHandler.sendHttpRequestWithParamByGet(GoodTeacherURL.updateParent, dataParas, RequestTag.updateParent);
     }
 

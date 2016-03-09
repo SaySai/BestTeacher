@@ -11,12 +11,11 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.shanghai.haojiajiao.R;
 import com.shanghai.haojiajiao.activity.EvaluateListActivity;
-import com.shanghai.haojiajiao.activity.LeaveActivity;
 import com.shanghai.haojiajiao.activity.NoticeActivity;
 import com.shanghai.haojiajiao.activity.SystemMsgActivity;
-import com.shanghai.haojiajiao.adapter.NoticeAdapter;
 import com.shanghai.haojiajiao.adapter.NoticesAdapter;
 import com.shanghai.haojiajiao.app.HaojiajiaoApplication;
 import com.shanghai.haojiajiao.base.BaseFragment;
@@ -38,7 +37,6 @@ import java.util.Map;
 
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
-import io.rong.imlib.model.UserInfo;
 
 /**
  * 消息主界面
@@ -67,6 +65,7 @@ public class MessageMainFM extends BaseFragment implements View.OnClickListener 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.e("MessageMainFM","进入MessageMainFM。");
         if (contentView == null) {
             contentView = inflater.inflate(R.layout.fragement_message_main, container, false);
             initView();

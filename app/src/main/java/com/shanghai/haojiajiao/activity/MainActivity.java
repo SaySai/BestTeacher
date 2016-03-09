@@ -72,6 +72,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //    private int color_pressed,color_no_pressed;
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Log.e("Mainactivity","进入MainActivity。");
         // TODO 自动生成的方法存根
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
