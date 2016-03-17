@@ -65,7 +65,8 @@
         android:layout_marginLeft="50dip"
         android:layout_marginRight="50dip"
         android:layout_marginTop="16dip"
-        android:text="Tips: Tap to set the time for appointment."
+        android:text="Tap to set the time for appointment."
+        android:textSize="16sp"
         android:textColor="@android:color/black" />
 
     <ScrollView

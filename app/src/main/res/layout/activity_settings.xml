@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="System settings"
+            android:text="SYSTEN SETTINGS"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -34,13 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dip"
+        android:layout_marginBottom="25dip"
         android:layout_marginTop="24dip"
         android:background="@drawable/signup_style_corners_red_theme"
         android:ems="13"
         android:gravity="center"
         android:padding="10dip"
-        android:text="Logout"
+        android:text="LOGOUT"
         android:textColor="@android:color/white"
         android:textSize="@dimen/title_text_size" />
 
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dip"
             android:layout_marginTop="16dip"
-            android:text="Login settings" />
+            android:text="LOGIN SETTINGS" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="36dip"
-                    android:text="Email：" />
+                    android:text="EMAIL:" />
 
                 <EditText
                     android:id="@+id/et_tab1_userEmail"
@@ -90,6 +90,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
+                    android:editable="false"
                     android:singleLine="true" />
             </LinearLayout>
 
@@ -109,8 +110,8 @@
             android:background="?android:attr/selectableItemBackground"
             android:gravity="right"
             android:padding="12dip"
-            android:text="Change Password"
-            android:textColor="@android:color/holo_green_light"
+            android:text="CHANGE PASSWORD"
+            android:textColor="@android:color/darker_gray"
             android:textSize="16sp" />
     </LinearLayout>
 </RelativeLayout>

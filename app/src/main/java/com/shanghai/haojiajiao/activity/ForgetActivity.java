@@ -51,7 +51,8 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(ForgetActivity.class.getCanonicalName());
         registerReceiver(receiver, intentFilter);
-        SMSSDK.initSDK(this, "df88811a3201", "8f8c3268808c73f18a79c503acb722ea");
+        //test: SMSSDK.initSDK(this, "df88811a3201", "8f8c3268808c73f18a79c503acb722ea");
+        SMSSDK.initSDK(this, "1024a083e6984", "499789800f20210bca9d2bea4e7a1796");
         iv_back = (ImageView) findViewById(R.id.iv_back);
         iv_back.setOnClickListener(this);
         et_tab1_userEmail = (EditText) findViewById(R.id.et_tab1_userEmail);
@@ -162,7 +163,7 @@ public class ForgetActivity extends BaseActivity implements View.OnClickListener
             ToastUtil.showLong(ForgetActivity.this, "Sorry, you cannot leave required fields blank.");
             return;
         }
-        if (!et_tab1_password1.getText().equals(et_tab1_password2.getText())) {
+        if (!et_tab1_password1.getText().toString().equals(et_tab1_password2.getText().toString())) {
             ToastUtil.showLong(ForgetActivity.this, "The passwords you entered are not the same. Please re-enter your password.");
             return;
         }

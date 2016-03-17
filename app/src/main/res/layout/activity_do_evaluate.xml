@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="评价"
+            android:text="EVALUATE"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="10dip"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/default_usericon" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -58,7 +58,7 @@
                 style="@style/name_test_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="汪理高" />
+                android:text="Simon" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                 style="@style/name_tab_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="预约时间：2015/12/30   9:00~10:00"
+                android:text="time: 2015/12/30   9:00~10:00"
                 android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
@@ -137,7 +137,8 @@
             android:layout_marginRight="48dip"
             android:layout_marginTop="16dip"
             android:background="@null"
-            android:hint="写下您的评价吧！" />
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="write down your evaluation" />
 
         <TextView
             android:id="@+id/tv_up"
@@ -150,7 +151,7 @@
             android:ems="13"
             android:gravity="center"
             android:padding="10dip"
-            android:text="提交"
+            android:text="SUBMIT"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size" />
     </LinearLayout>

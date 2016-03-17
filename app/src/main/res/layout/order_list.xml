@@ -21,7 +21,7 @@
                 style="@style/name_test_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="预约订单" />
+                android:text="Booking Order" />
 
             <TextView
                 android:id="@+id/tv_finish"
@@ -29,10 +29,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/button_shape_corners_white_k_red"
-                android:ems="4"
+                android:ems="7"
                 android:gravity="center"
                 android:padding="2dip"
-                android:text="已完成"
+                android:text="Booking Done"
                 android:textColor="#FFCC3300" />
         </RelativeLayout>
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dip"
             android:layout_marginTop="16dip"
-            android:text="订单编号：" />
+            android:text="ORDER NO:" />
 
         <TextView
             android:id="@+id/tv_teacher"
@@ -69,6 +69,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dip"
             android:layout_marginTop="8dip"
-            android:text="教师：" />
+            android:text="TEACHER:" />
     </LinearLayout>
 </LinearLayout>

@@ -5,6 +5,7 @@
     android:background="@color/background_color"
     android:orientation="vertical">
 
+    <!--top title-->
     <RelativeLayout
         android:id="@+id/rl_title"
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
 
 
 
-
+    <!--teacher info-->
     <ScrollView
         android:id="@+id/sv_tab1"
         android:layout_width="match_parent"
@@ -51,14 +52,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dip"
                 android:layout_marginTop="16dip"
-                android:text="Personal Information" />
+                android:text="PERSONAL INFO" />
 
+            <!--basic info-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="245dip"
+                android:layout_height="285dip"
                 android:layout_marginTop="12dip"
                 android:background="@android:color/white"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -71,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Name：" />
+                        android:text="NAME:" />
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Name"
@@ -100,7 +103,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="36dip"
-                        android:text="Sex：" />
+                        android:text="GENDER:" />
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Sax"
@@ -129,7 +132,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="36dip"
-                        android:text="Age：" />
+                        android:text="AGE:" />
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Age"
@@ -157,7 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Email：" />
+                        android:text="EMAIL:" />
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Email"
@@ -185,9 +188,8 @@
                         style="@style/name_tab_style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:layout_marginLeft="36dip"
-                        android:text="Phone：" />
+                        android:text="PHONE:" />
 
                     <EditText
                         android:id="@+id/et_TeacherTab2Phone"
@@ -208,7 +210,6 @@
                     android:id="@+id/ll_teacher_city"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingTop="8dip">
 
@@ -217,13 +218,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="City" />
+                        android:text="CITY:" />
 
-                    <ImageView
+                    <!--<ImageView
                         android:layout_width="16dip"
                         android:layout_height="16dip"
                         android:gravity="center"
-                        android:src="@mipmap/tab1_icon" />
+                        android:src="@mipmap/tab1_icon" />-->
 
                     <TextView
                         android:id="@+id/et_TeacherTab2City"
@@ -236,8 +237,42 @@
                         android:maxLines="1"
                         android:singleLine="true" />
                 </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#EEEEEE" />
+
+                <LinearLayout
+                    android:id="@+id/ll_teachers"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dip">
+
+                    <TextView
+                        style="@style/name_tab_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="36dip"
+                        android:text="PAYPAL:" />
+
+                    <EditText
+                        android:id="@+id/et_TeacherTab2ZPay"
+                        style="@style/name_tab_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:imeOptions="actionNext"
+                        android:gravity="center_horizontal"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </LinearLayout>
+
             </LinearLayout>
 
+            <!--teacher city-->
             <LinearLayout
                 android:id="@+id/ll_city_list_teacher"
                 android:layout_width="match_parent"
@@ -266,45 +301,19 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="1dip"
+                android:layout_height="4dip"
                 android:background="#EEEEEE" />
 
+            <!--experience-->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:id="@+id/ll_teachers"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dip"
-                    android:orientation="horizontal"
-                    android:paddingTop="8dip">
-
-                    <TextView
-                        style="@style/name_tab_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:layout_marginLeft="36dip"
-                        android:text="Paypay account：" />
-
-                    <EditText
-                        android:id="@+id/et_TeacherTab2ZPay"
-                        style="@style/name_tab_style"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:imeOptions="actionNext"
-                        android:maxLines="1"
-                        android:singleLine="true" />
-                </LinearLayout>
 
 
                 <ImageView
                     android:id="@+id/ll_teachers1"
                     android:layout_width="match_parent"
                     android:layout_height="3dip"
-                    android:layout_below="@id/ll_teachers"
                     android:background="#EEEEEE" />
 
                 <LinearLayout
@@ -322,7 +331,7 @@
                         android:layout_marginBottom="4dip"
                         android:layout_marginLeft="16dip"
                         android:layout_marginTop="16dip"
-                        android:text="Experience：" />
+                        android:text="EXPERIENCE:" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -349,6 +358,7 @@
 
             </RelativeLayout>
 
+            <!--add course-->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -359,22 +369,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dip"
                     android:layout_marginTop="16dip"
-                    android:text="My Course" />
+                    android:text="MY COURSE" />
 
                 <ImageView
                     android:id="@+id/et_TeacherTab3Add"
-                    android:layout_width="44dip"
-                    android:layout_height="44dip"
+                    android:layout_width="55dip"
+                    android:layout_height="55dip"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dip"
                     android:background="?android:attr/selectableItemBackground"
                     android:src="@mipmap/add_img" />
             </RelativeLayout>
 
+            <!--price-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dip"
+                android:layout_margin="0dip"
                 android:orientation="horizontal"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip">
@@ -382,9 +393,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Price:"
+                    android:text="PRICE:"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/et_money"
@@ -392,23 +403,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dip"
                     android:layout_marginRight="12dip"
-                    android:ems="5"
+                    android:ems="6"
                     android:hint="fee"
                     android:imeOptions="actionDone"
                     android:inputType="number"
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textColor="@android:color/black"
-                    android:textSize="16dip" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="AUD/H"
                     android:textColor="@android:color/black"
-                    android:textSize="16dip" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
+            <!--course listview-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dip"
@@ -421,6 +433,7 @@
                     android:layout_height="200dip" />
             </LinearLayout>
 
+            <!--submit-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -431,24 +444,26 @@
                     android:id="@+id/tv_teacher"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dip"
+                    android:layout_marginBottom="16dip"
                     android:layout_marginTop="24dip"
                     android:background="@drawable/signup_style_corners_red_theme"
                     android:ems="13"
                     android:gravity="center"
                     android:padding="10dip"
-                    android:text="Submit"
+                    android:text="SUBMIT"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/title_text_size" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
+    <!--parent info-->
     <ScrollView
         android:id="@+id/sv_tab2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible">
+
 
         <LinearLayout
             android:id="@+id/ll_parent_tab2"
@@ -464,7 +479,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dip"
                 android:layout_marginTop="16dip"
-                android:text="Parent Information" />
+                android:text="PARENT INFO" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -484,7 +499,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Name：" />
+                        android:text="NAME:" />
 
                     <EditText
                         android:id="@+id/et_parentTab2Name"
@@ -511,7 +526,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Sex：" />
+                        android:text="GENDER:" />
 
                     <EditText
                         android:id="@+id/et_parentTab2Sax"
@@ -538,7 +553,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Email：" />
+                        android:text="EMAIL:" />
 
                     <EditText
                         android:id="@+id/et_parentTab2Email"
@@ -566,7 +581,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Phone：" />
+                        android:text="PHONE:" />
 
                     <EditText
                         android:id="@+id/et_parentTab2Phone"
@@ -584,7 +599,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dip"
                 android:layout_marginTop="16dip"
-                android:text="Student Information" />
+                android:text="STUDENT INFO" />
 
 
             <LinearLayout
@@ -634,7 +649,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="Name：" />
+                        android:text="NAME:" />
 
                     <EditText
                         android:id="@+id/et_ChildTab2Name"
@@ -654,7 +669,6 @@
                     android:id="@+id/ll_city_listShow"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingTop="8dip">
 
@@ -663,13 +677,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dip"
-                        android:text="City" />
+                        android:text="CITY:" />
 
-                    <ImageView
+                    <!--<ImageView
                         android:layout_width="16dip"
                         android:layout_height="16dip"
                         android:gravity="center"
-                        android:src="@mipmap/tab1_icon" />
+                        android:src="@mipmap/tab1_icon" />-->
 
                     <TextView
                         android:id="@+id/et_ChildTab2City"
@@ -709,7 +723,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="36dip"
-                            android:text="Sex：" />
+                            android:text="GENDER:" />
 
                         <EditText
                             android:id="@+id/et_ChildTab2Sax"
@@ -743,7 +757,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="36dip"
-                            android:text="Age：" />
+                            android:text="AGE:" />
 
                         <EditText
                             android:id="@+id/et_ChildTab2Age"
@@ -777,7 +791,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="36dip"
-                            android:text="Email：" />
+                            android:text="EMAIL:" />
 
                         <EditText
                             android:id="@+id/et_ChildTab2Email"

@@ -7,7 +7,6 @@ import android.app.Service;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.os.Environment;
 import android.os.Vibrator;
 import android.telephony.TelephonyManager;
@@ -105,7 +104,7 @@ public class HaojiajiaoApplication extends Application {
         Log.e("Application","获取位置信息结束。");
         mVibrator = (Vibrator) getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
         // 判断当前SDK版本号，如果是4.4以上，就是支持沉浸式状态栏的
-        isCanFullScreen = Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
+        isCanFullScreen = false;//Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
         // 在sd卡中创建项目所需文件夹
         Log.e("Application","创建项目根目录开始。");
         createRootDirectory();
@@ -143,16 +142,11 @@ public class HaojiajiaoApplication extends Application {
         isWifi = DeviceUtil.isWifiConnected(context);
         Log.e("Application","初始化uil图片处理框架结束。");
         Log.e("Application","初始化融云开始。");
-
         initRong();
         Log.e("Application","初始化融云结束。");
-
-
     }
 
     public void initRong() {
-
-
         /**
          * OnCreate 会被多个进程重入，这段保护代码，确保只有您需要使用 RongIM 的进程和 Push 进程执行了 init。
          * io.rong.push 为融云 push 进程名称，不可修改。
@@ -162,25 +156,13 @@ public class HaojiajiaoApplication extends Application {
             /**
              * 初始化融云
              */
-            RongIM.init(HaojiajiaoApplication.this);
-            //RongIM.getInstance().registerConversationTemplate(new MyPrivateConversationProvider());
-//        //初始化融云个人信息
-            /*RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
-                @Override
-                public UserInfo getUserInfo(String s) {
-                    Uri u = Uri.parse("http://d.hiphotos.baidu.com/image/h%3D200/sign=99e997010e24ab18ff16e63705fbe69a/267f9e2f07082838d4bfae33bf99a9014c08f163.jpg");
-                    UserInfo userInfo = new UserInfo("2222", "chenyajun", u);
-                    return userInfo;
-                }
-            }, true);*/
+            RongIM.init(this);
+
         }
-
-
     }
 
     /**
      * 获得当前进程的名字
-     *
      * @param context
      * @return 进程号
      */

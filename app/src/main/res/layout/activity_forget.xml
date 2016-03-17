@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="Set Password"
+            android:text="RESET PASSWORD"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dip"
+        android:layout_marginBottom="25dip"
         android:layout_marginTop="24dip"
         android:background="@drawable/signup_style_corners_red_theme"
         android:ems="13"
@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="36dip"
-                    android:text="Account：" />
+                    android:text="ACCOUNT:" />
 
                 <EditText
                     android:id="@+id/et_tab1_userEmail"
@@ -102,7 +102,7 @@
                         android:layout_height="wrap_content"
 
                         android:layout_marginLeft="36dip"
-                        android:text="Phone：" />
+                        android:text="CELLPHONE:" />
 
                     <EditText
                         android:id="@+id/et_tab1_phones"
@@ -149,7 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="36dip"
-                    android:text="Vecrification code：" />
+                    android:text="VERIFICATION CODE:" />
 
                 <EditText
                     android:id="@+id/et_tab1_yanzheng"
@@ -176,7 +176,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="36dip"
-                    android:text="Enter password：" />
+                    android:text="NEW PASSWORD:" />
 
                 <EditText
                     android:id="@+id/et_tab1_password1"
@@ -203,7 +203,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="36dip"
-                    android:text="Confirm password：" />
+                    android:text="CONFIRM PASSWORD:" />
 
                 <EditText
                     android:id="@+id/et_tab1_password2"

@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.shanghai.haojiajiao.R;
 import com.shanghai.haojiajiao.activity.BookingSettingActivity;
 import com.shanghai.haojiajiao.activity.ContactUsActivity;
@@ -41,6 +40,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +63,7 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.e("MyMainFM","come to MyMainFM!");
         contentView = inflater.inflate(R.layout.fragement_my_main, container, false);
         iv_userIcon = (CircleImageView) contentView.findViewById(R.id.iv_userIcon);
         iv_line = (ImageView) contentView.findViewById(R.id.iv_line);
@@ -88,6 +90,8 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
             iv_line.setVisibility(View.GONE);
         }
         options = UilUtil.getOptions();
+        getPicUrl();
+
         iv_userIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,12 +139,19 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
         }
         return contentView;
     }
+
+
     @Override
     public void onResume() {
         super.onResume();
         //发送头像请求
         if (HaojiajiaoApplication.IFLOGIN) {
-            getPicUrl();
+            //getPicUrl();
+            if (HaojiajiaoApplication.ISSTATE) {
+                getTeacherInfoByUserName();
+            } else {
+                getParentInfoByUserName();
+            }
         }
     }
 
@@ -194,6 +205,7 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
 
     public void getRequestCodeFromActivity(final Bitmap bitmap) {
         iv_userIcon.setImageBitmap(bitmap);
+        Log.e("MyMain","set Bitmap");
         // BitmapUtil.doCropPhoto(data,SignUpActivity.this);
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -215,18 +227,20 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 0:
-                    ToastUtil.showShort(MyMainFM.this.getActivity(), "保存头像失败,请重新选择!");
+                    ToastUtil.showShort(MyMainFM.this.getActivity(), "Update avatar failed!");
                     break;
                 case 1:
-                    ToastUtil.showShort(MyMainFM.this.getActivity(), "保存头像成功!");
+                    ToastUtil.showShort(MyMainFM.this.getActivity(), "Update avatar success!");
                     new Thread(networkTask).start();
+                    //getPicUrl();
                     break;
                 case 2:
-                    ToastUtil.showShort(MyMainFM.this.getActivity(), "上传图片结束!");
+                    ToastUtil.showShort(MyMainFM.this.getActivity(), "Upload picture end!");
+                    Log.e("MyMain","upload pic: "+ HaojiajiaoApplication.picUrl);
 //                    new Thread(networkTask).start();
                     break;
                 case 3:
-                    ToastUtil.showShort(MyMainFM.this.getActivity(), "上传图片错误!");
+                    ToastUtil.showShort(MyMainFM.this.getActivity(), "Upload picture error!");
 //                    new Thread(networkTask).start();
                     break;
                 default:
@@ -243,7 +257,7 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
         try {
             params.put("img", FileBase64Code.encodeBase64File(imageFile));
 //            // 请求普通信息
-            params.put("name", "张三");
+            //params.put("name", "张三");
             params.put("UserName", HaojiajiaoApplication.userName);
             params.put("FigType", "jpg");
         } catch (Exception e) {
@@ -267,10 +281,12 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
             String picPath = com.shanghai.haojiajiao.util.CrashHandlerUtils.FileUtil.getImagePath() + "/crop_photo.jpg";
 //            File picFile=new File(picPath);
             uploadFile(picPath);
+            Log.e("MyMainFm","upload~~~~~~~~~~~~~~~~~");
         }
     };
 
     public void getPicUrl() {
+        Log.e("MyMainFm","getPicUrl~~~~~~~~~~~~~~~~~");
         Map<String, String> dataParas = new HashMap<String, String>();
         dataParas.put("UserName", HaojiajiaoApplication.userName);
         requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getPicUrl, dataParas, RequestTag.getPorPath);
@@ -290,8 +306,25 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
                 total1 = new JSONObject(dataStr);
                 String result = total1.optString("result");
                 if (!result.trim().equals("")) {
-                    ImageLoader.getInstance().displayImage(
-                            result, iv_userIcon, options);
+                    Log.e("getPic return:","result: "+result);
+                    /*ImageLoader.getInstance().displayImage(
+                            result, iv_userIcon, options);*/
+                    URL Url =null;
+                    try {
+                        Url = new URL(result);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    BitmapUtil.onLoadImage(this.getActivity(), Url, new BitmapUtil.OnLoadImageListener() {
+                        @Override
+                        public void OnLoadImage(Bitmap bitmap, String bitmapPath) {
+                            // TODO Auto-generated method stub
+                            Log.e("MyMain","get teacher bitmap!");
+                            if(bitmap!=null){
+                                iv_userIcon.setImageBitmap(bitmap);
+                            }
+                        }
+                    });
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -312,6 +345,24 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
                 else {
                     iv_sex.setImageDrawable(getResources().getDrawable(R.mipmap.female_icon));
                 }
+                /*String uri = total1.optString("teacherPortrait");
+                URL Url =null;
+                try {
+                    Url = new URL(uri);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                BitmapUtil.onLoadImage(this.getActivity(), Url, new BitmapUtil.OnLoadImageListener() {
+                    @Override
+                    public void OnLoadImage(Bitmap bitmap, String bitmapPath) {
+                        // TODO Auto-generated method stub
+                        Log.e("MyMain","get teacher bitmap!");
+                        if(bitmap!=null){
+                            iv_userIcon.setImageBitmap(bitmap);
+                        }
+                    }
+                });*/
+
             } catch (Exception e) {
 
             }
@@ -325,13 +376,31 @@ public class MyMainFM extends BaseFragment implements View.OnClickListener {
                 JSONObject jsonArray = total1.getJSONObject("result");
                 tv_userName.setText(jsonArray.optString("parentName"));
                 tv_userCity.setText(jsonArray.optString("studentCity"));
-                String sex = jsonArray.optString("teacherGender");
+                String sex = jsonArray.optString("parentGender");
                 if(sex.equals("male")){
                     iv_sex.setImageDrawable(getResources().getDrawable(R.mipmap.male_icon));
                 }
                 else {
                     iv_sex.setImageDrawable(getResources().getDrawable(R.mipmap.female_icon));
                 }
+               /* String uri = jsonArray.optString("parentPortrait");
+                URL Url =null;
+                try {
+                    Url = new URL(uri);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+                BitmapUtil.onLoadImage(this.getActivity().getApplicationContext(),Url, new BitmapUtil.OnLoadImageListener() {
+                    @Override
+                    public void OnLoadImage(Bitmap bitmap, String bitmapPath) {
+                        // TODO Auto-generated method stub
+                        Log.e("MyMain","get parent bitmap!");
+                        if(bitmap!=null){
+                            iv_userIcon.setImageBitmap(bitmap);
+                        }
+                    }
+                });*/
+
             } catch (Exception e) {
 
             }

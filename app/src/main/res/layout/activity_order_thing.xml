@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dip"
                     android:layout_marginTop="16dip"
-                    android:text="Order No:" />
+                    android:text="ORDER NO:" />
 
                 <TextView
                     android:id="@+id/tv_teacher"
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dip"
                     android:layout_marginTop="8dip"
-                    android:text="Teacher:" />
+                    android:text="TEACHER:" />
 
                 <TextView
                     android:id="@+id/tv_orderTime"
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dip"
                     android:layout_marginTop="8dip"
-                    android:text="Time:" />
+                    android:text="TIME:" />
 
                 <TextView
                 android:id="@+id/tv_money"
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dip"
                 android:layout_marginTop="8dip"
-                android:text="Price:" />
+                android:text="PRICE:" />
 
                 <TextView
                     android:id="@+id/tv_total"
@@ -141,7 +141,7 @@
                     android:layout_marginBottom="4dip"
                     android:layout_marginLeft="12dip"
                     android:layout_marginTop="8dip"
-                    android:text="Total Price:" />
+                    android:text="TOTAL PRICE:" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -159,7 +159,8 @@
                         android:paddingLeft="12dp"
                         android:paddingRight="12dp"
                         android:paddingTop="3dp"
-                        android:text="chat"
+                        android:textStyle="bold"
+                        android:text="CHAT"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -172,10 +173,11 @@
                     android:layout_marginBottom="16dip"
                     android:layout_marginLeft="12dip"
                     android:layout_marginRight="12dip"
+                    android:layout_marginTop="12dp"
                     android:background="@drawable/signup_style_corners_red_theme"
                     android:gravity="center"
                     android:padding="10dip"
-                    android:text="去评价"
+                    android:text="EVALUATION"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/title_text_size"
                     android:visibility="gone" />
@@ -266,7 +268,7 @@
                 android:background="@drawable/button_style_corners_no_stroke_theme"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="返回教师详情"
+                android:text="Back to Teacher's page"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/title_text_size"
                 android:visibility="gone" />

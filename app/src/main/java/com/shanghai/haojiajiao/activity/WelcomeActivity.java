@@ -54,6 +54,7 @@ public class WelcomeActivity extends BaseActivity implements View.OnClickListene
         Log.e("WelcomeActivity","welcomeActivity:onResume()");
         JPushInterface.onResume(WelcomeActivity.this);
         super.onResume();
+
     }
 
     @Override

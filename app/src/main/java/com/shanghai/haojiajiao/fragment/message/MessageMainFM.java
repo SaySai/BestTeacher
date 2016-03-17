@@ -2,6 +2,7 @@ package com.shanghai.haojiajiao.fragment.message;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,8 +36,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.rong.imkit.RongContext;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.UserInfo;
 
 /**
  * 消息主界面
@@ -204,7 +207,7 @@ public class MessageMainFM extends BaseFragment implements View.OnClickListener 
                       ll_parent.setVisibility(View.VISIBLE);
             }
                 } else {
-                    new LoginDialog(getActivity(), "登录后才可以预约哦！", new LoginLisenner() {
+                    new LoginDialog(getActivity(), "Sorry! Please login before make an appointment.", new LoginLisenner() {
                         @Override
                         public void login() {
                             Intent i = getActivity().getPackageManager()
@@ -239,6 +242,10 @@ public class MessageMainFM extends BaseFragment implements View.OnClickListener 
                 //启动会话列表界面
                 if (RongIM.getInstance() != null) {
 
+                    RongContext.getInstance().getUserInfoCache().put(HaojiajiaoApplication.userName,
+                            new UserInfo(HaojiajiaoApplication.userName,
+                                    HaojiajiaoApplication.name,
+                                    Uri.parse(HaojiajiaoApplication.picUrl)));
                     RongIM.getInstance().startConversationList(this.getActivity());
 
                 }
@@ -255,6 +262,10 @@ public class MessageMainFM extends BaseFragment implements View.OnClickListener 
         switch (id) {
             case R.id.tv_leaveParent:
                 if (RongIM.getInstance() != null) {
+                    RongContext.getInstance().getUserInfoCache().put(HaojiajiaoApplication.userName,
+                            new UserInfo(HaojiajiaoApplication.userName,
+                                    HaojiajiaoApplication.name,
+                                    Uri.parse(HaojiajiaoApplication.picUrl)));
                     RongIM.getInstance().startConversationList(this.getActivity());
                 }
                 break;

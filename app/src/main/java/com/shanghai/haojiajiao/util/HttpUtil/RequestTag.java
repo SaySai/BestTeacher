@@ -13,8 +13,10 @@ public enum RequestTag {
     changePassword,//修改密码
     getTeacherByRate,//根据评分获取教师信息
     getParentInfoByUserName,//根据名字获取用户信息
+    getParentInfoByUserNameForRY,//for Rongyun
     resetPassword,//重置密码
     getTeacherInfoByUserName,//获取教师信息
+    getTeacherInfoByUserNameForRY,//for Rongyun
     getTeacherEvaluation,//获取用户评论
     updateTeacher,//修改老师
     updateParent,//修改家长

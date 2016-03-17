@@ -67,7 +67,7 @@ public class CourseDialog extends Dialog {
         ArrayList<Course1Model> course1Models = new ArrayList<>();
         for (int i = 0; i < 11; i++) {
             Course1Model course1Model = new Course1Model();
-            course1Model.setCatchCourse(i == 0);
+            //course1Model.setCatchCourse(i == 0);
             course1Models.add(course1Model);
         }
         course1Adapter.setData(course1Models);

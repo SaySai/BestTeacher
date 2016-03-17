@@ -17,7 +17,7 @@
             style="@style/name_test_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="预约订单" />
+            android:text="Booking order" />
 
 
         <TextView

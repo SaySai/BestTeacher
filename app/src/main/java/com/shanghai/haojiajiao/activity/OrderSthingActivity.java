@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +58,7 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
     private LinearLayout ll_pay;
     private FinishReceiver receiver;
     private LoadingDialog loadingDialog;
+    private String teacherName = null;
     private String OrderState = "1";
     //父id  教师id   订单日期    订单          订单日期     费用            时间段
     private String ParentId = "", TeacherId = "", OrderDay = "", OrderCharge = "", TimeSegment = "",userName="";
@@ -155,15 +157,17 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
         OrderDay = this.getIntent().getStringExtra("OrderDay");
         OrderCharge = this.getIntent().getStringExtra("OrderCharge");
         TimeSegment = this.getIntent().getStringExtra("TimeSegment");
+        Log.e("OrderSthingActivity","TimeSegment"+TimeSegment);
         OrderState = this.getIntent().getStringExtra("OrderState");
         userName=this.getIntent().getStringExtra("userName");
+        Log.e("OrderSthingActivity","userName: "+ userName);
         if (orderNumber == null) {
             orderNumber = DateUtil.getCurrentDate(DateUtil.dateFormatChuo);
-            tv_number.setText("Order No: " + orderNumber + ParentId + "" + TeacherId);
+            tv_number.setText("ORDER NO:  " + orderNumber + ParentId + "" + TeacherId);
         } else {
-            tv_number.setText("Order No: " + orderNumber);
+            tv_number.setText("ORDER NO:  " + orderNumber);
         }
-        tv_total.setText("Price: " + OrderCharge);
+        tv_total.setText("TOTAL PRICE:  " + OrderCharge);
         tv_finish.setVisibility(View.VISIBLE);
         getTeacherById();
         getParentById();
@@ -191,7 +195,7 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
         } else {
             tv_finish.setText("Wait Booking");
         }
-        tv_orderTime.setText("Time: " + OrderDay + getResult(DayAdapter.hours, DayAdapter.abc, TimeSegment));
+        tv_orderTime.setText("TIME:  " + OrderDay.replace("00:00:00.0"," ") + getResult(DayAdapter.hours, DayAdapter.abc, TimeSegment));
         //.....................................支付相关.................................................................
         Intent intent = new Intent(this, PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
@@ -257,10 +261,10 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
             case R.id.tv_photo:
                 //启动聊天
                 if (RongIM.getInstance() != null) {
-                    if(userName!=null&&(!userName.equals(""))) {
-                        RongIM.getInstance().startPrivateChat(this, userName, "hello");
+                    if(!userName.equals("")) {
+                        RongIM.getInstance().startPrivateChat(this, userName, teacherName);
                     }else {
-                        ToastUtil.showShort(OrderSthingActivity.this,"教师用户名为空");
+                        ToastUtil.showShort(OrderSthingActivity.this,"Teacher user's name is null.");
                     }
                 }
                 break;
@@ -376,10 +380,10 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
                 String result = total1.optString("result");
                 if (!result.trim().equals("")) {
                     if (result.equals("1")) {
-                        ToastUtil.showShort(OrderSthingActivity.this, "生成订单成功!");
+                        ToastUtil.showShort(OrderSthingActivity.this, "Book order success!");
                         OrderSthingActivity.this.finish();
                     } else {
-                        ToastUtil.showShort(OrderSthingActivity.this, "生成订单失败!");
+                        ToastUtil.showShort(OrderSthingActivity.this, "Book order failed!");
                     }
 
                 }
@@ -393,7 +397,8 @@ public class OrderSthingActivity extends BaseActivity implements View.OnClickLis
             try {
                 total1 = new JSONObject(dataStr);
                 JSONObject result = total1.getJSONObject("result");
-                tv_teacher.setText("预约教师：" + result.optString("teacherName"));
+                teacherName = result.optString("teacherName");
+                tv_teacher.setText("TEACHER:  " + result.optString("teacherName"));
                 if (!HaojiajiaoApplication.ISSTATE) {
                     tv_photo.setText(result.optString("teacherTel"));
                 }

@@ -15,6 +15,8 @@ import com.shanghai.haojiajiao.app.HaojiajiaoApplication;
 import com.shanghai.haojiajiao.base.BaseActivity;
 import com.shanghai.haojiajiao.model.BroadCastAction;
 
+import io.rong.imkit.RongIM;
+
 public class SettingsActivity extends BaseActivity {
     private ImageView iv_back;
     private TextView tv_signUp, tv_forget;
@@ -44,6 +46,7 @@ public class SettingsActivity extends BaseActivity {
         tv_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RongIM.getInstance().disconnect();
                 Intent ntent = new Intent(SettingsActivity. this, WelcomeActivity.class);
                 SettingsActivity. this.startActivity(ntent);
                 SettingsActivity.this.finish();

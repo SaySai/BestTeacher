@@ -57,7 +57,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
     //年级，课程，排序，搜索框
     private LinearLayout ll_subject, ll_sort;
     private ListView listview;
-    private LinearLayout ll_blank;              // added by husai
+    //private LinearLayout ll_blank;              // added by husai
     private TeacherPageAdatper teacherPageAdatper;
     //城市
     private TextView tv_city;
@@ -72,12 +72,15 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
     private Course2Adapter course2Adapter;
     //排序
     private TextView tv_sort;
-    private LinearLayout ll_sort_list;
+    private LinearLayout ll_sort_list,ll_teacher_list;
     private ListView lv_sort_list;
     private SortAdapter sortAdapter;
     private int courselist1 = 0;
     private int courselist2 = 0;
     private int sort = 0;
+    private int cityPos = 3;
+    private int coursePos = 5;
+    private int filterPos = 1;
     private LoadingDialog loadingDialog = null;
     public ArrayList<TeacherListModel> teacherListModels = null;
     int[] str = {4, 7};
@@ -88,6 +91,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                              Bundle savedInstanceState) {
         if (contentView == null) {
             contentView = inflater.inflate(R.layout.fragement_home_page_main, container, false);
+            Log.e("HomePageMainFM","come to HomePageMainFM!");
             initView();
             listview = (ListView) contentView.findViewById(R.id.listview);
             teacherPageAdatper = new TeacherPageAdatper(getActivity());
@@ -139,7 +143,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
         lv_city.setAdapter(cityAdapter = new CityAdapter(getActivity()));
         tv_teacher = (TextView) contentView.findViewById(R.id.tv_teacher);
         ll_search = (LinearLayout) contentView.findViewById(R.id.ll_search);
-        ll_blank = (LinearLayout) contentView.findViewById(R.id.ll_blank);
+        //ll_blank = (LinearLayout) contentView.findViewById(R.id.ll_blank);
         iv1 = (ImageView) contentView.findViewById(R.id.iv1);
         iv2 = (ImageView) contentView.findViewById(R.id.iv2);
         iv21 = (ImageView) contentView.findViewById(R.id.iv21);
@@ -158,6 +162,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
         //lv_course2_list.setAdapter(course2Adapter = new Course2Adapter(getActivity()));
         tv_subject = (TextView) contentView.findViewById(R.id.tv_subject);
         ll_sort_list = (LinearLayout) contentView.findViewById(R.id.ll_sort_list);
+        ll_teacher_list = (LinearLayout) contentView.findViewById(R.id.ll_teacher_list);
         lv_sort_list = (ListView) contentView.findViewById(R.id.lv_sort_list);
         lv_sort_list.setAdapter(sortAdapter = new SortAdapter(getActivity()));
         tv_sort = (TextView) contentView.findViewById(R.id.tv_sort);
@@ -169,7 +174,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
         ll_city.setOnClickListener(this);
         tv_teacher.setOnClickListener(this);
         ll_search.setOnClickListener(this);
-        ll_blank.setOnClickListener(this);
+        //ll_blank.setOnClickListener(this);
         ivShow(1);
         //setGpsCity(HaojiajiaoApplication.city);
     }
@@ -205,7 +210,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                     ArrayList<Course1Model> course1Models = new ArrayList<>();
                     for (int i = 0; i < 11; i++) {          //注意！！！目前是有11门课程~~~~~~~~~~~~~~~~~~
                         Course1Model course1Model = new Course1Model();
-                        course1Model.setCatchCourse(i == 0);
+                        course1Model.setCatchCourse(i == coursePos);
                         course1Models.add(course1Model);
                     }
                     course1Adapter.setData(course1Models);
@@ -230,14 +235,14 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                     ArrayList<SortModel> list = new ArrayList<>();
                     for (int i = 0; i < 3; i++) {
                         SortModel sortModel = new SortModel();
-                        sortModel.setCatchSort(i == 0);
+                        sortModel.setCatchSort(i == filterPos);
                         list.add(sortModel);
                     }
                     sortAdapter.setData(list);
                 }
                 iv21.setVisibility(View.INVISIBLE);
                 break;
-            case R.id.ll_blank:
+            /*case R.id.ll_blank:
                 Log.e("HomePageMainFM","~~~~~~~~~~~~~~click ll_blank~~~~~~~~~~~~~~");
                 if (ll_city_list.getVisibility() == View.VISIBLE) {
                     ll_city_list.setVisibility(View.GONE);
@@ -253,7 +258,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                 }
                 ll_sort_list.setVisibility(View.GONE);
                 iv22.setVisibility(View.INVISIBLE);
-                break;
+                break;*/
         }
     }
 
@@ -277,7 +282,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                     ArrayList<CityModel> cityModels = new ArrayList<>();
                     for (int i = 0; i < CityAdapter.testCity.length; i++) {
                         CityModel cityModel = new CityModel();
-                        cityModel.setCatchCity(i == 2);
+                        cityModel.setCatchCity(i == cityPos);
                         cityModels.add(cityModel);
                     }
                     cityAdapter.setData(cityModels);
@@ -351,12 +356,27 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                     intent.putExtra("tab", 0);
                     intent.putExtra("TeacherUserName", teacherListModel.getTeacherUserName());
                     intent.putExtra("TeacherId", teacherListModel.getId());
+                    intent.putExtra("TeacherName",teacherListModel.getTeacherName());
+                    Log.e("HomePage-TeacherAct","teacherName: "+teacherListModel.getTeacherName());
                     getActivity().startActivity(intent);
                 }
 
 
             }
         });
+
+        ll_teacher_list.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_city_list.setVisibility(View.GONE);
+                iv1.setVisibility(View.GONE);
+                ll_course_list.setVisibility(View.GONE);
+                iv21.setVisibility(View.GONE);
+                //ll_sort_list.setVisibility(View.GONE);
+                iv22.setVisibility(View.GONE);
+            }
+        });
+
     }
 
     private void lv_city() {
@@ -365,6 +385,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 cityAdapter.setCityColor(position);
                 if (ll_city_list.getVisibility() == View.VISIBLE) {
+                    cityPos = position;
                     tv_city.setText(CityAdapter.testCity[position]);
                     ll_city_list.setVisibility(View.GONE);
                     getTeacherByCity(CityAdapter.testCity[position]);
@@ -383,6 +404,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                     iv21.setVisibility(View.INVISIBLE);
 
                 }
+                coursePos = position;
                 getTeacherByLesson(Course1Adapter.testCourse[position]);
                 tv_subject.setText(Course1Adapter.testCourse1[position]);
             }
@@ -431,6 +453,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                 if (ll_sort_list.getVisibility() == View.VISIBLE) {
                     ll_sort_list.setVisibility(View.GONE);
                     sort = position;
+                    filterPos = position;
                     tv_sort.setText(SortAdapter.testCourse[position]);
                     switch (position) {
                         case 0:
@@ -449,7 +472,7 @@ public class HomePageMainFM extends BaseFragment implements OnClickListener{
                     ArrayList<SortModel> sortModels = new ArrayList<>();
                     for (int i = 0; i < 3; i++) {
                         SortModel sortModel = new SortModel();
-                        sortModel.setCatchSort(i == 0);
+                        sortModel.setCatchSort(i == filterPos);
                         sortModels.add(sortModel);
                     }
                     sortAdapter.setData(sortModels);

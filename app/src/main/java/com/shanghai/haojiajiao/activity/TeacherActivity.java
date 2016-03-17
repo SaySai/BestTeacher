@@ -45,13 +45,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import io.rong.imkit.RongContext;
 import io.rong.imkit.RongIM;
 import io.rong.imlib.model.UserInfo;
 
 /**
  * 教师详情
  */
-public class TeacherActivity extends BaseActivity implements View.OnClickListener,RongIM.UserInfoProvider {
+public class TeacherActivity extends BaseActivity implements View.OnClickListener {
     /**
      * 返回
      */
@@ -134,11 +135,12 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
     private int twoMouth1 = 0;
     private int twoMouth2 = 0;
     private ScrollView scrollView;
-    String str = "This Month";
+    String str = "BACK";
     private TeacherEvaluateAdapter teacherEvaluateAdapter;
     private FinishReceiver receiver;
     private LoadingDialog loadingDialog;
     private int teacherId = 0;
+    private String teacherName = null;
     public String teacherUserNames = null;
     //...............................................聊天相关..........................................................
 //    String Token = "3t2smePRwqNZL+kSZZj6TmAhfU1q45pmBt2Df5Dd6kCUgHNR7ixL/rYzJsjyZ6u//0f0ll9aB1JEN5lMCShKaw==";//test
@@ -157,8 +159,9 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
         intentFilter.addAction(BroadCastAction.TEACHERACTIVITY);
         teacherUserName = getIntent().getStringExtra("TeacherUserName");
         teacherId = getIntent().getIntExtra("TeacherId", 0);
+        teacherName = getIntent().getStringExtra("TeacherName");
         registerReceiver(receiver, intentFilter);
-        RongIM.setUserInfoProvider(this, true);
+        //RongIM.setUserInfoProvider(this, true);
         initView();
         switchPage(getIntent().getIntExtra("tab", 0));
         getTeacherInfoByUserName();
@@ -220,7 +223,7 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                         intent.putExtra("TeacherUserName", teacherUserNames);
                         startActivity(intent);
                     }
-                } else if (tv_next.getText().equals("Next Month")) {//calendarModels
+                } else if (tv_next.getText().equals("NEXT MONTH")) {//calendarModels
                     if (calendarModels.get(position).getChoiceState() == 1 && calendarModels.get(position).isHasdata()) {
                         Intent intent = new Intent(TeacherActivity.this, BookingSettingDayActivity.class);
                         intent.putExtra("yearMonth", CalendarAdapter.getCurrentyyyy_MM(0));
@@ -323,7 +326,12 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                     if (HaojiajiaoApplication.ISSTATE == false) {
                         if (RongIM.getInstance() != null) {
                             Log.e("TeacherAct:","startPrivateChat teacherUserName:"+teacherUserName);
-                            RongIM.getInstance().startPrivateChat(this, teacherUserName, teacherUserName);
+                            Log.e("chat with a teacher:","picUrl: "+ HaojiajiaoApplication.picUrl);
+                            RongContext.getInstance().getUserInfoCache().put(HaojiajiaoApplication.userName,
+                                    new UserInfo(HaojiajiaoApplication.userName,
+                                            HaojiajiaoApplication.name,
+                                            Uri.parse(HaojiajiaoApplication.picUrl)));
+                            RongIM.getInstance().startPrivateChat(this, teacherUserName, teacherName);
                         }//String.valueOf(teacherId)
                     } else {
                         ToastUtil.showShort(this, "teacher can not send a message to teacher!");
@@ -367,7 +375,7 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                         calendarAdapter.setData(calendarModels2);
                     }
                 } else {
-                    if (tv_next.getText().equals("Next Month")) {
+                    if (tv_next.getText().equals("NEXT MONTH")) {
                         calendarAdapter.clearData();
                         calendarAdapter.setData(calendarModels2);
                         tv_times.setText(CalendarAdapter.getCurrentyyyyMM(Math.abs(thisMounthSS)));
@@ -375,10 +383,10 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                         tv_next.setText(str);
                     } else if (tv_next.getText().equals(str)) {
                         calendarAdapter.clearData();
-                        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(0));
+                        tv_times.setText(CalendarAdapter.getCurrentyyyyMM(Math.abs(thisMounthSS+24 * 60 * 60 * 1000)));
                         calendarAdapter.setData(calendarModels);
 
-                        tv_next.setText("Next Month");
+                        tv_next.setText("NEXT MONTH");
                     }
                 }
                 break;
@@ -392,6 +400,9 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 tv_homePage.setTextColor(0xFF1ABC9C);
                 tv_evaluate.setTextColor(Color.BLACK);
                 tv_booking.setTextColor(Color.BLACK);
+                tv_homePage.getPaint().setFakeBoldText(true);
+                tv_evaluate.getPaint().setFakeBoldText(false);
+                tv_booking.getPaint().setFakeBoldText(false);
                 ll_homePage_tab1.setVisibility(View.VISIBLE);
                 ll_homePage_tab2.setVisibility(View.GONE);
                 ll_homePage_tab3.setVisibility(View.GONE);
@@ -400,6 +411,9 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 tv_homePage.setTextColor(Color.BLACK);
                 tv_evaluate.setTextColor(0xFF1ABC9C);
                 tv_booking.setTextColor(Color.BLACK);
+                tv_homePage.getPaint().setFakeBoldText(false);
+                tv_evaluate.getPaint().setFakeBoldText(true);
+                tv_booking.getPaint().setFakeBoldText(false);
                 ll_homePage_tab1.setVisibility(View.GONE);
                 ll_homePage_tab2.setVisibility(View.VISIBLE);
                 ll_homePage_tab3.setVisibility(View.GONE);
@@ -408,6 +422,9 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 tv_homePage.setTextColor(Color.BLACK);
                 tv_evaluate.setTextColor(Color.BLACK);
                 tv_booking.setTextColor(0xFF1ABC9C);
+                tv_homePage.getPaint().setFakeBoldText(false);
+                tv_evaluate.getPaint().setFakeBoldText(false);
+                tv_booking.getPaint().setFakeBoldText(true);
                 ll_homePage_tab1.setVisibility(View.GONE);
                 ll_homePage_tab2.setVisibility(View.GONE);
                 ll_homePage_tab3.setVisibility(View.VISIBLE);
@@ -511,6 +528,12 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
         requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherInfoByUserName, stringMap, RequestTag.getTeacherInfoByUserName);
     }
 
+    private void getTeacherInfoByUserName(String TeacherUserName) {
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("TeacherUserName", TeacherUserName);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherInfoByUserName, stringMap, RequestTag.getTeacherInfoByUserNameForRY);
+    }
+
     private void getParentInfoByUserName(String parentUserName) {
         Map<String, String> stringMap = new HashMap<>();
         stringMap.put("userName", parentUserName);
@@ -533,20 +556,20 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 setEditString(tv_userName, total1.optString("teacherName") + "");
                 setEditString(tv_age1, total1.optString("teacherAge") + "");
                 setEditString(iv_sex, total1.optString("teacherGender") + "");
-                setEditString(tv_age, "Age: "+total1.optString("teacherAge") + "");
-                setEditString(tv_city, "City: "+total1.optString("teacherCity") + "");
-                setEditString(tv_pays, "Price: "+total1.optString("teacherCharge") + "");
+                setEditString(tv_age, total1.optString("teacherAge") + "");
+                setEditString(tv_city, total1.optString("teacherCity") + "");
+                setEditString(tv_pays, total1.optString("teacherCharge") + "");
                 setEditString(tv_course, total1.optString("teacherLesson") + "");
                 setEditString(tv_content, total1.optString("teacherSelfCv") + "");
                 teacherUserNames = total1.optString("teacherUserName") + "";
                 //获取用户头像
                 ImageLoader.getInstance().displayImage(
                         total1.optString("teacherPortrait"), iv_userIcon, options);
-                HaojiajiaoApplication.R_name = total1.optString("teacherName");
+                /*HaojiajiaoApplication.R_name = total1.optString("teacherName");
                 HaojiajiaoApplication.R_userName = total1.optString("teacherUserName");
                 HaojiajiaoApplication.R_picUrl = total1.optString("teacherPortrait");
                 Log.e("response:","teacher: R_userName:"+HaojiajiaoApplication.R_userName);
-                HaojiajiaoApplication.response=true;
+                HaojiajiaoApplication.response=true;*/
             } catch (JSONException e) {
                 e.printStackTrace();
                 Log.e("TeacherActivity","get teacherIcon error!!!");
@@ -555,6 +578,24 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
 //                HaojiajiaoApplication.R_picUrl=null;
             }
             getTeacherEvaluation();
+        }/*else if (response.requestTag.toString().equals("getTeacherInfoByUserNameForRY")) {
+            String dataStr = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr);
+                HaojiajiaoApplication.R_name = total1.optString("teacherName");
+                HaojiajiaoApplication.R_userName = total1.optString("teacherUserName");
+                HaojiajiaoApplication.R_picUrl = total1.optString("teacherPortrait");
+                Log.e("response:", "teacher: R_userName:" + HaojiajiaoApplication.R_userName);
+                if(!HaojiajiaoApplication.R_userName.equals("")){
+                    HaojiajiaoApplication.response = true;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.e("TeacherActivity", "get teacherIcon error!!!");
+//                HaojiajiaoApplication.R_name=null;
+//                HaojiajiaoApplication.R_userName=null;
+//                HaojiajiaoApplication.R_picUrl=null;
+            }
         } else if (response.requestTag.toString().equals("getParentInfoByUserName")) {
             String dataStr = response.responseString;
 //            HaojiajiaoApplication.R_name=null;
@@ -568,7 +609,9 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 HaojiajiaoApplication.R_picUrl = jsonArray.getString("parentPortrait");
                 HaojiajiaoApplication.R_userName = jsonArray.getString("parentUserName");
                 Log.e("response:","parent: R_userName:"+HaojiajiaoApplication.R_userName);
-                HaojiajiaoApplication.response=true;
+                if(!HaojiajiaoApplication.R_userName.equals("")){
+                    HaojiajiaoApplication.response = true;
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
                 Log.e("TeacherActivity","get parentIcon error!!!");
@@ -576,8 +619,8 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
 //                HaojiajiaoApplication.R_userName=null;
 //                HaojiajiaoApplication.R_picUrl=null;
             }
-            getTeacherEvaluation();
-        } else if (response.requestTag.toString().equals("getTeacherEvaluation")) {
+
+        }*/ else if (response.requestTag.toString().equals("getTeacherEvaluation")) {
             loadingDialog.dismiss();
             String dataStr = response.responseString;
             try {
@@ -691,12 +734,12 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
         editString.setText(str + "");
     }
 
-    @Override
+/*    @Override
     public  UserInfo getUserInfo(String s) {
         Log.e("TeacherAct:","userName:"+s);
 
         HaojiajiaoApplication.response=false;
-        getTeacherInfoByUserName();
+        getTeacherInfoByUserName(s);
         getParentInfoByUserName(s);
         //if(HaojiajiaoApplication.R_userName!=null){
         while(true){
@@ -704,22 +747,8 @@ public class TeacherActivity extends BaseActivity implements View.OnClickListene
                 break;
             }
         }
-            Log.e("TeacherAct:","getUserInfo: "+HaojiajiaoApplication.R_userName);
-            return new UserInfo(HaojiajiaoApplication.R_userName,HaojiajiaoApplication.R_name,
-                    Uri.parse(HaojiajiaoApplication.R_picUrl));
-        //}
-       // else{
-          //  getParentInfoByUserName(s);
-            //if(HaojiajiaoApplication.R_userName!=null){
-                //Log.e("TeacherAct:","parent: "+HaojiajiaoApplication.R_userName);
-               // return new UserInfo(HaojiajiaoApplication.R_userName,HaojiajiaoApplication.R_name,
-                       // Uri.parse(HaojiajiaoApplication.R_picUrl));
-           // }
-           // else{
-           //     return null;
-           // }
-
-        //}
-
-    }
+        Log.e("TeacherAct:","getUserInfo: "+HaojiajiaoApplication.R_userName);
+        return new UserInfo(HaojiajiaoApplication.R_userName,HaojiajiaoApplication.R_name,
+                Uri.parse(HaojiajiaoApplication.R_picUrl));
+    }*/
 }

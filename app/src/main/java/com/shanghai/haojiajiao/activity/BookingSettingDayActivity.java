@@ -83,7 +83,7 @@ public class BookingSettingDayActivity extends BaseActivity {
         }
 
         if (HaojiajiaoApplication.ISSTATE) {//HaojiajiaoApplication.ISSTATE
-            tv_signUp.setText("保存");
+            tv_signUp.setText("SUBMIT");
             dayModels = new ArrayList<>();
             for (int a = 0; a < 16; a++) {
                 dayModel = new DayModel();

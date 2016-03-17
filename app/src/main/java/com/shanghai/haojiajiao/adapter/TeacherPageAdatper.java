@@ -77,17 +77,17 @@ TeacherPageAdatper extends AdapterBase<TeacherListModel> {
                 String[] res = lesson.split("-");
                 StringBuffer stringBuffer1 = new StringBuffer();
                 for (int i = 0; i < res.length; i++) {
-                    stringBuffer1.append(getCourse1(Course1Adapter.testCourse, Course1Adapter.testCourse1, res[i]));
-                    stringBuffer1.append(" ");
-                    stringBuffer1.append(getCourse2(Course2Adapter.testCourse, Course2Adapter.testCourseType, res[i]));
+                    stringBuffer1.append(res[i]);
+                    //stringBuffer1.append(" ");
+                    //stringBuffer1.append(getCourse2(Course2Adapter.testCourse, Course2Adapter.testCourseType, res[i]));
                     if (i != res.length - 1) {
-                        stringBuffer1.append(",");
+                        stringBuffer1.append(", ");
                     }
                 }
                 tv_class.setText(stringBuffer1);
             } else {
-                tv_class.setText(getCourse1(Course1Adapter.testCourse, Course1Adapter.testCourse1, lesson));
-                tv_subject.setText(getCourse2(Course2Adapter.testCourse, Course2Adapter.testCourseType, lesson));
+                tv_class.setText(lesson);
+                //tv_subject.setText(getCourse2(Course2Adapter.testCourse, Course2Adapter.testCourseType, lesson));
             }
         }
         TextView tv_evaluate = (TextView) convertView.findViewById(R.id.tv_evaluate);
@@ -105,6 +105,7 @@ TeacherPageAdatper extends AdapterBase<TeacherListModel> {
                 intent.putExtra("tab", 1);
                 intent.putExtra("TeacherUserName", teacherListModel1.getTeacherUserName());
                 intent.putExtra("TeacherId", teacherListModel1.getId());
+                intent.putExtra("TeacherName",teacherListModel1.getTeacherName());
                 getAct().startActivity(intent);
             }
         });
@@ -121,6 +122,7 @@ TeacherPageAdatper extends AdapterBase<TeacherListModel> {
                         intent.putExtra("tab", 2);
                         intent.putExtra("TeacherUserName", teacherListModel1.getTeacherUserName());
                         intent.putExtra("TeacherId", teacherListModel1.getId());
+                        intent.putExtra("TeacherName",teacherListModel1.getTeacherName());
                         getAct().startActivity(intent);
                     }
 

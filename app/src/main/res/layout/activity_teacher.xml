@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="Teacher Information"
+            android:text="TEACHER PROFILE"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -89,7 +89,8 @@
             android:layout_height="36dip"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Profile" />
+            android:textStyle=""
+            android:text="PROFILE" />
 
         <TextView
             android:id="@+id/tv_evaluate"
@@ -98,7 +99,7 @@
             android:layout_height="36dip"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Reviews" />
+            android:text="REVIEWS" />
 
         <TextView
             android:id="@+id/tv_booking"
@@ -107,7 +108,7 @@
             android:layout_height="36dip"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Book" />
+            android:text="BOOK" />
 
         <TextView
             android:id="@+id/tv_message"
@@ -116,7 +117,7 @@
             android:layout_height="36dip"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Contact" />
+            android:text="CONTACT" />
     </LinearLayout>
 
     <ImageView
@@ -143,6 +144,7 @@
                 android:background="@color/background_color"
                 android:orientation="vertical">
 
+                <!--info-->
                 <LinearLayout
                     android:id="@+id/ll_homePage_tab1"
                     android:layout_width="match_parent"
@@ -159,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dip"
                         android:layout_marginTop="16dip"
-                        android:text="Personal information" />
+                        android:text="PERSONAL INFO" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -170,40 +172,86 @@
                         android:background="@color/gray_light" />
 
 
-                    <TextView
-                        android:id="@+id/tv_age"
-                        style="@style/user_content_style"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="54dip"
-                        android:layout_marginTop="8dip"
-                        android:text="Age: " />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="54dip"
+                            android:layout_marginTop="8dip"
+                            android:text="AGE: " />
+
+                        <TextView
+                            android:id="@+id/tv_age"
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/smssdk_gray"
+                            android:layout_marginLeft="4dip"
+                            android:layout_marginTop="8dip"
+                            android:text="" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="54dip"
+                            android:layout_marginTop="8dip"
+                            android:text="CITY: " />
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/smssdk_gray"
+                            android:layout_marginLeft="4dip"
+                            android:layout_marginTop="8dip"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="54dip"
+                            android:layout_marginTop="8dip"
+                            android:text="PRICE: " />
+
+                        <TextView
+                            android:id="@+id/tv_pays"
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/smssdk_gray"
+                            android:layout_marginLeft="4dip"
+                            android:layout_marginTop="8dip"
+                            android:text="" />
+                    </LinearLayout>
 
                     <TextView
-                        android:id="@+id/tv_city"
-                        style="@style/user_content_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="54dip"
-                        android:layout_marginTop="8dip"
-                        android:text="City: " />
-
-                    <TextView
-                        android:id="@+id/tv_pays"
-                        style="@style/user_content_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="54dip"
-                        android:layout_marginTop="8dip"
-                        android:text="Price: " />
-
-                    <TextView
-                        style="@style/user_content_style"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="54dip"
-                        android:layout_marginTop="8dip"
-                        android:text="Experience: " />
+                            style="@style/user_content_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="54dip"
+                            android:layout_marginTop="8dip"
+                            android:text="EXPERIENCE: " />
 
                     <TextView
                         android:id="@+id/tv_mysulf"
@@ -212,6 +260,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="66dip"
                         android:layout_marginTop="8dip"
+                        android:textColor="@color/smssdk_gray"
                         android:textSize="14sp"
                         android:text="Good at Math" />
 
@@ -221,7 +270,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="54dip"
                     android:layout_marginTop="8dip"
-                    android:text="Course: " />
+                    android:text="COURSE: " />
 
                     <TextView
                         android:id="@+id/tv_course"
@@ -230,6 +279,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="66dip"
                         android:layout_marginTop="8dip"
+                        android:textColor="@color/smssdk_gray"
                         android:textSize="14sp"
                         android:text="High School Math" />
 
@@ -248,6 +298,7 @@
 
                 </LinearLayout>
 
+                <!--review-->
                 <LinearLayout
                     android:id="@+id/ll_homePage_tab2"
                     android:layout_width="match_parent"
@@ -287,6 +338,7 @@
                         android:background="@android:color/white"></com.shanghai.haojiajiao.weight.ListViewForScrollView>
                 </LinearLayout>
 
+                <!--book-->
                 <LinearLayout
                     android:id="@+id/ll_homePage_tab3"
                     android:layout_width="match_parent"
@@ -306,7 +358,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="25dip"
                             android:layout_alignParentBottom="true"
-                            android:text="This month:"
+                            android:text="BOOKING TIME:"
                             android:textColor="@color/tab_no_press_color"
                             android:textSize="14sp"
                             android:textStyle="bold"/>
@@ -329,9 +381,9 @@
                             android:layout_height="25dip"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            android:text="Next Month"
+                            android:text="NEXT MONTH"
                             android:textColor="@color/tab_no_press_color"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
 
@@ -354,7 +406,7 @@
                         android:layout_marginLeft="50dip"
                         android:layout_marginRight="50dip"
                         android:layout_marginTop="16dip"
-                        android:text="Tips: green background can make an appointment date, click on the date, continue to choose the time period."
+                        android:text="Tap the green area to make an appointment."
                         android:textColor="@android:color/black" />
 
                 </LinearLayout>

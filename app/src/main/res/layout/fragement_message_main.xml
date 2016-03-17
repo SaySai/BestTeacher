@@ -20,7 +20,7 @@
             android:background="@drawable/shape_notice_backgroud_white"
             android:ems="7"
             android:gravity="center"
-            android:text="notification"
+            android:text="NOTIFICATION"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -32,7 +32,7 @@
             android:background="@drawable/shape_message_backgroud_white"
             android:ems="7"
             android:gravity="center"
-            android:text="message"
+            android:text="MESSAGE"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="normal" />
@@ -62,13 +62,13 @@
             android:id="@+id/tv_comments"
             style="@style/name_tab_style"
             android:layout_width="match_parent"
-            android:layout_height="35dip"
+            android:layout_height="50dip"
             android:layout_centerVertical="true"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:paddingLeft="30dip"
             android:paddingRight="20dip"
-            android:text="Review" />
+            android:text="REVIEW" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -80,13 +80,13 @@
             android:id="@+id/tv_leave"
             style="@style/name_tab_style"
             android:layout_width="match_parent"
-            android:layout_height="35dip"
+            android:layout_height="50dip"
             android:layout_centerVertical="true"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:paddingLeft="30dip"
             android:paddingRight="20dip"
-            android:text="Charts" />
+            android:text="CHATS" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -97,12 +97,12 @@
             android:id="@+id/tv_system"
             style="@style/name_tab_style"
             android:layout_width="match_parent"
-            android:layout_height="35dip"
+            android:layout_height="50dip"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:paddingLeft="30dip"
             android:paddingRight="20dip"
-            android:text="System message" />
+            android:text="SYSTEM MESSAGE" />
 
 
         <ImageView
@@ -128,13 +128,13 @@
             android:id="@+id/tv_leaveParent"
             style="@style/name_tab_style"
             android:layout_width="match_parent"
-            android:layout_height="35dip"
+            android:layout_height="50dip"
             android:layout_centerVertical="true"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:paddingLeft="30dip"
             android:paddingRight="20dip"
-            android:text="Charts" />
+            android:text="CHATS" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -145,12 +145,12 @@
             android:id="@+id/tv_systemParent"
             style="@style/name_tab_style"
             android:layout_width="match_parent"
-            android:layout_height="35dip"
+            android:layout_height="50dip"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:paddingLeft="30dip"
             android:paddingRight="20dip"
-            android:text="System message" />
+            android:text="SYSTEM MESSAGE" />
 
 
         <ImageView

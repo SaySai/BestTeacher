@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -36,15 +38,25 @@ import com.shanghai.haojiajiao.weight.CustomDialog;
 import com.shanghai.haojiajiao.weight.LoginDialog;
 import com.shanghai.haojiajiao.weight.LoginLisenner;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import cn.jpush.android.api.JPushInterface;
+import io.rong.imkit.RongContext;
+import io.rong.imkit.RongIM;
+import io.rong.imlib.model.UserInfo;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener,RongIM.UserInfoProvider {
     private LinearLayout homepage_ll, message_ll, my_ll;
     public final static int HOME_PAGETAG = 0;
     public final static int MESSAGETAG = 1;
@@ -67,6 +79,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private MessageReceiver mMessageReceiver;
     public static int IF_MSG_IS_INIT_FIRST = 0;
     public ViewPager viewPager = null;
+    public static final int GET_TOKEN = 0;
 
     //    private TextView textView1,textView2,textView3;
 //    private int color_pressed,color_no_pressed;
@@ -87,31 +100,163 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if( HaojiajiaoApplication.IFLOGIN ==false){
             initViewpager();
         }else {
-            /*if(HaojiajiaoApplication.token.equals("-1")){
-                if(HaojiajiaoApplication.ISSTATE){
-                    getTeacherToken();
-                    Log.e("MainAct:","~~~~~~~~~do getTeaToken()~~~~~~~~~~~~~~");
-                }
-                else{
-                    getParentToken();
-                    Log.e("MainAct:","~~~~~~~~~do getPaToken()~~~~~~~~~~~~~~");
-                }
+            checkLocalToken();
+            if(HaojiajiaoApplication.token.equals("") || HaojiajiaoApplication.token.equals("403")
+                    || HaojiajiaoApplication.token.equals("-1")){
+                //获取当前用户的token
+                Log.e("MainAct:","~~~~~~~~~do getToken()~~~~~~~~~~~~~~");
+                getToken();
             }
             else{
                 initViewpager();
-            }*/
+            }
 
-            //获取当前用户的token
-            Log.e("MainAct:","~~~~~~~~~do getToken()~~~~~~~~~~~~~~");
-            getToken();
+        }
+        RongIM.setUserInfoProvider(this, true);
+    }
+
+
+
+    @Override
+    public UserInfo getUserInfo(String s) {
+        Log.e("MainActivity:","userName:"+s);
+        HaojiajiaoApplication.response=false;
+        getTeacherInfoByUserNameForRY(s);
+        getParentInfoByUserNameForRY(s);
+        while(true){
+            if(HaojiajiaoApplication.response){
+                break;
+            }
+        }
+        Log.e("MainActivity:","getUserInfo, PicUrl: " + HaojiajiaoApplication.R_picUrl);
+        RongContext.getInstance().getUserInfoCache().put(HaojiajiaoApplication.R_userName,
+                new UserInfo(HaojiajiaoApplication.R_userName,
+                        HaojiajiaoApplication.R_name,
+                        Uri.parse(HaojiajiaoApplication.R_picUrl)));
+        return new UserInfo(HaojiajiaoApplication.R_userName,HaojiajiaoApplication.R_name,
+                Uri.parse(HaojiajiaoApplication.R_picUrl));
+    }
+
+    private void getTeacherInfoByUserNameForRY(String TeacherUserName) {
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("TeacherUserName", TeacherUserName);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getTeacherInfoByUserName, stringMap, RequestTag.getTeacherInfoByUserNameForRY);
+    }
+
+    private void getParentInfoByUserNameForRY(String parentUserName) {
+        Map<String, String> stringMap = new HashMap<>();
+        stringMap.put("userName", parentUserName);
+        requestHandler.sendHttpRequestWithParam(GoodTeacherURL.getParentInfoByUserName, stringMap, RequestTag.getParentInfoByUserNameForRY);
+    }
+
+    private void checkLocalToken(){
+        SharedPreferences pref = getSharedPreferences("UserToken",MODE_PRIVATE);
+        String token = pref.getString(HaojiajiaoApplication.userName,"");
+        if(token.equals("")){
+            Log.e("MainAct","Local not have this user's token.");
+        }
+        else{
+            Log.e("MainAct","   Local have this user's token!!!!!");
+            HaojiajiaoApplication.token = token;
         }
     }
 
-    private void getLocalToken(){
-        SharedPreferences pref = getSharedPreferences("UserToken",MODE_PRIVATE);
-        String token = pref.getString(HaojiajiaoApplication.userName,"");
-        HaojiajiaoApplication.token = token;
+    private void getTeacherTokenPhp(){
+        String s = "http://121.42.140.239/hjj/php/getTeacherToken?" + "teacherUserName=" + HaojiajiaoApplication.userName;
+        URL url =null;
+        try{
+            url = new URL(s);
+        }catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+        sendRequestWithHttpURLConnection(url);
     }
+    private void getParentTokenPhp(){
+        String s = "http://121.42.140.239/hjj/php/getParentToken?" + "parentUserName=" + HaojiajiaoApplication.userName;
+        URL url =null;
+        try{
+            url = new URL(s);
+        }catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+        sendRequestWithHttpURLConnection(url);
+    }
+
+    private void sendRequestWithHttpURLConnection(final URL url) {
+        // 开启线程来发起网络请求
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                HttpURLConnection connection = null;
+                try {
+                    //URL url = new URL("http://121.42.140.239/hjj/php/getParentToken?parentUserName=pe@qq.com");
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setConnectTimeout(8000);
+                    connection.setReadTimeout(8000);
+                    connection.setDoInput(true);
+                    connection.setDoOutput(true);
+                    InputStream in = connection.getInputStream();
+                    // 下面对获取到的输入流进行读取
+                    BufferedReader reader = new BufferedReader(
+                            new InputStreamReader(in));
+                    StringBuilder response = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        response.append(line);
+                    }
+                    Message message = new Message();
+                    message.what = GET_TOKEN;
+                    String jsondata = response.toString();
+                    String token = null;
+                    jsondata = jsondata.replace("\\", "").replace("u003d", "=");
+                    try {
+                        JSONObject total1 = new JSONObject(jsondata);
+                        token = total1.optString("token");
+                        if(!token.equals("403")){
+                            HaojiajiaoApplication.token = token;
+                            SharedPreferences.Editor editor = getSharedPreferences("UserToken",MODE_PRIVATE).edit();
+                            editor.putString(HaojiajiaoApplication.userName,token);
+                            editor.commit();
+                            Log.e("MainAct:"," get token by sendRequestWithHttpURLConnection: "+token);
+                        }
+                        else{
+                            HaojiajiaoApplication.token = token;
+                            Log.e("MainAct:","get token by sendRequestWithHttpURLConnection 403!!! ");
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        HaojiajiaoApplication.token = "-1";
+                        Log.e("MainActivity:","get token by sendRequestWithHttpURLConnection~get token error!");
+                    }
+                    // 将服务器返回的结果存放到Message中
+                    message.obj = token;
+                    handler.sendMessage(message);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (connection != null) {
+                        connection.disconnect();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    private Handler handler = new Handler() {
+
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case GET_TOKEN:
+                    String response = (String) msg.obj;
+                    Log.e("MainActivity:","get token by sendRequestWithHttpURLConnection~ "+response);
+                    // 在这里进行UI操作，将结果显示到界面上
+                    initViewpager();
+                    break;
+            }
+        }
+
+    };
 
     private void initViewpager() {
         viewPager = (ViewPager) findViewById(R.id.content_view);
@@ -150,9 +295,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         super.onDestroy();
         unregisterReceiver(mMessageReceiver);
+        Log.e("MainAct","Destory");
+        //RongIM.getInstance().disconnect();
     }
 
     @Override
@@ -515,14 +662,35 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             try {
                 JSONObject total1 = new JSONObject(dataStr);
                 String code = total1.optString("result");
-                HaojiajiaoApplication.token = code;
-                Log.e("MainAct:","~~~~~~~get token: "+code);
+                if(code.equals("403")){
+                    Log.e("MainActivity:","~~~~~~~~~~get token 403!~~~~~~~");
+                    if(HaojiajiaoApplication.ISSTATE){
+                        getTeacherTokenPhp();
+                    }
+                    else {
+                        getParentTokenPhp();
+                    }
+                }
+                else{
+                    HaojiajiaoApplication.token = code;
+                    Log.e("MainAct:","~~~~~~~get token: "+code);
+                    initViewpager();
+                    SharedPreferences.Editor editor = getSharedPreferences("UserToken",MODE_PRIVATE).edit();
+                    editor.putString(HaojiajiaoApplication.userName,code);
+                    editor.commit();
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
                 HaojiajiaoApplication.token = "-1";
                 Log.e("MainActivity:","~~~~~~~~~~get token error!~~~~~~~");
+                if(HaojiajiaoApplication.ISSTATE){
+                    getTeacherTokenPhp();
+                }
+                else {
+                    getParentTokenPhp();
+                }
             }
-            initViewpager();
         } else if(response.requestTag.toString().equals("getTeacherToken")){
             String dataStr = response.responseString;
             dataStr = dataStr.replace("\\", "").replace("u003d", "=");
@@ -562,7 +730,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 HaojiajiaoApplication.userId = total1.getInt("id");
                 HaojiajiaoApplication.picUrl = total1.getString("teacherPortrait");
                 HaojiajiaoApplication.name = total1.getString("teacherName");
-                Log.e("MainActivity","init teacher Url: "+total1.getString("teacherName"));
+                Log.e("MainActivity","init teacher Url: "+total1.getString("teacherPortrait"));
 
             } catch (Exception e) {
 
@@ -583,7 +751,41 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             } catch (Exception e) {
 
             }
+        }else if (response.requestTag.toString().equals("getTeacherInfoByUserNameForRY")) {
+            String dataStr = response.responseString;
+            try {
+                JSONObject total1 = new JSONObject(dataStr);
+
+                Log.e("response:", "teacher: R_userName:" + HaojiajiaoApplication.R_userName);
+                if(total1!=null && (!total1.optString("teacherUserName").equals(""))){
+                    HaojiajiaoApplication.R_name = total1.optString("teacherName");
+                    HaojiajiaoApplication.R_userName = total1.optString("teacherUserName");
+                    HaojiajiaoApplication.R_picUrl = total1.optString("teacherPortrait");
+                    HaojiajiaoApplication.response = true;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.e("MainActivity", "get teacherIcon error!!!");
+            }
+        }else if (response.requestTag.toString().equals("getParentInfoByUserNameForRY")) {
+            String dataStr = response.responseString;
+            JSONObject total1 = null;
+            try {
+                total1 = new JSONObject(dataStr);
+                JSONObject jsonArray = total1.getJSONObject("result");
+                if (jsonArray!=null && (!jsonArray.getString("parentUserName").equals(""))) {
+                    HaojiajiaoApplication.R_name = jsonArray.getString("parentName");
+                    HaojiajiaoApplication.R_picUrl = jsonArray.getString("parentPortrait");
+                    HaojiajiaoApplication.R_userName = jsonArray.getString("parentUserName");
+                    Log.e("response:", "parent: R_userName:" + HaojiajiaoApplication.R_userName);
+                    HaojiajiaoApplication.response = true;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.e("MainActivity", "get parentIcon error!!!");
+            }
         }
+
     }
 
     //新增上传文件接口

@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.shanghai.haojiajiao.R;
 import com.shanghai.haojiajiao.model.CourseModel;
-import com.shanghai.haojiajiao.model.NoticeModel;
 
 import java.util.List;
 
@@ -54,7 +53,7 @@ public class CourseAdapter extends BaseAdapter{
 			contentView = LayoutInflater.from(context).inflate(R.layout.course_list_layout, null);//将layout中的XML文件转换成view显示出来
 			holder = new ViewHolder();
             holder.tv_class=(TextView)contentView.findViewById(R.id.tv_class);
-            holder.tv_subject=(TextView)contentView.findViewById(R.id.tv_subject);
+            //holder.tv_subject=(TextView)contentView.findViewById(R.id.tv_subject);
             holder.tv_booking=(TextView)contentView.findViewById(R.id.tv_booking);
             holder.tv_booking.setTag(position);
 
@@ -75,7 +74,7 @@ public class CourseAdapter extends BaseAdapter{
             }
         });
         holder.tv_class.setText(courseModel.tv_class);
-        holder.tv_subject.setText(courseModel.tv_subject);
+        //holder.tv_subject.setText(courseModel.tv_subject);
 //        holder.tv_content.setText(noticeModel.noticeContent);
  		return contentView;
 	}
@@ -85,7 +84,7 @@ public class CourseAdapter extends BaseAdapter{
     }
 
     static class ViewHolder{
-		TextView tv_class,tv_subject,tv_booking;
+		TextView tv_class,tv_booking;//,tv_subject
 
 
 	}

@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="About"
+            android:text="ABOUT"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -46,7 +46,7 @@
             style="@style/name_test_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About us" />
+            android:text="ABOUT US" />
 
         <!--<TextView
             android:id="@+id/tv_Times"
@@ -81,6 +81,7 @@
             android:layout_marginLeft="12dip"
             android:layout_marginRight="12dip"
             android:layout_marginTop="20dip"
+            android:textSize="14sp"
             android:text="Good family education, give you the world's good teacher!"
             android:textColor="@android:color/black" />
     </LinearLayout>

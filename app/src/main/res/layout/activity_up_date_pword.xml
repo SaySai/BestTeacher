@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="Change Password"
+            android:text="CHANGE PASSWORD"
             android:textColor="@android:color/white"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold" />
@@ -53,11 +53,12 @@
                 android:layout_height="wrap_content"
 
                 android:layout_marginLeft="24dip"
-                android:text="Old Password：" />
+                android:text="OLD PASSWORD:" />
 
             <EditText
                 android:id="@+id/et_userPassword"
                 style="@style/name_tab_style"
+                android:paddingLeft="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null" />
@@ -80,13 +81,15 @@
                 android:layout_height="wrap_content"
 
                 android:layout_marginLeft="24dip"
-                android:text="New Password：" />
+                android:text="NEW PASSWORD:" />
 
             <EditText
                 android:id="@+id/et_newPassword"
                 style="@style/name_tab_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:password="true"
                 android:background="@null" />
         </LinearLayout>
 
@@ -107,13 +110,15 @@
                 android:layout_height="wrap_content"
 
                 android:layout_marginLeft="24dip"
-                android:text="Confirm Password：" />
+                android:text="CONFIRM PASSWORD:" />
 
             <EditText
                 android:id="@+id/et_ageinPassword"
                 style="@style/name_tab_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:password="true"
                 android:background="@null" />
         </LinearLayout>
     </LinearLayout>
@@ -124,7 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dip"
+        android:layout_marginBottom="25dip"
         android:layout_marginLeft="48dip"
         android:layout_marginRight="48dip"
         android:background="@drawable/signup_style_corners_red_theme"

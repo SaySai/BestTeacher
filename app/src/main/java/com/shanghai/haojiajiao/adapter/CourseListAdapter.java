@@ -22,7 +22,7 @@ public class CourseListAdapter extends AdapterBase<String> {
     protected View getExView(final int position, View convertView, ViewGroup parent, LayoutInflater inflater) {
         convertView = inflater.inflate(R.layout.course_list_layout, null);
         TextView tv_class = (TextView) convertView.findViewById(R.id.tv_class);
-        TextView tv_subject = (TextView) convertView.findViewById(R.id.tv_subject);
+        //TextView tv_subject = (TextView) convertView.findViewById(R.id.tv_subject);
         TextView tv_booking = (TextView) convertView.findViewById(R.id.tv_booking);
         tv_booking.setOnClickListener(new View.OnClickListener() {
             @Override
